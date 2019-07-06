@@ -1,0 +1,655 @@
+<!--- Project Dataslave --->
+<!--- Version 0.1 Alpha --->
+<!--- By EtoileLion --->
+<input type='hidden' name='attr_sheetpage' value='1'>
+<div class='sheet-page sheet-page1'>
+    <div class='sheet-header'>
+        <input type='text' name='attr_character_name'>
+    </div>
+    <div class='sheet-2colrow'>
+        <div class='sheet-col'>
+            <div class='sheet-personaldata'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='personaldata'>Personal Data</p>
+                </div>
+                <table>
+                    <tr>
+                        <td colspan='4'>
+                            <label for='attr_namealias' data-i18n='namealias'>NAME/PRIMARY ALIAS</label>
+                            <input type='text' name='attr_namealias'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            <label for='attr_metatype' data-i18n='metatype'>Metatype</label>
+                            <input type='text' name='attr_metatype'>
+                        </td>
+                        <td colspan='2'>
+                            <label for='attr_ethnicity' data-i18n='ethnicity'>Ethnicity</label>
+                            <input type='text' name='attr_ethnicity'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_age' data-i18n='age'>Age</label>
+                            <input type='text' name='attr_age'>					
+                        </td>
+                        <td>
+                            <label for='attr_sex' data-i18n='sex'>Sex</label>
+                            <input type='text' name='attr_sex'>					
+                        </td>
+                        <td>
+                            <label for='attr_height' data-i18n='charheight'>Height</label>
+                            <input type='text' name='attr_height'>					
+                        </td>
+                        <td>
+                            <label for='attr_weight' data-i18n='charweight'>Weight</label>
+                            <input type='text' name='attr_weight'>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            <label for='attr_reputation' data-i18n='reputation'>Reputation</label>
+                            <input type='text' name='attr_reputation'>
+                        </td>
+                        <td colspan='2'>
+                            <label for='attr_heat' data-i18n='heat'>Heat</label>
+                            <input type='text' name='attr_heat'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            <label for='attr_karma' data-i18n='karma'>Karma</label>
+                            <input type='text' name='attr_karma'>					
+                        </td>
+                        <td colspan='2'>
+                            <label for='attr_miscpersonal' data-i18n='misc'>Misc</label>
+                            <input type='text' name='attr_miscpersonal'>					
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class='sheet-attributes'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='attributes'>Attributes</p>
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <label for='attr_body' data-i18n='body'>Body</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_body' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_essence' data-i18n='essence'>Essence</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_essence' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_agility' data-i18n='agility'>Agility</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_agility' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_magic' data-i18n='magic'>Essence</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_magic' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_reaction' data-i18n='reaction'>Body</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_reaction' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_initiative' data-i18n='initiative'>Essence</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_initiative' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_strength' data-i18n='strength'>Body</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_strength' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_matrix-initiative' data-i18n='matrix-initiative'>Essence</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_matrix-initiative' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_willpower' data-i18n='willpower'>Body</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_willpower' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_astral-initiative' data-i18n='astral-initiative'>Essence</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_astral-initiative' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_logic' data-i18n='logic'>Body</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_logic' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_composure' data-i18n='composure'>Essence</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_composure' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_intuition' data-i18n='intuition'>intuition</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_intuition' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_judge-intentions' data-i18n='judge-intentions'>judge-intentions</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_judge-intentions' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_charisma' data-i18n='charisma'>charisma</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_charisma' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_memory' data-i18n='memory'>memory</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_memory' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_edge' data-i18n='edge'>edge</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_edge' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_lift-carry' data-i18n='lift-carry'>lift-carry</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_lift-carry' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_edgepoints' data-i18n='edgepoints'>edgepoints</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_edgepoints' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_movement' data-i18n='movement'>movement</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_movement' min=0>					
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_unarmed' data-i18n='unarmed'>unarmed</label>			
+                        </td>
+                        <td>
+                            <input type='number' name='attr_unarmed' min=0>					
+                        </td>
+                        <td>
+                            <label for='attr_defenserating' data-i18n='defenserating'>defenserating</label>
+                        </td>
+                        <td>
+                            <input type='number' name='attr_defenserating' min=0>					
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class='sheet-skills'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='skills'>Skills</p>
+                </div>
+                <table>
+                    <tr>
+                        <th data-i18n='skill'>Skill</th>
+                        <th data-i18n='skill'>Rank</th>
+                        <th data-i18n='skill'>Attribute</th>
+                        <th data-i18n='skill'>Type</th>
+                    </tr>
+                </table>
+                <fieldset class="repeating_skills">
+                    <table>
+                        <tr>
+                            <td><input type='text' name='attr_skillname'></td>
+                            <td><input type='number' name='attr_skillrank'></td>
+                            <td>
+                                <select name='attr_skillattr'>
+                                    <option value='body' data-i18n='body'>Body</option>
+                                    <option value='essence' data-i18n='essence'>Body</option>
+                                    <option value='agility' data-i18n='agility'>Body</option>
+                                    <option value='magic' data-i18n='magic'>Body</option>
+                                    <option value='reaction' data-i18n='reaction'>Body</option>
+                                    <option value='initiative' data-i18n='initiative'>Body</option>
+                                    <option value='strength' data-i18n='strength'>Body</option>
+                                    <option value='matrix-initiative' data-i18n='matrix-initiative'>Body</option>
+                                    <option value='willpower' data-i18n='willpower'>Body</option>
+                                    <option value='astral-initiative' data-i18n='astral-initiative'>Body</option>
+                                    <option value='logic' data-i18n='logic'>Body</option>
+                                    <option value='composure' data-i18n='composure'>Body</option>
+                                    <option value='intuition' data-i18n='intuition'>Body</option>
+                                    <option value='judge-intentions' data-i18n='judge-intentions'>Body</option>
+                                    <option value='charisma' data-i18n='charisma'>Body</option>
+                                    <option value='memory' data-i18n='memory'>Body</option>
+                                    <option value='edge' data-i18n='edge'>Body</option>
+                                    <option value='lift-carry' data-i18n='lift-carry'>Body</option>
+                                    <option value='movement' data-i18n='movement'>Body</option>
+                                    <option value='unarmed' data-i18n='unarmed'>Body</option>
+                                    <option value='defenserating' data-i18n='defenserating'>Body</option>
+                                </select>
+                            </td>
+                            <td><input type='text' name='attr_skilltype'></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <div class='sheet-lifestyles'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='idlifecurrency'>Ids/Lifestyles/Currency</p>
+                </div>
+                <table>
+                    <tr>
+                        <td colspan='2'>
+                            <label for='attr_primarylife' data-i18n='primarylife'>Primary Lifestyle</label>
+                            <input type='text' name='attr_primarylife'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='attr_nuyen' data-i18n='nuyen'>Nuyen</label>
+                            <input type='text' name='attr_nuyen'>
+                        </td>
+                        <td>
+                            <label for='attr_licenses' data-i18n='licenses'>Licenses</label>
+                            <input type='text' name='attr_licenses'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            <label data-i18n='fakes'>Fake IDs/Related Lifestyles/Funds/Licenses</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            <textarea name='attr_fakes'></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+		<div class='sheet-col'>
+			<div class='sheet-corecombat'>			
+                <div class='sheet-headertext'>
+                    <p data-i18n='corecombat'>Core Combat Info</p>
+                </div>
+				<table>
+					<tr>
+					<td>
+						<label for='attr_priarmor' data-i18n="priarmor">Primary Armor</label>
+						<input type='text' name='attr_priarmor'>
+						<label for='attr_priarmorrating'></label>
+						<input name='attr_primarmorrating' type='text'>
+					</td>
+					</tr>
+					<tr>
+						<td>
+							<label for='attr_priranged' data-i18n="priranged">Primary Ranged Weapon</label>
+							<input type='text' name='attr_priranged'>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label class='sheet-ghostlabel' data-i18n="dv">DV</label>
+							<input type='number' name='attr_priranged-dv'>
+							<label class='sheet-ghostlabel' data-i18n="mode">Mode</label>
+							<input type='number' name='attr_priranged-mode'>
+							<label class='sheet-ghostlabel' data-i18n="close">Close</label>
+							<input type='number' name='attr_priranged-close'>
+							<label class='sheet-ghostlabel' data-i18n="near">Near</label>
+							<input type='number' name='attr_priranged-near'>
+							<label class='sheet-ghostlabel' data-i18n="far">Far</label>
+							<input type='number' name='attr_priranged-far'>
+							<label class='sheet-ghostlabel' data-i18n="extreme">Extreme</label>
+							<input type='number' name='attr_priranged-extreme'>
+							<label class='sheet-ghostlabel' data-i18n="ammo">Ammo</label>
+							<input type='number' name='attr_priranged-ammo'>
+						</td>
+					</tr>					
+					<tr>
+							<label for='attr_primelee' data-i18n="primelee">Primary Melee Weapon</label>
+							<input type='text' name='attr_primelee'>
+					</tr>
+					<tr>
+						<td>
+							<label class='sheet-ghostlabel' data-i18n="dv">DV</label>
+							<input type='number' name='attr_priranged-dv'>
+							<label class='sheet-ghostlabel' data-i18n="close">Close</label>
+							<input type='number' name='attr_priranged-close'>					
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class='sheet-conditionmonitor'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='conditionmonitor'>Condition Monitor</p>
+                </div>
+				<div class='sheet-2col'>
+					<div class='sheet-col'>
+						<div class='sheet-damagetrack'>
+							<input type='checkbox' name='attr_physdamage1'>
+							<input type='checkbox' name='attr_physdamage2'>
+							<input type='checkbox' name='attr_physdamage3'>
+							<input type='checkbox' name='attr_physdamage4'>
+							<input type='checkbox' name='attr_physdamage5'>
+							<input type='checkbox' name='attr_physdamage6'>
+							<input type='checkbox' name='attr_physdamage7'>
+							<input type='checkbox' name='attr_physdamage8'>
+							<input type='checkbox' name='attr_physdamage9'>
+							<input type='checkbox' name='attr_physdamage10'>
+							<input type='checkbox' name='attr_physdamage11'>
+							<input type='checkbox' name='attr_physdamage12'>
+							<input type='checkbox' name='attr_physdamage13'>
+							<input type='checkbox' name='attr_physdamage14'>
+							<input type='checkbox' name='attr_physdamage15'>
+							<input type='checkbox' name='attr_physdamage16'>
+							<input type='checkbox' name='attr_physdamage17'>
+							<input type='checkbox' name='attr_physdamage18'>
+							<input type='hidden' name='attr_physpoolmod' value='0'>
+						</div>
+					</div>
+					<div class='sheet-col'>
+						<div class='sheet-damagetrack'>
+							<input type='checkbox' name='attr_stundamage1'>
+							<input type='checkbox' name='attr_stundamage2'>
+							<input type='checkbox' name='attr_stundamage3'>
+							<input type='checkbox' name='attr_stundamage4'>
+							<input type='checkbox' name='attr_stundamage5'>
+							<input type='checkbox' name='attr_stundamage6'>
+							<input type='checkbox' name='attr_stundamage7'>
+							<input type='checkbox' name='attr_stundamage8'>
+							<input type='checkbox' name='attr_stundamage9'>
+							<input type='checkbox' name='attr_stundamage10'>
+							<input type='checkbox' name='attr_stundamage11'>
+							<input type='checkbox' name='attr_stundamage12'>
+							<input type='hidden' name='attr_stunpoolmod' value='0'>
+						</div>
+						<p>For every 3 boxes of damage on any one damage track, the character takes a -1 Dice Pool Modifier on tests.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class='sheet-qualities'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='qualities'>Qualities</p>
+                </div>
+				<table>
+					<tr>
+						<th data-i18n="quality">Quality</th>
+						<th data-i18n="notes">Notes</th>
+						<th data-i18n="type">Type</th>
+					</tr>
+				</table>
+				<fieldset class='repeating_qualities'>
+					<table>
+						<tr>
+							<td><input type='text' name='attr_qualityname'></td>
+							<td><input type='text' name='attr_qualitynote'></td>
+							<td><input type='text' name='attr_qualitytype'></td>
+						</tr>
+					</table>				
+				</fieldset>
+			</div>
+			<div class='sheet-contacts'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='contacts'>Contacts</p>
+                </div>
+				<table>
+					<tr>
+						<th data-i18n="name">Name</th>
+						<th data-i18n="loyalty">Loyalty</th>
+						<th data-i18n="connection">Connection</th>
+					</tr>
+				</table>
+				<fieldset class='repeating_contacts'>
+					<table>
+						<tr>
+							<td><input type='text' name='attr_contactname'></td>
+							<td><input type='text' name='attr_contactloyalty'></td>
+							<td><input type='text' name='attr_contactconnection'></td>
+						</tr>
+					</table>				
+				</fieldset>				
+			</div>
+		</div>    
+	</div>
+</div>
+<div class='sheet-page sheet-page2'>
+    <div class='sheet-header'>
+        <input type='text' name='attr_character_name'>
+    </div>
+    <div class='sheet-2colrow'>
+        <div class='sheet-col'>
+			<div class='sheet-rangedweapons'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='rangedweapons'>Ranged Weapons</p>
+                </div>
+				<table>
+					<tr>
+						<th data-i18n="weapon">Weapon</th>
+						<th data-i18n="dv">DV</th>
+						<th data-i18n="mode">Mode</th>
+						<th data-i18n="close">Close</th>
+						<th data-i18n="near">Near</th>
+						<th data-i18n="far">Far</th>
+						<th data-i18n="extreme">Extreme</th>
+						<th data-i18n="ammo">Ammo</th>						
+					</tr>
+				</table>
+				<fieldset class='repeating_rangedweapons'>
+					<table>
+						<tr>
+							<td><input type='text' name='attr_rangedweaponname'></td>
+							<td><input type='text' name='attr_rangedweapondv'></td>
+							<td><input type='text' name='attr_rangedweaponmode'></td>
+							<td><input type='text' name='attr_rangedweaponclose'></td>
+							<td><input type='text' name='attr_rangedweaponnear'></td>
+							<td><input type='text' name='attr_rangedweaponfar'></td>
+							<td><input type='text' name='attr_rangedweaponextreme'></td>
+							<td><input type='text' name='attr_rangedweaponammo'></td>							
+						</tr>
+					</table>				
+				</fieldset>				
+			</div>
+			<div class='sheet-armor'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='armor'>Armor</p>
+                </div>
+				<table>
+					<tr>
+						<th data-i18n="name">Name</th>
+						<th data-i18n="rating">Rating</th>
+						<th data-i18n="notes">Notes</th>
+					</tr>
+				</table>
+				<fieldset class='repeating_armor'>
+					<table>
+						<tr>
+							<td><input type='text' name='attr_armorname'></td>
+							<td><input type='text' name='attr_armorrating'></td>
+							<td><input type='text' name='attr_armornotes'></td>
+						</tr>
+					</table>				
+				</fieldset>				
+			</div>
+						<div class='sheet-augmentations'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='augmentations'>Augmentations</p>
+                </div>
+				<table>
+					<tr>
+						<th data-i18n="augmentation">Augmentation</th>
+						<th data-i18n="rating">Rating</th>
+						<th data-i18n="notes">Notes</th>
+						<th data-i18n="essence">Essence</th>						
+					</tr>
+				</table>
+				<fieldset class='repeating_augmentations'>
+					<table>
+						<tr>
+							<td><input type='text' name='attr_augmentationname'></td>
+							<td><input type='text' name='attr_augmentationrating'></td>
+							<td><input type='text' name='attr_augmentationnotes'></td>
+							<td><input type='text' name='attr_augmentationessence'></td>
+						</tr>
+					</table>				
+				</fieldset>				
+			</div>
+			<div class='sheet-gear'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='gear'>Gear</p>
+                </div>
+				<table>
+					<tr>
+						<th data-i18n="item">Item</th>
+						<th data-i18n="rating">Rating</th>
+					</tr>
+				</table>
+				<fieldset class='repeating_gear'>
+					<table>
+						<tr>
+							<td><input type='text' name='attr_gearitem'></td>
+							<td><input type='text' name='attr_gearrating'></td>
+						</tr>
+					</table>				
+				</fieldset>				
+			</div>			
+		</div>
+		<div class='sheet-col'>
+			<div class='sheet-meleeweapons'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='meleeweapons'>Melee Weapons</p>
+                </div>
+				<table>
+					<tr>
+						<th data-i18n="weapon">Weapon</th>
+						<th data-i18n="dv">DV</th>
+						<th data-i18n="close">Close</th>
+					</tr>
+				</table>
+				<fieldset class='repeating_meleeweapons'>
+					<table>
+						<tr>
+							<td><input type='text' name='attr_meleeweaponname'></td>
+							<td><input type='text' name='attr_meleeweapondv'></td>
+							<td><input type='text' name='attr_meleeweaponclose'></td>
+						</tr>
+					</table>				
+				</fieldset>				
+			</div>
+			<div class='sheet-matrix'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='matrixstats'>Matrix Stats</p>
+                </div>
+			</div>
+			<div class='sheet-vehicle'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='vehicle'>Vehicle</p>
+                </div>
+			</div>
+			<div class='sheet-spells'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='spellprepritform'>Spells/Preparations/Rituals/Complex Forms</p>
+                </div>
+				<table>
+					<tr>
+						<th data-i18n="sprcf">S/P/R/CF</th>
+						<th data-i18n="typetarget">Type/Target</th>					
+						<th data-i18n="range">Range</th>
+						<th data-i18n="duration">Duration</th>
+						<th data-i18n="drain">Drain</th>
+					</tr>
+				</table>
+				<fieldset class='repeating_spells'>
+					<table>
+						<tr>
+							<td>
+								<select name='attr_spelltype'>
+									<option value='s'>Spell</option>
+									<option value='p'>Preparation</option>
+									<option value='r'>Ritual</option>
+									<option value='cf'>Complex Form</option>
+								</select>
+							</td>
+							<td><input type='text' name='attr_spelltarget'></td>
+							<td><input type='text' name='attr_spellrange'></td>
+							<td><input type='text' name='attr_spellduration'></td>
+							<td><input type='text' name='attr_spelldrain'></td>							
+						</tr>
+					</table>				
+				</fieldset>				
+			</div>
+			<div class='sheet-powers'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='adeptpowers'>Adept Powers or Other Abilities</p>
+                </div>
+				<table>
+					<tr>
+						<th data-i18n="name">Name</th>
+						<th data-i18n="level">Level</th>
+						<th data-i18n="notes">Notes</th>
+					</tr>
+				</table>
+				<fieldset class='repeating_powers'>
+					<table>
+						<tr>
+							<td><input type='text' name='attr_powername'></td>
+							<td><input type='text' name='attr_powerlevel'></td>
+							<td><input type='text' name='attr_powernotes'></td>
+						</tr>
+					</table>				
+				</fieldset>				
+			</div>			
+		</div>
+	</div>
+</div>
+<div class='sheet-page sheet-page3'>
+</div>
+<div class='sheet-page sheet-page4'>
+</div>
+<rolltemplate class="sheet-rolltemplate-iafattack">
+</rolltemplate>
+<script type='text/worker'></script>

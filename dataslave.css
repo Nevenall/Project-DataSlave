@@ -1,0 +1,21 @@
+@font-face {
+	font-family: Njord;
+	src: url("https://shadowrequiem.com/tempshare/Njord.otf");
+}
+
+@font-face {
+	font-family: AmpCB;
+	src: url("https://shadowrequiem.com/tempshare/AmpCB.ttf");
+}
+
+.sheet-headertext p {
+	color: #800d6d;
+	font-family: Njord;
+	font-size: x-large;
+	text-transform: capitalize;
+}
+
+.sheet-page label {
+	font-size: 1em;
+	font-family: AmpCB;
+}
