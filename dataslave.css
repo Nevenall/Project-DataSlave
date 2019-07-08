@@ -5,7 +5,15 @@
 
 @font-face {
 	font-family: AmpCB;
-	src: url("https://shadowrequiem.com/tempshare/AmpCB.ttf");
+	src: url("https://shadowrequiem.com/tempshare/AmpCB.otf");
+}
+
+.sheet-header input {
+	text-align: right;
+	border: none;
+	font-family: Njord;
+	font-size: 49px;
+	width: 100%;
 }
 
 .sheet-headertext p {
@@ -14,8 +22,143 @@
 	font-size: x-large;
 	text-transform: capitalize;
 }
-
+.sheet-tablehead,
+th,
 .sheet-page label {
 	font-size: 1em;
 	font-family: AmpCB;
+	margin-bottom: unset;
+}
+
+.sheet-ghostlabel {
+	display: inline;
+}
+
+.sheet-flexcontainer {
+	display: flex;
+}
+.sheet-flex {
+	flex: 1;
+}
+.sheet-flex2 {
+	flex: 2;
+}
+.sheet-fullwidth {
+	width: 100%;
+}
+.sheet-flexcontainer input[type='text'] {
+	width: 0px;
+}
+select,
+.sheet-inlinelabel {
+	width: auto;
+}
+.sheet-section {
+	border-top: 2px solid #800d6d;
+	border-bottom: 2px solid #800d6d;	
+	padding-bottom: 7px;
+	padding-top: 5px;
+	margin-bottom: 20px;
+}
+.sheet-col:nth-child(1) .sheet-section {
+	border-right: 2px solid #800d6d;
+	border-radius: 0px 5px 5px 0px;
+	padding-right: 2px;
+}
+.sheet-col:nth-child(2) .sheet-section {
+	border-left: 2px solid #800d6d;	
+	border-radius: 5px 0px 0px 5px;
+	padding-left: 2px;
+}
+.repcontainer[data-groupname="repeating_skills"] .repitem table tbody tr:nth-child(1) {
+	display: none;
+}
+.repcontainer[data-groupname="repeating_skills"] .repitem:nth-child(1) table tbody tr:nth-child(1) {
+	display: block;
+	font-family: AmpCB;
+	font-size: 1em;
+}
+.sheet-attributes label {
+	text-align: right;
+}
+.sheet-attributes td:nth-child(3) {
+	margin-left: 6px
+}
+.sheet-attributes td:nth-child(even) {
+	padding-left: 6px;
+}
+.sheet-dmtrackcell {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin-bottom: 4px;
+}
+.sheet-phydamagemarker,
+.sheet-stundamagemarker {
+    display: inline;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sheet-phydamagemarker input,
+.sheet-stundamagemarker input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.sheet-stundamagemarker span,
+.sheet-phydamagemarker span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 50px;
+	background-color: #eee;
+	border: 1px solid #800d6d;
+	font-size: 28px;
+	line-height: 55px;
+	color: #666;
+	text-align: center;
+}
+.sheet-phydamagemarker:hover input ~ span,
+.sheet-stundamagemarker:hover input ~ span {
+    background-color: #ccc;
+}
+.sheet-stundamagemarker input:checked ~ span,
+.sheet-phydamagemarker input:checked ~ span {
+	background-color: #844;
+	color: #CCC;
+}
+.sheet-mini {
+	font-size: xx-small;
+	color: #999;
+}
+.sheet-numtag {
+	width: 3.5em;
+}
+.sheet-contactoutput,
+.sheet-qualityoutput {
+	font-family: Njord;
+	font-weight: bold;
+}
+.sheet-hidestuff[value='on'] ~ .sheet-contactoutput,
+.sheet-contactinput,
+.sheet-hidestuff[value='on'] ~ .sheet-qualityoutput,
+.sheet-qualityinput {
+	display: none;
+}
+.sheet-hidestuff[value='on'] ~ .sheet-qualityinput,
+.sheet-hidestuff[value='on'] ~ .sheet-contactinput {
+	display: inline;
+}
+.sheet-right {
+	float: right;
 }

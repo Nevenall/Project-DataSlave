@@ -8,68 +8,57 @@
     </div>
     <div class='sheet-2colrow'>
         <div class='sheet-col'>
-            <div class='sheet-personaldata'>
+            <div class='sheet-section sheet-personaldata'>
                 <div class='sheet-headertext'>
                     <p data-i18n='personaldata'>Personal Data</p>
                 </div>
-                <table>
-                    <tr>
-                        <td colspan='4'>
-                            <label for='attr_namealias' data-i18n='namealias'>NAME/PRIMARY ALIAS</label>
-                            <input type='text' name='attr_namealias'>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan='2'>
-                            <label for='attr_metatype' data-i18n='metatype'>Metatype</label>
-                            <input type='text' name='attr_metatype'>
-                        </td>
-                        <td colspan='2'>
-                            <label for='attr_ethnicity' data-i18n='ethnicity'>Ethnicity</label>
-                            <input type='text' name='attr_ethnicity'>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for='attr_age' data-i18n='age'>Age</label>
-                            <input type='text' name='attr_age'>					
-                        </td>
-                        <td>
-                            <label for='attr_sex' data-i18n='sex'>Sex</label>
-                            <input type='text' name='attr_sex'>					
-                        </td>
-                        <td>
-                            <label for='attr_height' data-i18n='charheight'>Height</label>
-                            <input type='text' name='attr_height'>					
-                        </td>
-                        <td>
-                            <label for='attr_weight' data-i18n='charweight'>Weight</label>
-                            <input type='text' name='attr_weight'>					
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan='2'>
-                            <label for='attr_reputation' data-i18n='reputation'>Reputation</label>
-                            <input type='text' name='attr_reputation'>
-                        </td>
-                        <td colspan='2'>
-                            <label for='attr_heat' data-i18n='heat'>Heat</label>
-                            <input type='text' name='attr_heat'>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan='2'>
-                            <label for='attr_karma' data-i18n='karma'>Karma</label>
-                            <input type='text' name='attr_karma'>					
-                        </td>
-                        <td colspan='2'>
-                            <label for='attr_miscpersonal' data-i18n='misc'>Misc</label>
-                            <input type='text' name='attr_miscpersonal'>					
-                        </td>
-                    </tr>
-                </table>
+                    <div class='sheet-flexcontainer'>
+                            <label for='adiviv_namealias' data-i18n='namealias' class='sheet-flex'>NAME/PRIMARY ALIAS</label>
+					</div>
+						<div class='sheet-flexcontainer'>
+                            <input type='text' name='adiviv_namealias' class='sheet-flex'>
+                        </div>
+                        <div class='sheet-flexcontainer'>
+                            <label for='adiviv_metatype' data-i18n='metatype' class='sheet-flex'>Metatype</label>
+							<label for='adiviv_ethnicity' data-i18n='ethnicity' class='sheet-flex'>Ethnicity</label>
+                        </div>
+                        <div class='sheet-flexcontainer'>
+                            <input type='text' name='adiviv_metatype' class='sheet-flex'>
+                            <input type='text' name='adiviv_ethnicity' class='sheet-flex'>
+                        </div>
+                        <div class='sheet-flexcontainer'>
+                            <label for='adiviv_age' data-i18n='age' class='sheet-flex'>Age</label>
+							<label for='adiviv_sex' data-i18n='sex' class='sheet-flex'>Sex</label>
+							<label for='adiviv_height' data-i18n='charheight' class='sheet-flex'>Height</label>
+                            <label for='adiviv_weight' data-i18n='charweight' class='sheet-flex'>Weight</label>
+
+                        </div>
+                        <div class='sheet-flexcontainer'>
+                            <input type='text' name='adiviv_age' class='sheet-flex'>					
+                            <input type='text' name='adiviv_sex' class='sheet-flex'>	
+							<input type='text' name='adiviv_height' class='sheet-flex'>
+							<input type='text' name='adiviv_weight' class='sheet-flex'>							
+                        </div>                        
+                        <div class='sheet-flexcontainer'>
+                            <label for='adiviv_reputation' data-i18n='reputation' class='sheet-flex'>Reputation</label>
+							<label for='adiviv_heat' data-i18n='heat' class='sheet-flex'>Heat</label>
+                            
+                        </div>
+                        <div class='sheet-flexcontainer'>
+                            <input type='text' name='adiviv_reputation' class='sheet-flex'>
+                            <input type='text' name='adiviv_heat' class='sheet-flex'>
+                        </div>
+                        <div class='sheet-flexcontainer'>						
+                            <label for='adiviv_karma' data-i18n='karma' class='sheet-flex'>Karma</label>                            					
+							<label for='adiviv_miscpersonal' data-i18n='misc' class='sheet-flex'>Misc</label>
+                        </div>
+                        <div class='sheet-flexcontainer'>                            
+							<input type='text' name='adiviv_karma' class='sheet-flex'>
+                            <input type='text' name='adiviv_miscpersonal' class='sheet-flex'>					
+                        </div>
+
             </div>
-            <div class='sheet-attributes'>
+            <div class='sheet-section sheet-attributes'>
                 <div class='sheet-headertext'>
                     <p data-i18n='attributes'>Attributes</p>
                 </div>
@@ -230,25 +219,21 @@
                     </tr>
                 </table>
             </div>
-            <div class='sheet-skills'>
+            <div class='sheet-section sheet-skills'>
                 <div class='sheet-headertext'>
                     <p data-i18n='skills'>Skills</p>
                 </div>
-                <table>
-                    <tr>
-                        <th data-i18n='skill'>Skill</th>
-                        <th data-i18n='skill'>Rank</th>
-                        <th data-i18n='skill'>Attribute</th>
-                        <th data-i18n='skill'>Type</th>
-                    </tr>
-                </table>
+				<div class='sheet-flexcontainer'>
+					<span data-i18n='skill' class='sheet-flex sheet-tablehead'>Skill</span>
+					<span data-i18n='rank' class='sheet-numtag sheet-tablehead'>Rank</span>
+					<span data-i18n='attribute' class='sheet-tablehead'>Attribute</span>
+					<span data-i18n='type' class='sheet-numtag sheet-tablehead'>Type</span>
+				</div>
                 <fieldset class="repeating_skills">
-                    <table>
-                        <tr>
-                            <td><input type='text' name='attr_skillname'></td>
-                            <td><input type='number' name='attr_skillrank'></td>
-                            <td>
-                                <select name='attr_skillattr'>
+				    <div class='sheet-flexcontainer sheet-fullwidth'>
+					<input type='text' name='attr_skillname' class='sheet-flex'>
+					<input type='number' name='attr_skillrank'>
+					<select name='attr_skillattr'  class='sheet-inlinelabel'>
                                     <option value='body' data-i18n='body'>Body</option>
                                     <option value='essence' data-i18n='essence'>Body</option>
                                     <option value='agility' data-i18n='agility'>Body</option>
@@ -271,13 +256,14 @@
                                     <option value='unarmed' data-i18n='unarmed'>Body</option>
                                     <option value='defenserating' data-i18n='defenserating'>Body</option>
                                 </select>
-                            </td>
-                            <td><input type='text' name='attr_skilltype'></td>
-                        </tr>
-                    </table>
+								<select name='attr_skilltype'>
+									<option value='skill' data-i18n='skill'></option>
+									<option value='spec' data-i18n='spec'></option>
+									<option value='exp' data-i18n='exp'></option>
+								</select>
                 </fieldset>
             </div>
-            <div class='sheet-lifestyles'>
+            <div class='sheet-section sheet-lifestyles'>
                 <div class='sheet-headertext'>
                     <p data-i18n='idlifecurrency'>Ids/Lifestyles/Currency</p>
                 </div>
@@ -312,46 +298,52 @@
             </div>
         </div>
 		<div class='sheet-col'>
-			<div class='sheet-corecombat'>			
+			<div class='sheet-section sheet-corecombat'>			
                 <div class='sheet-headertext'>
                     <p data-i18n='corecombat'>Core Combat Info</p>
                 </div>
-				<table>
+				<table class='sheet-fullwidth'>
 					<tr>
-					<td>
-						<label for='attr_priarmor' data-i18n="priarmor">Primary Armor</label>
-						<input type='text' name='attr_priarmor'>
-						<label for='attr_priarmorrating'></label>
-						<input name='attr_primarmorrating' type='text'>
+					<td class='sheet-flexcontainer'>
+						<label for='attr_priarmor' data-i18n="priarmor" class='sheet-inlinelabel'>Primary Armor</label>
+						<input type='text' name='attr_priarmor' class='sheet-flex'>						
+						<label for='attr_priarmorrating' data-i18n="rating" class='sheet-inlinelabel'></label>
+						<input name='attr_primarmorrating' type='number'>
 					</td>
 					</tr>
 					<tr>
-						<td>
-							<label for='attr_priranged' data-i18n="priranged">Primary Ranged Weapon</label>
-							<input type='text' name='attr_priranged'>
+						<td class='sheet-flexcontainer'>
+							<label for='attr_priranged' data-i18n="priranged" class='sheet-inlinelabel'>Primary Ranged Weapon</label>
+							<input type='text' name='attr_priranged' class='sheet-flex'>
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<td class='sheet-flexcontainer'>
 							<label class='sheet-ghostlabel' data-i18n="dv">DV</label>
-							<input type='number' name='attr_priranged-dv'>
 							<label class='sheet-ghostlabel' data-i18n="mode">Mode</label>
-							<input type='number' name='attr_priranged-mode'>
 							<label class='sheet-ghostlabel' data-i18n="close">Close</label>
-							<input type='number' name='attr_priranged-close'>
 							<label class='sheet-ghostlabel' data-i18n="near">Near</label>
-							<input type='number' name='attr_priranged-near'>
 							<label class='sheet-ghostlabel' data-i18n="far">Far</label>
-							<input type='number' name='attr_priranged-far'>
 							<label class='sheet-ghostlabel' data-i18n="extreme">Extreme</label>
-							<input type='number' name='attr_priranged-extreme'>
-							<label class='sheet-ghostlabel' data-i18n="ammo">Ammo</label>
-							<input type='number' name='attr_priranged-ammo'>
+							<label class='sheet-ghostlabel' data-i18n="ammo">Ammo</label>							
 						</td>
-					</tr>					
+					</tr>
 					<tr>
-							<label for='attr_primelee' data-i18n="primelee">Primary Melee Weapon</label>
-							<input type='text' name='attr_primelee'>
+						<td class='sheet-flexcontainer'>
+							<input class='sheet-flex' type='number' name='attr_priranged-dv'>
+							<input class='sheet-flex' type='number' name='attr_priranged-mode'>
+							<input class='sheet-flex' type='number' name='attr_priranged-close'>
+							<input class='sheet-flex' type='number' name='attr_priranged-near'>
+							<input class='sheet-flex' type='number' name='attr_priranged-far'>
+							<input class='sheet-flex' type='number' name='attr_priranged-extreme'>
+							<input class='sheet-flex' type='number' name='attr_priranged-ammo'>						
+						</td>
+					</tr>
+					<tr>
+						<td class='sheet-flexcontainer'>
+							<label for='attr_primelee' data-i18n="primelee" class='sheet-inlinelabel'>Primary Melee Weapon</label>
+							<input type='text' name='attr_primelee' class='sheet-flex'>
+						</td>
 					</tr>
 					<tr>
 						<td>
@@ -363,95 +355,200 @@
 					</tr>
 				</table>
 			</div>
-			<div class='sheet-conditionmonitor'>
+			<div class='sheet-section sheet-conditionmonitor'>
                 <div class='sheet-headertext'>
                     <p data-i18n='conditionmonitor'>Condition Monitor</p>
                 </div>
 				<div class='sheet-2col'>
 					<div class='sheet-col'>
+						<div class='sheet-dmgtrackheader'>Physical Damage Track</div>
 						<div class='sheet-damagetrack'>
+							<div class='sheet-dmtrackcell'>
+							<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage1'>
+							<span></span>							
+							</label>	
+                            </div>							
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage2'>
+							<span></span>
+							</label></div>							
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage3'>
+							<span>-1</span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage4'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage5'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage6'>
+							<span>-2</span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage7'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage8'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage9'>
+							<span>-3</span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage10'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage11'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage12'>
+							<span>-4</span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage13'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage14'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage15'>
+							<span>-5</span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage16'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage17'>
+							<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage18'>
+							<span>-6</span>
+							</label></div>
 							<input type='hidden' name='attr_physpoolmod' value='0'>
 						</div>
 					</div>
 					<div class='sheet-col'>
 						<div class='sheet-damagetrack'>
-							<input type='checkbox' name='attr_stundamage1'>
-							<input type='checkbox' name='attr_stundamage2'>
-							<input type='checkbox' name='attr_stundamage3'>
-							<input type='checkbox' name='attr_stundamage4'>
-							<input type='checkbox' name='attr_stundamage5'>
-							<input type='checkbox' name='attr_stundamage6'>
-							<input type='checkbox' name='attr_stundamage7'>
-							<input type='checkbox' name='attr_stundamage8'>
-							<input type='checkbox' name='attr_stundamage9'>
-							<input type='checkbox' name='attr_stundamage10'>
-							<input type='checkbox' name='attr_stundamage11'>
-							<input type='checkbox' name='attr_stundamage12'>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage1'>
+								<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage2'>
+								<span></span>
+							</label></div>							
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage3'>
+								<span>-1</span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage4'>
+								<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage5'>
+								<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage6'>
+								<span>-2</span>
+							</label></div>							
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage7'>
+								<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage8'>
+								<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage9'>
+								<span>-3</span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage10'>
+								<span></span>
+							</label></div>							
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage11'>
+								<span></span>
+							</label></div>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage12'>
+								<span>-4</span>
+							</label></div>
 							<input type='hidden' name='attr_stunpoolmod' value='0'>
 						</div>
-						<p>For every 3 boxes of damage on any one damage track, the character takes a -1 Dice Pool Modifier on tests.
+						<p class='sheet-mini'>For every 3 boxes of damage on any one damage track, the character takes a -1 Dice Pool Modifier on tests.
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class='sheet-qualities'>
+			<div class='sheet-section sheet-qualities'>
                 <div class='sheet-headertext'>
                     <p data-i18n='qualities'>Qualities</p>
                 </div>
-				<table>
-					<tr>
-						<th data-i18n="quality">Quality</th>
-						<th data-i18n="notes">Notes</th>
-						<th data-i18n="type">Type</th>
-					</tr>
-				</table>
+
 				<fieldset class='repeating_qualities'>
-					<table>
-						<tr>
-							<td><input type='text' name='attr_qualityname'></td>
-							<td><input type='text' name='attr_qualitynote'></td>
-							<td><input type='text' name='attr_qualitytype'></td>
-						</tr>
-					</table>				
+					<input type='hidden' name='attr_qualityhide' class='sheet-hidestuff'>
+					<span class='sheet-qualityoutput' name='attr_qualityname'></span>
+					<input type='text' name='attr_qualityname' class='sheet-qualityinput'><input type='checkbox'  class='sheet-right' name='attr_qualityhide' data-i18n-place='qualityname' checked>
+					<textarea name='attr_qualitynote'  class='sheet-qualityinput' data-i18n-place='qualitynote'></textarea>					
 				</fieldset>
 			</div>
-			<div class='sheet-contacts'>
+			<div class='sheet-section sheet-contacts'>
                 <div class='sheet-headertext'>
                     <p data-i18n='contacts'>Contacts</p>
                 </div>
-				<table>
-					<tr>
-						<th data-i18n="name">Name</th>
-						<th data-i18n="loyalty">Loyalty</th>
-						<th data-i18n="connection">Connection</th>
-					</tr>
-				</table>
 				<fieldset class='repeating_contacts'>
-					<table>
-						<tr>
-							<td><input type='text' name='attr_contactname'></td>
-							<td><input type='text' name='attr_contactloyalty'></td>
-							<td><input type='text' name='attr_contactconnection'></td>
-						</tr>
-					</table>				
+						<input type='hidden' name='attr_contacthide' class='sheet-hidestuff'>
+						<p class='sheet-contactoutput'><span name='attr_contactname'></span>&nbsp;(C<span name='attr_contactloyalty'></span>/L<span name='attr_contactconnection'></span>)</p>
+						<input type='text' name='attr_contactname' class='sheet-contactinput'><input type='checkbox' name='attr_contacthide' data-i18n-place='contactname' checked class='sheet-right'>
+						<input type='number' name='attr_contactloyalty' class='sheet-contactinput'>
+						<input type='number' name='attr_contactconnection' class='sheet-contactinput'>
+						<textarea name='attr_contactnotes' class='sheet-contactinput'></textarea>
 				</fieldset>				
 			</div>
 		</div>    
@@ -463,7 +560,7 @@
     </div>
     <div class='sheet-2colrow'>
         <div class='sheet-col'>
-			<div class='sheet-rangedweapons'>
+			<div class='sheet-section sheet-rangedweapons'>
                 <div class='sheet-headertext'>
                     <p data-i18n='rangedweapons'>Ranged Weapons</p>
                 </div>
@@ -494,7 +591,7 @@
 					</table>				
 				</fieldset>				
 			</div>
-			<div class='sheet-armor'>
+			<div class='sheet-section sheet-armor'>
                 <div class='sheet-headertext'>
                     <p data-i18n='armor'>Armor</p>
                 </div>
@@ -515,7 +612,7 @@
 					</table>				
 				</fieldset>				
 			</div>
-						<div class='sheet-augmentations'>
+			<div class='sheet-section sheet-augmentations'>
                 <div class='sheet-headertext'>
                     <p data-i18n='augmentations'>Augmentations</p>
                 </div>
@@ -538,7 +635,7 @@
 					</table>				
 				</fieldset>				
 			</div>
-			<div class='sheet-gear'>
+			<div class='sheet-section sheet-gear'>
                 <div class='sheet-headertext'>
                     <p data-i18n='gear'>Gear</p>
                 </div>
@@ -552,14 +649,14 @@
 					<table>
 						<tr>
 							<td><input type='text' name='attr_gearitem'></td>
-							<td><input type='text' name='attr_gearrating'></td>
+							<td><input type='number' name='attr_gearrating'></td>
 						</tr>
 					</table>				
 				</fieldset>				
 			</div>			
 		</div>
 		<div class='sheet-col'>
-			<div class='sheet-meleeweapons'>
+			<div class='sheet-section sheet-meleeweapons'>
                 <div class='sheet-headertext'>
                     <p data-i18n='meleeweapons'>Melee Weapons</p>
                 </div>
@@ -580,17 +677,17 @@
 					</table>				
 				</fieldset>				
 			</div>
-			<div class='sheet-matrix'>
+			<div class='sheet-section sheet-matrix'>
                 <div class='sheet-headertext'>
                     <p data-i18n='matrixstats'>Matrix Stats</p>
                 </div>
 			</div>
-			<div class='sheet-vehicle'>
+			<div class='sheet-section sheet-vehicle'>
                 <div class='sheet-headertext'>
                     <p data-i18n='vehicle'>Vehicle</p>
                 </div>
 			</div>
-			<div class='sheet-spells'>
+			<div class='sheet-section sheet-spells'>
                 <div class='sheet-headertext'>
                     <p data-i18n='spellprepritform'>Spells/Preparations/Rituals/Complex Forms</p>
                 </div>

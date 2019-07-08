@@ -34,7 +34,7 @@
 "unarmed":"Unarmed",
 "defenserating":"Defense Rating",
 "skills":"Skills",
-"skill":"Type",
+"skill":"Skill",
 "idlifecurrency":"Ids/Lifestyles/Currency",
 "primarylife":"Primary Lifestyle",
 "nuyen":"Nuyen",
@@ -58,8 +58,8 @@
 "type":"Type",
 "contacts":"Contacts",
 "name":"Name",
-"loyalty":"Loyalty",
-"connection":"Connection",
+"loyalty":"LOY",
+"connection":"CON",
 "rangedweapons":"Ranged Weapons",
 "weapon":"Weapon",
 "armor":"Armor",
@@ -78,4 +78,9 @@
 "duration":"Duration",
 "drain":"Drain",
 "adeptpowers":"Adept Powers or Other Abilities",
-"level":"Level"}
+"level":"Level",
+"rank":"Rank",
+"attribute":"Attribute",
+"spec":"SPEC"
+"exp":"EXP"
+}
