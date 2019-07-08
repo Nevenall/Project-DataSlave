@@ -162,3 +162,7 @@ select,
 .sheet-right {
 	float: right;
 }
+
+.sheet-contactoutput {
+	display: inline;
+}
