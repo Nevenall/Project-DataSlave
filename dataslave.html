@@ -226,8 +226,8 @@
                 <fieldset class="repeating_skills">
 					<input type='hidden' name='attr_skillhide'>
 					<input type='hidden' name='attr_skilltype'>					
-					<p class='sheet-skilloutput'><span class='sheet-skill'>S </span><span class='sheet-spec'>* </span><span class='sheet-exp'>** </span><span name='attr_skillname'></span> (<span name='attr_skillattr'></span>)</p>
-				    <div class='sheet-flexcontainer sheet-fullwidth sheet-skillinput'>
+					<p class='sheet-hideoutput'><span class='sheet-skill'>S </span><span class='sheet-spec'>* </span><span class='sheet-exp'>** </span><span name='attr_skillname'></span> (<span name='attr_skillattr'></span>)</p>
+				    <div class='sheet-flexcontainer sheet-fullwidth sheet-hideinput'>
 					<input type='text' name='attr_skillname' class='sheet-flex'>
 					<input type='number' name='attr_skillrank'>
 					<select name='attr_skillattr'  class='sheet-inlinelabel'>
@@ -274,13 +274,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <label for='attr_nuyen' data-i18n='nuyen'>Nuyen</label>
-                            <input type='text' name='attr_nuyen'>
+                        <td class='sheet-flexcontainer'>
+                            <label for='attr_nuyen' data-i18n='nuyen' class='sheet-flex'>Nuyen</label>
+							<label for='attr_licenses' data-i18n='licenses' class='sheet-flex'>Licenses</label>
                         </td>
-                        <td>
-                            <label for='attr_licenses' data-i18n='licenses'>Licenses</label>
-                            <input type='text' name='attr_licenses'>
+                        <td class='sheet-flexcontainer'>
+							<input type='number' name='attr_nuyen' class='sheet-flex'>
+                            <input type='text' name='attr_licenses' class='sheet-flex'>
                         </td>
                     </tr>
                     <tr>
@@ -290,7 +290,9 @@
                     </tr>
                     <tr>
                         <td colspan='2'>
-                            <textarea name='attr_fakes'></textarea>
+							<fieldset class='repeating_fakes'>
+                            <input name='attr_fakes' class='sheet-fullwidth'>
+							</fieldset>
                         </td>
                     </tr>
                 </table>
@@ -532,9 +534,9 @@
 
 				<fieldset class='repeating_qualities'>
 					<input type='hidden' name='attr_qualityhide' class='sheet-hidestuff'>
-					<span class='sheet-qualityoutput' name='attr_qualityname'></span>
-					<input type='text' name='attr_qualityname' class='sheet-qualityinput'><input type='checkbox'  class='sheet-right' name='attr_qualityhide' data-i18n-place='qualityname' checked>
-					<textarea name='attr_qualitynote'  class='sheet-qualityinput' data-i18n-place='qualitynote'></textarea>					
+					<span class='sheet-hideoutput' name='attr_qualityname'></span>
+					<input type='text' name='attr_qualityname' class='sheet-hideinput'><input type='checkbox'  class='sheet-right' name='attr_qualityhide' data-i18n-place='qualityname' checked>
+					<textarea name='attr_qualitynote'  class='sheet-hideinput' data-i18n-place='qualitynote'></textarea>					
 				</fieldset>
 			</div>
 			<div class='sheet-section sheet-contacts'>
@@ -543,11 +545,11 @@
                 </div>
 				<fieldset class='repeating_contacts'>
 						<input type='hidden' name='attr_contacthide' class='sheet-hidestuff'>
-						<p class='sheet-contactoutput'><span name='attr_contactname'></span>&nbsp;(C<span name='attr_contactloyalty'></span>/L<span name='attr_contactconnection'></span>)</p>
-						<input type='text' name='attr_contactname' class='sheet-contactinput'><input type='checkbox' name='attr_contacthide' data-i18n-place='contactname' checked class='sheet-right'>
-						<input type='number' name='attr_contactloyalty' class='sheet-contactinput' value=0>
-						<input type='number' name='attr_contactconnection' class='sheet-contactinput' value=0>
-						<textarea name='attr_contactnotes' class='sheet-contactinput' data-i18n-place='contactnotes'></textarea>
+						<p class='sheet-hideoutput'><span name='attr_contactname'></span>&nbsp;(C<span name='attr_contactloyalty'></span>/L<span name='attr_contactconnection'></span>)</p>
+						<input type='text' name='attr_contactname' class='sheet-hideinput'><input type='checkbox' name='attr_contacthide' data-i18n-place='contactname' checked class='sheet-right'>
+						<input type='number' name='attr_contactloyalty' class='sheet-hideinput' value=0>
+						<input type='number' name='attr_contactconnection' class='sheet-hideinput' value=0>
+						<textarea name='attr_contactnotes' class='sheet-hideinput' data-i18n-place='contactnotes'></textarea>
 				</fieldset>				
 			</div>
 		</div>    
@@ -563,31 +565,22 @@
                 <div class='sheet-headertext'>
                     <p data-i18n='rangedweapons'>Ranged Weapons</p>
                 </div>
-				<table>
-					<tr>
-						<th data-i18n="weapon">Weapon</th>
-						<th data-i18n="dv">DV</th>
-						<th data-i18n="mode">Mode</th>
-						<th data-i18n="close">Close</th>
-						<th data-i18n="near">Near</th>
-						<th data-i18n="far">Far</th>
-						<th data-i18n="extreme">Extreme</th>
-						<th data-i18n="ammo">Ammo</th>						
-					</tr>
-				</table>
 				<fieldset class='repeating_rangedweapons'>
-					<table>
+					<input class='sheet-hidestuff' name='attr_rangedhide'>
+					<p class='sheet-hideoutput'><span name='attr_rangedweaponname'></span> (<span name='attr_rangedweaponclose'></span>/<span name='attr_rangedweaponnear'></span>/<span name='attr_rangedweaponfar'></span>/<span name='attr_rangedweaponextreme'></span>) [<span name='attr_rangedweapondv'></span>]</p>
+					<table class='sheet-hideinput'>
 						<tr>
 							<td><input type='text' name='attr_rangedweaponname'></td>
 							<td><input type='text' name='attr_rangedweapondv'></td>
 							<td><input type='text' name='attr_rangedweaponmode'></td>
-							<td><input type='text' name='attr_rangedweaponclose'></td>
-							<td><input type='text' name='attr_rangedweaponnear'></td>
-							<td><input type='text' name='attr_rangedweaponfar'></td>
-							<td><input type='text' name='attr_rangedweaponextreme'></td>
-							<td><input type='text' name='attr_rangedweaponammo'></td>							
+							<td><input type='number' name='attr_rangedweaponclose'></td>
+							<td><input type='number' name='attr_rangedweaponnear'></td>
+							<td><input type='number' name='attr_rangedweaponfar'></td>
+							<td><input type='number' name='attr_rangedweaponextreme'></td>
+							<td><input type='text' name='attr_rangedweaponammo'></td>
 						</tr>
-					</table>				
+					</table>
+					<input type='checkbox' name='attr_rangedhide'>					
 				</fieldset>				
 			</div>
 			<div class='sheet-section sheet-armor'>

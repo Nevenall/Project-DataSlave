@@ -149,23 +149,16 @@ select,
 .sheet-numtag {
 	width: 3.5em;
 }
-.sheet-skillinput,
-.sheet-contactoutput,
-.sheet-qualityoutput {
+.sheet-hideoutput {
 	font-family: Njord;
 	font-weight: bold;
 }
-.sheet-hidestuff[value='on'] ~ .sheet-skilloutput,
-.sheet-skillinput,
-.sheet-hidestuff[value='on'] ~ .sheet-contactoutput,
-.sheet-contactinput,
-.sheet-hidestuff[value='on'] ~ .sheet-qualityoutput,
-.sheet-qualityinput {
+
+.sheet-hidestuff[value='on'] ~ .sheet-hideoutput,
+.sheet-hideinput {
 	display: none;
 }
-.sheet-hidestuff[value='on'] ~ .sheet-skillinput,
-.sheet-hidestuff[value='on'] ~ .sheet-qualityinput,
-.sheet-hidestuff[value='on'] ~ .sheet-contactinput {
+.sheet-hidestuff[value='on'] ~ .sheet-hideinput {
 	display: inline;
 }
 .sheet-right {
