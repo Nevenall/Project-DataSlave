@@ -85,7 +85,7 @@
                             <input type='number' name='attr_agility' min=0>					
                         </td>
                         <td>
-                            <label for='attr_magic' data-i18n='magic'>Essence</label>
+                            <label for='attr_magic' data-i18n='magic'></label>
                         </td>
                         <td>
                             <input type='number' name='attr_magic' min=0>					
@@ -93,13 +93,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_reaction' data-i18n='reaction'>Body</label>			
+                            <label for='attr_reaction' data-i18n='reaction'></label>			
                         </td>
                         <td>
                             <input type='number' name='attr_reaction' min=0>					
                         </td>
                         <td>
-                            <label for='attr_initiative' data-i18n='initiative'>Essence</label>
+                            <label for='attr_initiative' data-i18n='initiative'></label>
                         </td>
                         <td>
                             <input type='number' name='attr_initiative' min=0>					
@@ -107,13 +107,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_strength' data-i18n='strength'>Body</label>			
+                            <label for='attr_strength' data-i18n='strength'></label>			
                         </td>
                         <td>
                             <input type='number' name='attr_strength' min=0>					
                         </td>
                         <td>
-                            <label for='attr_matrix-initiative' data-i18n='matrix-initiative'>Essence</label>
+                            <label for='attr_matrix-initiative' data-i18n='matrix-initiative'></label>
                         </td>
                         <td>
                             <input type='number' name='attr_matrix-initiative' min=0>					
@@ -121,13 +121,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_willpower' data-i18n='willpower'>Body</label>			
+                            <label for='attr_willpower' data-i18n='willpower'></label>			
                         </td>
                         <td>
                             <input type='number' name='attr_willpower' min=0>					
                         </td>
                         <td>
-                            <label for='attr_astral-initiative' data-i18n='astral-initiative'>Essence</label>
+                            <label for='attr_astral-initiative' data-i18n='astral-initiative'></label>
                         </td>
                         <td>
                             <input type='number' name='attr_astral-initiative' min=0>					
@@ -135,13 +135,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_logic' data-i18n='logic'>Body</label>			
+                            <label for='attr_logic' data-i18n='logic'></label>			
                         </td>
                         <td>
                             <input type='number' name='attr_logic' min=0>					
                         </td>
                         <td>
-                            <label for='attr_composure' data-i18n='composure'>Essence</label>
+                            <label for='attr_composure' data-i18n='composure'></label>
                         </td>
                         <td>
                             <input type='number' name='attr_composure' min=0>					
@@ -223,17 +223,11 @@
                 <div class='sheet-headertext'>
                     <p data-i18n='skills'>Skills</p>
                 </div>
-				<div class='sheet-flexcontainer'>
-					<span data-i18n='skill' class='sheet-flex sheet-tablehead'>Skill</span>
-					<span data-i18n='rank' class='sheet-numtag sheet-tablehead'>Rank</span>
-					<span data-i18n='attribute' class='sheet-tablehead'>Attribute</span>
-					<span data-i18n='type' class='sheet-numtag sheet-tablehead'>Type</span>
-				</div>
                 <fieldset class="repeating_skills">
 					<input type='hidden' name='attr_skillhide'>
 					<input type='hidden' name='attr_skilltype'>					
-					<p class='sheet-skilloutput'><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><span name='attr_skillname'></span> (<span name='attr_skillattr'></span>)</p>
-				    <div class='sheet-flexcontainer sheet-fullwidth'>
+					<p class='sheet-skilloutput'><span class='sheet-skill'>S </span><span class='sheet-spec'>* </span><span class='sheet-exp'>** </span><span name='attr_skillname'></span> (<span name='attr_skillattr'></span>)</p>
+				    <div class='sheet-flexcontainer sheet-fullwidth sheet-skillinput'>
 					<input type='text' name='attr_skillname' class='sheet-flex'>
 					<input type='number' name='attr_skillrank'>
 					<select name='attr_skillattr'  class='sheet-inlinelabel'>
@@ -264,11 +258,13 @@
 									<option value='spec' data-i18n='spec'></option>
 									<option value='exp' data-i18n='exp'></option>
 								</select>
+					</div>
+					<input type='checkbox' name='attr_skillhide' checked>
                 </fieldset>
             </div>
             <div class='sheet-section sheet-lifestyles'>
                 <div class='sheet-headertext'>
-                    <p data-i18n='idlifecurrency'>Ids/Lifestyles/Currency</p>
+                    <p data-i18n='idlifecurrency'>Id<sub>s</sub>/Lifestyles/Currency</p>
                 </div>
                 <table>
                     <tr>
