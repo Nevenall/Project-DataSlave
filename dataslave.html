@@ -230,31 +230,34 @@
 					<span data-i18n='type' class='sheet-numtag sheet-tablehead'>Type</span>
 				</div>
                 <fieldset class="repeating_skills">
+					<input type='hidden' name='attr_skillhide'>
+					<input type='hidden' name='attr_skilltype'>					
+					<p class='sheet-skilloutput'><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><span name='attr_skillname'></span> (<span name='attr_skillattr'></span>)</p>
 				    <div class='sheet-flexcontainer sheet-fullwidth'>
 					<input type='text' name='attr_skillname' class='sheet-flex'>
 					<input type='number' name='attr_skillrank'>
 					<select name='attr_skillattr'  class='sheet-inlinelabel'>
-                                    <option value='body' data-i18n='body'>Body</option>
-                                    <option value='essence' data-i18n='essence'>Body</option>
-                                    <option value='agility' data-i18n='agility'>Body</option>
-                                    <option value='magic' data-i18n='magic'>Body</option>
-                                    <option value='reaction' data-i18n='reaction'>Body</option>
-                                    <option value='initiative' data-i18n='initiative'>Body</option>
-                                    <option value='strength' data-i18n='strength'>Body</option>
-                                    <option value='matrix-initiative' data-i18n='matrix-initiative'>Body</option>
-                                    <option value='willpower' data-i18n='willpower'>Body</option>
-                                    <option value='astral-initiative' data-i18n='astral-initiative'>Body</option>
-                                    <option value='logic' data-i18n='logic'>Body</option>
-                                    <option value='composure' data-i18n='composure'>Body</option>
-                                    <option value='intuition' data-i18n='intuition'>Body</option>
-                                    <option value='judge-intentions' data-i18n='judge-intentions'>Body</option>
-                                    <option value='charisma' data-i18n='charisma'>Body</option>
-                                    <option value='memory' data-i18n='memory'>Body</option>
-                                    <option value='edge' data-i18n='edge'>Body</option>
-                                    <option value='lift-carry' data-i18n='lift-carry'>Body</option>
-                                    <option value='movement' data-i18n='movement'>Body</option>
-                                    <option value='unarmed' data-i18n='unarmed'>Body</option>
-                                    <option value='defenserating' data-i18n='defenserating'>Body</option>
+                                    <option value='body' data-i18n='body'></option>
+                                    <option value='essence' data-i18n='essence'></option>
+                                    <option value='agility' data-i18n='agility'></option>
+                                    <option value='magic' data-i18n='magic'></option>
+                                    <option value='reaction' data-i18n='reaction'></option>
+                                    <option value='initiative' data-i18n='initiative'></option>
+                                    <option value='strength' data-i18n='strength'></option>
+                                    <option value='matrix-initiative' data-i18n='matrix-initiative'></option>
+                                    <option value='willpower' data-i18n='willpower'></option>
+                                    <option value='astral-initiative' data-i18n='astral-initiative'></option>
+                                    <option value='logic' data-i18n='logic'></option>
+                                    <option value='composure' data-i18n='composure'></option>
+                                    <option value='intuition' data-i18n='intuition'></option>
+                                    <option value='judge-intentions' data-i18n='judge-intentions'></option>
+                                    <option value='charisma' data-i18n='charisma'></option>
+                                    <option value='memory' data-i18n='memory'></option>
+                                    <option value='edge' data-i18n='edge'></option>
+                                    <option value='lift-carry' data-i18n='lift-carry'></option>
+                                    <option value='movement' data-i18n='movement'></option>
+                                    <option value='unarmed' data-i18n='unarmed'></option>
+                                    <option value='defenserating' data-i18n='defenserating'></option>
                                 </select>
 								<select name='attr_skilltype'>
 									<option value='skill' data-i18n='skill'></option>
@@ -546,9 +549,9 @@
 						<input type='hidden' name='attr_contacthide' class='sheet-hidestuff'>
 						<p class='sheet-contactoutput'><span name='attr_contactname'></span>&nbsp;(C<span name='attr_contactloyalty'></span>/L<span name='attr_contactconnection'></span>)</p>
 						<input type='text' name='attr_contactname' class='sheet-contactinput'><input type='checkbox' name='attr_contacthide' data-i18n-place='contactname' checked class='sheet-right'>
-						<input type='number' name='attr_contactloyalty' class='sheet-contactinput'>
-						<input type='number' name='attr_contactconnection' class='sheet-contactinput'>
-						<textarea name='attr_contactnotes' class='sheet-contactinput'></textarea>
+						<input type='number' name='attr_contactloyalty' class='sheet-contactinput' value=0>
+						<input type='number' name='attr_contactconnection' class='sheet-contactinput' value=0>
+						<textarea name='attr_contactnotes' class='sheet-contactinput' data-i18n-place='contactnotes'></textarea>
 				</fieldset>				
 			</div>
 		</div>    

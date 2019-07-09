@@ -8,6 +8,11 @@
 	src: url("https://shadowrequiem.com/tempshare/AmpCB.otf");
 }
 
+.sheet-page {
+	background: url("https://shadowrequiem.com/tempshare/sheetback.png");
+	/* background: url("https://www.github.com/EtoileLion/Project-Dataslave/blob/master/images/sheetback.png?raw=true"); */
+}
+
 .sheet-header input {
 	text-align: right;
 	border: none;
