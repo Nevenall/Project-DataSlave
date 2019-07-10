@@ -224,13 +224,13 @@
                     <p data-i18n='skills'>Skills</p>
                 </div>
                 <fieldset class="repeating_skills">
-					<input type='hidden' name='attr_skillhide'>
-					<input type='hidden' name='attr_skilltype'>					
-					<p class='sheet-hideoutput'><span class='sheet-skill'>S </span><span class='sheet-spec'>* </span><span class='sheet-exp'>** </span><span name='attr_skillname'></span> (<span name='attr_skillattr'></span>)</p>
-				    <div class='sheet-flexcontainer sheet-fullwidth sheet-hideinput'>
-					<input type='text' name='attr_skillname' class='sheet-flex'>
-					<input type='number' name='attr_skillrank'>
-					<select name='attr_skillattr'  class='sheet-inlinelabel'>
+					<input type='hidden' name='attr_skillhide' class='sheet-hidestuff'>
+					<input type='hidden' name='attr_skilltype' class='sheet-skilltype'>					
+					<p class='sheet-hideoutput sheet-il'><span class='sheet-skill'>S </span><span class='sheet-spec'>* </span><span class='sheet-exp'>** </span><span name='attr_skillname'></span> (<span name='attr_skillattr'></span>)</p>
+				    <div class='sheet-flexcontainer sheet-fullwidth'>
+					<input type='text' name='attr_skillname' class='sheet-flex sheet-hideinput'>
+					<input type='number' name='attr_skillrank sheet-hideinput'>
+					<select name='attr_skillattr'  class='sheet-inlinelabel sheet-hideinput'>
                                     <option value='body' data-i18n='body'></option>
                                     <option value='essence' data-i18n='essence'></option>
                                     <option value='agility' data-i18n='agility'></option>
@@ -253,20 +253,21 @@
                                     <option value='unarmed' data-i18n='unarmed'></option>
                                     <option value='defenserating' data-i18n='defenserating'></option>
                                 </select>
-								<select name='attr_skilltype'>
+								<select name='attr_skilltype sheet-hideinput'>
 									<option value='skill' data-i18n='skill'></option>
 									<option value='spec' data-i18n='spec'></option>
 									<option value='exp' data-i18n='exp'></option>
 								</select>
+								<input type='checkbox' name='attr_skillhide' class='sheet-right' checked>
 					</div>
-					<input type='checkbox' name='attr_skillhide' checked>
+					
                 </fieldset>
             </div>
             <div class='sheet-section sheet-lifestyles'>
                 <div class='sheet-headertext'>
                     <p data-i18n='idlifecurrency'>Id<sub>s</sub>/Lifestyles/Currency</p>
                 </div>
-                <table>
+                <table class='sheet-fullwidth'>
                     <tr>
                         <td colspan='2'>
                             <label for='attr_primarylife' data-i18n='primarylife'>Primary Lifestyle</label>
@@ -545,7 +546,7 @@
                 </div>
 				<fieldset class='repeating_contacts'>
 						<input type='hidden' name='attr_contacthide' class='sheet-hidestuff'>
-						<p class='sheet-hideoutput'><span name='attr_contactname'></span>&nbsp;(C<span name='attr_contactloyalty'></span>/L<span name='attr_contactconnection'></span>)</p>
+						<p class='sheet-hideoutput sheet-il'><span name='attr_contactname'></span>&nbsp;(C<span name='attr_contactloyalty'></span>/L<span name='attr_contactconnection'></span>)</p>
 						<input type='text' name='attr_contactname' class='sheet-hideinput'><input type='checkbox' name='attr_contacthide' data-i18n-place='contactname' checked class='sheet-right'>
 						<input type='number' name='attr_contactloyalty' class='sheet-hideinput' value=0>
 						<input type='number' name='attr_contactconnection' class='sheet-hideinput' value=0>
