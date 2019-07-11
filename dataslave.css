@@ -209,11 +209,10 @@ th,
 	font-family: AmpCB;
 	margin-bottom: unset;
 }
-
+.sheet-il,
 .sheet-ghostlabel {
 	display: inline;
 }
-
 .sheet-flexcontainer {
 	display: flex;
 }
@@ -336,14 +335,12 @@ select,
 .sheet-skilltype[value="skill"] ~ .sheet-hideoutput .sheet-skill,
 .sheet-skilltype[value="spec"] ~ .sheet-hideoutput .sheet-spec,
 .sheet-skilltype[value="exp"] ~ .sheet-hideoutput .sheet-exp,
-.sheet-hidestuff[value='on'] ~ .sheet-hideinput {
+.sheet-hidestuff[value='on'] ~ .sheet-hideinput,
+.sheet-hidestuff[value='on'] ~ .sheet-flexcontainer .sheet-hideinput {
 	display: inline;
 }
 .sheet-right {
 	float: right;
 }
 
-.sheet-il {
-	display: inline;
-}
 
