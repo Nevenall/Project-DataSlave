@@ -117,7 +117,7 @@
                             <input type='number' value="1" name='attr_reaction' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='%{template:shadowsum} {{roll=[[@{initiative}+?{Dice Pool Modifier|0}d6]]}}'><label for='attr_initiative' data-i18n='initiative'></label></button>
+                            <button  type='roll' value='&{template:shadowsum} {{attr=Initiative}} {{roll=[[[[@{initiative}+?{Dice Pool Modifier|0}]]d6]]}}'><label for='attr_initiative' data-i18n='initiative'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_initiative' min=0>					
@@ -131,7 +131,7 @@
                             <input type='number' value="1" name='attr_strength' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='%{template:shadowsum} {{roll=[[@{matrix-initiative}+?{Dice Pool Modifier|0}d6]]}}'><label for='attr_matrix-initiative' data-i18n='matrix-initiative'></label></button>
+                            <button  type='roll' value='&{template:shadowsum} {{attr=Matrix Initiative}} {{roll=[[[[@{matrix-initiative}+?{Dice Pool Modifier|0}]]d6]]}}'><label for='attr_matrix-initiative' data-i18n='matrix-initiative'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_matrix-initiative' min=0>					
@@ -145,7 +145,7 @@
                             <input type='number' value="1" name='attr_willpower' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='%{template:shadowsum} {{roll=[[@{astral-initiative}+?{Dice Pool Modifier|0}d6]]}}'><label for='attr_astral-initiative' data-i18n='astral-initiative'></label></button>
+                            <button  type='roll' value='&{template:shadowsum} {{attr=Astral Initiative}} {{roll=[[[[@{astral-initiative}+?{Dice Pool Modifier|0}]]d6]]}}'><label for='attr_astral-initiative' data-i18n='astral-initiative'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_astral-initiative' min=0>					
@@ -956,6 +956,20 @@
 			<span class='sheet-rolltemplate-result-critglitch'>
 				Critical Glitch
 			</span>
+			</td>
+		</tr>
+	</table>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-shadowsum">
+	<table>
+		<tr>
+			<td class='sheet-rolltemplate-byline'>
+			 {{attr}}
+			</td>
+		</tr>
+		<tr>
+			<td class='sheet-rolltemplate-dieline'>
+			  {{roll}}
 			</td>
 		</tr>
 	</table>

@@ -11,6 +11,7 @@
 .sheet-page {
 	display: none;
 }
+.sheet-rolltemplate-shadowsum,
 .sheet-rolltemplate-shadowtest,
 .sheet-bg {
 	background: url("https://shadowrequiem.com/tempshare/sheetback.png");
@@ -458,8 +459,10 @@ select,
 .sheet-taleft {
 	text-align: left !important;
 }
+.sheet-rolltemplate-shadowsum table,
 .sheet-rolltemplate-shadowtest table {
-	border: 2px solid #800d6d;	
+	border: 2px solid #800d6d;
+    border-radius: 5px;	
 	padding: 7px;
 	font-family: AmpCB;
 	text-align: center;
