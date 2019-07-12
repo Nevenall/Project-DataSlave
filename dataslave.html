@@ -1,11 +1,29 @@
 <!--- Project Dataslave --->
 <!--- Version 0.1 Alpha --->
 <!--- By EtoileLion --->
-<input type='hidden' name='attr_sheetpage' value='1'>
+<div class='sheet-bg'>
+<input type='hidden' name='attr_sheetpage' class='sheet-sheetpage' value='1'>
 <div class='sheet-page sheet-page1'>
     <div class='sheet-header'>
         <input type='text' name='attr_character_name'>
     </div>
+	<div class='sheet-pagetogglediv'>	
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage'  type='radio' value="1" checked>
+			<span class="sheet-pfradio">1
+			</span>
+		</label>
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="2" >
+			<span class="sheet-pfradio">2
+			</span>		
+		</label>
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="3" >
+			<span class="sheet-pfradio">3
+			</span>		
+		</label>			
+	</div>	
     <div class='sheet-2colrow'>
         <div class='sheet-col'>
             <div class='sheet-section sheet-personaldata'>
@@ -13,48 +31,48 @@
                     <p data-i18n='personaldata'>Personal Data</p>
                 </div>
                     <div class='sheet-flexcontainer'>
-                            <label for='adiviv_namealias' data-i18n='namealias' class='sheet-flex'>NAME/PRIMARY ALIAS</label>
+                            <label for='attr_namealias' data-i18n='namealias' class='sheet-flex'>NAME/PRIMARY ALIAS</label>
 					</div>
 						<div class='sheet-flexcontainer'>
-                            <input type='text' name='adiviv_namealias' class='sheet-flex'>
+                            <input type='text' name='attr_namealias' class='sheet-flex'>
                         </div>
                         <div class='sheet-flexcontainer'>
-                            <label for='adiviv_metatype' data-i18n='metatype' class='sheet-flex'>Metatype</label>
-							<label for='adiviv_ethnicity' data-i18n='ethnicity' class='sheet-flex'>Ethnicity</label>
+                            <label for='attr_metatype' data-i18n='metatype' class='sheet-flex'>Metatype</label>
+							<label for='attr_ethnicity' data-i18n='ethnicity' class='sheet-flex'>Ethnicity</label>
                         </div>
                         <div class='sheet-flexcontainer'>
-                            <input type='text' name='adiviv_metatype' class='sheet-flex'>
-                            <input type='text' name='adiviv_ethnicity' class='sheet-flex'>
+                            <input type='text' name='attr_metatype' class='sheet-flex'>
+                            <input type='text' name='attr_ethnicity' class='sheet-flex'>
                         </div>
                         <div class='sheet-flexcontainer'>
-                            <label for='adiviv_age' data-i18n='age' class='sheet-flex'>Age</label>
-							<label for='adiviv_sex' data-i18n='sex' class='sheet-flex'>Sex</label>
-							<label for='adiviv_height' data-i18n='charheight' class='sheet-flex'>Height</label>
-                            <label for='adiviv_weight' data-i18n='charweight' class='sheet-flex'>Weight</label>
+                            <label for='attr_age' data-i18n='age' class='sheet-flex'>Age</label>
+							<label for='attr_sex' data-i18n='sex' class='sheet-flex'>Sex</label>
+							<label for='attr_height' data-i18n='charheight' class='sheet-flex'>Height</label>
+                            <label for='attr_weight' data-i18n='charweight' class='sheet-flex'>Weight</label>
 
                         </div>
                         <div class='sheet-flexcontainer'>
-                            <input type='text' name='adiviv_age' class='sheet-flex'>					
-                            <input type='text' name='adiviv_sex' class='sheet-flex'>	
-							<input type='text' name='adiviv_height' class='sheet-flex'>
-							<input type='text' name='adiviv_weight' class='sheet-flex'>							
+                            <input type='text' name='attr_age' class='sheet-flex'>					
+                            <input type='text' name='attr_sex' class='sheet-flex'>	
+							<input type='text' name='attr_height' class='sheet-flex'>
+							<input type='text' name='attr_weight' class='sheet-flex'>							
                         </div>                        
                         <div class='sheet-flexcontainer'>
-                            <label for='adiviv_reputation' data-i18n='reputation' class='sheet-flex'>Reputation</label>
-							<label for='adiviv_heat' data-i18n='heat' class='sheet-flex'>Heat</label>
+                            <label for='attr_reputation' data-i18n='reputation' class='sheet-flex'>Reputation</label>
+							<label for='attr_heat' data-i18n='heat' class='sheet-flex'>Heat</label>
                             
                         </div>
                         <div class='sheet-flexcontainer'>
-                            <input type='text' name='adiviv_reputation' class='sheet-flex'>
-                            <input type='text' name='adiviv_heat' class='sheet-flex'>
+                            <input type='text' name='attr_reputation' class='sheet-flex'>
+                            <input type='text' name='attr_heat' class='sheet-flex'>
                         </div>
                         <div class='sheet-flexcontainer'>						
-                            <label for='adiviv_karma' data-i18n='karma' class='sheet-flex'>Karma</label>                            					
-							<label for='adiviv_miscpersonal' data-i18n='misc' class='sheet-flex'>Misc</label>
+                            <label for='attr_karma' data-i18n='karma' class='sheet-flex'>Karma</label>                            					
+							<label for='attr_miscpersonal' data-i18n='misc' class='sheet-flex'>Misc</label>
                         </div>
                         <div class='sheet-flexcontainer'>                            
-							<input type='text' name='adiviv_karma' class='sheet-flex'>
-                            <input type='text' name='adiviv_miscpersonal' class='sheet-flex'>					
+							<input type='text' name='attr_karma' class='sheet-flex'>
+                            <input type='text' name='attr_miscpersonal' class='sheet-flex'>					
                         </div>
 
             </div>
@@ -65,13 +83,13 @@
                 <table>
                     <tr>
                         <td>
-                            <label for='attr_body' data-i18n='body'>Body</label>			
+                            <button  type='roll' value='!shadowtest @{body}|0|?{Dice Pool Modifier|0}|Body||@{character_name}'><label for='attr_body' data-i18n='body'>Body</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_body' min=0>					
                         </td>
                         <td>
-                            <label for='attr_essence' data-i18n='essence'>Essence</label>
+                            <button  type='roll' value='!shadowtest @{essence}|0|?{Dice Pool Modifier|0}|Essence||@{character_name}'><label for='attr_essence' data-i18n='essence'>Essence</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_essence' min=0>					
@@ -79,13 +97,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_agility' data-i18n='agility'>Agility</label>			
+                            <button  type='roll' value='!shadowtest @{agility}|0|?{Dice Pool Modifier|0}|Agility||@{character_name}'><label for='attr_agility' data-i18n='agility'>Agility</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_agility' min=0>					
                         </td>
                         <td>
-                            <label for='attr_magic' data-i18n='magic'></label>
+                            <button  type='roll' value='!shadowtest @{magic}|0|?{Dice Pool Modifier|0}|Magic||@{character_name}'><label for='attr_magic' data-i18n='magic'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_magic' min=0>					
@@ -93,13 +111,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_reaction' data-i18n='reaction'></label>			
+                            <button  type='roll' value='!shadowtest @{reaction}|0|?{Dice Pool Modifier|0}|Reaction||@{character_name}'><label for='attr_reaction' data-i18n='reaction'></label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_reaction' min=0>					
                         </td>
                         <td>
-                            <label for='attr_initiative' data-i18n='initiative'></label>
+                            <button  type='roll' value='%{template:shadowsum} {{roll=[[@{initiative}+?{Dice Pool Modifier|0}d6]]}}'><label for='attr_initiative' data-i18n='initiative'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_initiative' min=0>					
@@ -107,13 +125,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_strength' data-i18n='strength'></label>			
+                            <button  type='roll' value='!shadowtest @{strength}|0|?{Dice Pool Modifier|0}|Strength||@{character_name}'><label for='attr_strength' data-i18n='strength'></label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_strength' min=0>					
                         </td>
                         <td>
-                            <label for='attr_matrix-initiative' data-i18n='matrix-initiative'></label>
+                            <button  type='roll' value='%{template:shadowsum} {{roll=[[@{matrix-initiative}+?{Dice Pool Modifier|0}d6]]}}'><label for='attr_matrix-initiative' data-i18n='matrix-initiative'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_matrix-initiative' min=0>					
@@ -121,13 +139,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_willpower' data-i18n='willpower'></label>			
+                            <button  type='roll' value='!shadowtest @{willpower}|0|?{Dice Pool Modifier|0}|Willpower||@{character_name}'><label for='attr_willpower' data-i18n='willpower'></label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_willpower' min=0>					
                         </td>
                         <td>
-                            <label for='attr_astral-initiative' data-i18n='astral-initiative'></label>
+                            <button  type='roll' value='%{template:shadowsum} {{roll=[[@{astral-initiative}+?{Dice Pool Modifier|0}d6]]}}'><label for='attr_astral-initiative' data-i18n='astral-initiative'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_astral-initiative' min=0>					
@@ -135,13 +153,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_logic' data-i18n='logic'></label>			
+                            <button  type='roll' value='!shadowtest @{logic}|0|?{Dice Pool Modifier|0}|Logic||@{character_name}'><label for='attr_logic' data-i18n='logic'></label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_logic' min=0>					
                         </td>
                         <td>
-                            <label for='attr_composure' data-i18n='composure'></label>
+                            <button  type='roll' value='!shadowtest @{composure}|0|?{Dice Pool Modifier|0}|Composure||@{character_name}'><label for='attr_composure' data-i18n='composure'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_composure' min=0>					
@@ -149,13 +167,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_intuition' data-i18n='intuition'>intuition</label>			
+                            <button  type='roll' value='!shadowtest @{intuition}|0|?{Dice Pool Modifier|0}|Intuition||@{character_name}'><label for='attr_intuition' data-i18n='intuition'>intuition</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_intuition' min=0>					
                         </td>
                         <td>
-                            <label for='attr_judge-intentions' data-i18n='judge-intentions'>judge-intentions</label>
+                            <button  type='roll' value='!shadowtest @{judge-intentions}|0|?{Dice Pool Modifier|0}|Judge Intentions||@{character_name}'><label for='attr_judge-intentions' data-i18n='judge-intentions'>judge-intentions</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_judge-intentions' min=0>					
@@ -163,13 +181,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_charisma' data-i18n='charisma'>charisma</label>			
+                            <button  type='roll' value='!shadowtest @{charisma}|0|?{Dice Pool Modifier|0}|Charisma||@{character_name}'><label for='attr_charisma' data-i18n='charisma'>charisma</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_charisma' min=0>					
                         </td>
                         <td>
-                            <label for='attr_memory' data-i18n='memory'>memory</label>
+                            <button  type='roll' value='!shadowtest @{memory}|0|?{Dice Pool Modifier|0}|Memory||@{character_name}'><label for='attr_memory' data-i18n='memory'>memory</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_memory' min=0>					
@@ -177,13 +195,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_edge' data-i18n='edge'>edge</label>			
+                            <button  type='roll' value='!shadowtest @{edge}|0|?{Dice Pool Modifier|0}|Edge||@{character_name}'><label for='attr_edge' data-i18n='edge'>edge</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_edge' min=0>					
                         </td>
                         <td>
-                            <label for='attr_lift-carry' data-i18n='lift-carry'>lift-carry</label>
+                            <button  type='roll' value='!shadowtest @{lift-carry}|0|?{Dice Pool Modifier|0}|Lift/Carry||@{character_name}'><label for='attr_lift-carry' data-i18n='lift-carry'>lift-carry</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_lift-carry' min=0>					
@@ -191,13 +209,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_edgepoints' data-i18n='edgepoints'>edgepoints</label>			
+                            <button  type='roll' value='!shadowtest @{edgepoints}|0|?{Dice Pool Modifier|0}|Edge Points||@{character_name}'><label for='attr_edgepoints' data-i18n='edgepoints'>edgepoints</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_edgepoints' min=0>					
                         </td>
                         <td>
-                            <label for='attr_movement' data-i18n='movement'>movement</label>
+                            <button  type='roll' value='!shadowtest @{movement}|0|?{Dice Pool Modifier|0}|Movement||@{character_name}'><label for='attr_movement' data-i18n='movement'>movement</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_movement' min=0>					
@@ -205,13 +223,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for='attr_unarmed' data-i18n='unarmed'>unarmed</label>			
+                            <button  type='roll' value='!shadowtest @{unarmed}|0|?{Dice Pool Modifier|0}|Unarmed||@{character_name}'><label for='attr_unarmed' data-i18n='unarmed'>unarmed</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_unarmed' min=0>					
                         </td>
                         <td>
-                            <label for='attr_defenserating' data-i18n='defenserating'>defenserating</label>
+                            <button  type='roll' value='!shadowtest @{defenserating}|0|?{Dice Pool Modifier|0}|Defense Rating||@{character_name}'><label for='attr_defenserating' data-i18n='defenserating'>defenserating</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_defenserating' min=0>					
@@ -225,11 +243,14 @@
                 </div>
                 <fieldset class="repeating_skills">
 					<input type='hidden' name='attr_skillhide' class='sheet-hidestuff' value='on'>
-					<input type='hidden' name='attr_skilltype' class='sheet-skilltype' value='skill'>					
-					<p class='sheet-hideoutput sheet-il'><span name='attr_skillname'></span> (<span name='attr_skillattr'></span>) <span class='sheet-skill'>S</span><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><input type='checkbox' name='attr_skillhide' class='sheet-right' checked></p>
+					<input type='hidden' name='attr_skilltype' class='sheet-skilltype' value='skill'>
+					<table class='hideoutput fullwidth'><tr><td>
+					<button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|?{Dice Pool Modifier|0}|@{skillattr}|@{skillname}|@{character_name}' class='sheet-il sheet-hideoutput'><span name='attr_skillname'></span></button></td><td><p class='sheet-hideoutput sheet-flexcontainer'> (<span name='attr_skillattr'></span>) <span class='sheet-skill'>S</span><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><input type='checkbox' name='attr_skillhide' class='sheet-right sheet-il' checked></p></td></tr></table>
 				    <div class='sheet-flexcontainer sheet-fullwidth'>
 					<input type='text' name='attr_skillname' class='sheet-flex sheet-hideinput'>
 					<input type='number' name='attr_skillrank' class='sheet-hideinput'>
+					<input type='hidden' name='attr_skillattrvalue' value='0'>
+					<input type='hidden' name='attr_skillrankhidden' value='0'>
 					<select name='attr_skillattr'  class='sheet-inlinelabel sheet-hideinput'>
                                     <option value='body' data-i18n='body'></option>
                                     <option value='essence' data-i18n='essence'></option>
@@ -254,9 +275,9 @@
                                     <option value='defenserating' data-i18n='defenserating'></option>
                                 </select>
 								<select name='attr_skilltype' class=' sheet-hideinput'>
-									<option value='skill' data-i18n='skill'></option>
-									<option value='spec' data-i18n='spec'></option>
-									<option value='exp' data-i18n='exp'></option>
+									<option value='0' data-i18n='skill'></option>
+									<option value='2' data-i18n='spec'></option>
+									<option value='3' data-i18n='exp'></option>
 								</select>
 								<input type='checkbox' name='attr_skillhide' class='sheet-right sheet-hideinput' checked>
 					</div>
@@ -264,14 +285,14 @@
                 </fieldset>
             </div>
             <div class='sheet-section sheet-lifestyles'>
-                <div class='sheet-headertext'>
+                <div class='sheet-headertext'>			
                     <p data-i18n='idlifecurrency'>Id<sub>s</sub>/Lifestyles/Currency</p>
                 </div>
                 <table class='sheet-fullwidth'>
                     <tr>
                         <td colspan='2'>
                             <label for='attr_primarylife' data-i18n='primarylife'>Primary Lifestyle</label>
-                            <input type='text' name='attr_primarylife' style='sheet-fullwidth'>
+                            <input type='text' name='attr_primarylife' class='sheet-fullwidth'>
                         </td>
                     </tr>
                     <tr>
@@ -365,163 +386,194 @@
 					<div class='sheet-col'>
 						<div class='sheet-dmgtrackheader'>Physical Damage Track</div>
 						<div class='sheet-damagetrack'>
+							<input type='hidden' name='attr_physhide1' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 							<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage1'>
 							<span></span>							
 							</label>	
                             </div>							
+							<input type='hidden' name='attr_physhide2' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage2'>
 							<span></span>
 							</label></div>							
+							<input type='hidden' name='attr_physhide3' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage3'>
 							<span>-1</span>
 							</label></div>
+							<input type='hidden' name='attr_physhide4' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage4'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide5' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage5'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide6' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage6'>
 							<span>-2</span>
 							</label></div>
+							<input type='hidden' name='attr_physhide7' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage7'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide8' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage8'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide9' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage9'>
 							<span>-3</span>
 							</label></div>
+							<input type='hidden' name='attr_physhide10' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage10'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide11' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage11'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide12' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage12'>
 							<span>-4</span>
 							</label></div>
+							<input type='hidden' name='attr_physhide13' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage13'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide14' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage14'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide15' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage15'>
 							<span>-5</span>
 							</label></div>
+							<input type='hidden' name='attr_physhide16' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage16'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide17' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage17'>
 							<span></span>
 							</label></div>
+							<input type='hidden' name='attr_physhide18' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage18'>
 							<span>-6</span>
 							</label></div>
-							<input type='hidden' name='attr_physpoolmod' value='0'>
+							<input type='hidden' name='attr_physdamagepoolmod' value='0'>
 						</div>
 					</div>
 					<div class='sheet-col'>
 						<div class='sheet-damagetrack'>
+							<div class='sheet-dmgtrackheader'>Stun Damage Track</div>
+							<input type='hidden' name='attr_stunshide1' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage1'>
 								<span></span>
 							</label></div>
+							<input type='hidden' name='attr_stunshide2' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage2'>
 								<span></span>
 							</label></div>							
+							<input type='hidden' name='attr_stunshide3' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage3'>
 								<span>-1</span>
 							</label></div>
+							<input type='hidden' name='attr_stunshide4' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage4'>
 								<span></span>
 							</label></div>
+							<input type='hidden' name='attr_stunshide5' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage5'>
 								<span></span>
 							</label></div>
+							<input type='hidden' name='attr_stunshide6' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage6'>
 								<span>-2</span>
 							</label></div>							
+							<input type='hidden' name='attr_stunshide7' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage7'>
 								<span></span>
 							</label></div>
+							<input type='hidden' name='attr_stunshide8' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage8'>
 								<span></span>
 							</label></div>
+							<input type='hidden' name='attr_stunshide9' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage9'>
 								<span>-3</span>
 							</label></div>
+							<input type='hidden' name='attr_stunshide10' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage10'>
 								<span></span>
 							</label></div>							
+							<input type='hidden' name='attr_stunshide11' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage11'>
 								<span></span>
 							</label></div>
+							<input type='hidden' name='attr_stunshide12' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage12'>
 								<span>-4</span>
 							</label></div>
-							<input type='hidden' name='attr_stunpoolmod' value='0'>
+							<input type='hidden' name='attr_stunsdamagepoolmod' value='0'>
 						</div>
 						<p class='sheet-mini'>For every 3 boxes of damage on any one damage track, the character takes a -1 Dice Pool Modifier on tests.
 						</p>
@@ -560,6 +612,23 @@
     <div class='sheet-header'>
         <input type='text' name='attr_character_name'>
     </div>
+		<div class='sheet-pagetogglediv'>	
+			<label class='sheet-pfcontainer'>
+				<input name='attr_sheetpage'  type='radio' value="1" checked>
+				<span class="sheet-pfradio">1
+				</span>
+			</label>
+			<label class='sheet-pfcontainer'>
+				<input name='attr_sheetpage' type='radio' value="2" >
+				<span class="sheet-pfradio">2
+				</span>		
+			</label>
+			<label class='sheet-pfcontainer'>
+				<input name='attr_sheetpage' type='radio' value="3" >
+				<span class="sheet-pfradio">3
+				</span>		
+			</label>			
+		</div>	
     <div class='sheet-2colrow'>
         <div class='sheet-col'>
 			<div class='sheet-section sheet-rangedweapons'>
@@ -608,15 +677,16 @@
                     <p data-i18n='augmentations'>Augmentations</p>
                 </div>
 				<fieldset class='repeating_augmentations'>
-					<p class='sheet-hideoutput'><input type='checkbox' name='attr_augmentationhide' class='sheet-right sheet-hideinput' checked></p>
+					<input type='hidden' class='sheet-hidestuff' name='attr_augmentationhide' value='on'>
+					<p class='sheet-hideoutput'><span name='attr_augmentationname'></span> (<span name='attr_augmentationgrade'></span>) <input type='checkbox' name='attr_augmentationhide' class='sheet-right' checked></p>
 					<div class='sheet-flexcontainer'>
 						<input type='text' name='attr_augmentationname' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name" placeholder="Name">
 						<select name='attr_augmentationgrade'  class='sheet-inlinelabel sheet-hideinput'>
-							<option value="1.1">Used</option>
-							<option value='1' selected>Standard</option>
-							<option value="0.8">Alphaware</option>
-							<option value="0.7">Betaware</option>
-							<option value="0.5">Deltaware</option>
+							<option value="U">Used</option>
+							<option value='S' selected>Standard</option>
+							<option value="A">Alphaware</option>
+							<option value="B">Betaware</option>
+							<option value="D">Deltaware</option>
 						</select>						
 						<span class='sheet-hideinput sheet-il'>E:</span><input type='number' name='attr_augmentationessence' step="0.1" value="0.1" class='sheet-hideinput'>
 						<input type='checkbox' name='attr_augmentationhide' class='sheet-right sheet-hideinput' checked>
@@ -633,6 +703,7 @@
 				<fieldset class='repeating_gear'>
 					<div class='sheet-flexcontainer'>
 						<input type='text' name='attr_gearitem' class='sheet-flex'>
+						<span>R:</span>
 						<input type='number' name='attr_gearrating'>
 					</div>
 				</fieldset>				
@@ -644,85 +715,344 @@
                     <p data-i18n='meleeweapons'>Melee Weapons</p>
                 </div>
 				<fieldset class='repeating_meleeweapons'>
-					<table>
-						<tr>
-							<td><input type='text' name='attr_meleeweaponname'></td>
-							<td><input type='text' name='attr_meleeweapondv'></td>
-							<td><input type='number' name='attr_meleeweaponclose'></td>
-						</tr>
-					</table>				
+					<input type='hidden' class='sheet-hidestuff' name='attr_meleehide' value='on'>
+					<p class='sheet-hideoutput sheet-il'><span name='attr_meleeweaponname'></span> (<span name='attr_meleeweaponclose'></span>) [<span name='attr_meleeweapondv'></span>]</p><input type='checkbox' name='attr_meleehide'  class='sheet-hideoutput sheet-right' checked>					
+					<div class='sheet-flexcontainer sheet-fullwidth'>
+						<input type='text' name='attr_meleeweaponname' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name" placeholder="Name">
+						<input type='text' name='attr_meleeweapondv' class='sheet-flex sheet-hideinput' data-i18n-placeholder="dv" placeholder="DV">
+						<span class='sheet-hideinput sheet-il'>Cl</span><input type='number' name='attr_meleeweaponclose' class='sheet-hideinput' value="0">
+						<input type='checkbox' name='attr_meleehide'  class='sheet-hideinput sheet-right' checked>
+					</div>
 				</fieldset>				
 			</div>
 			<div class='sheet-section sheet-matrix'>
                 <div class='sheet-headertext'>
                     <p data-i18n='matrixstats'>Matrix Stats</p>
-                </div>
+                </div>						
+                        <div class='sheet-flexcontainer'>
+                            <label for='attr_matrixatk' data-i18n='atk' class='sheet-flex'>Attack</label><input type='number' name='attr_matrixatk'>					                            
+							<label for='attr_matrixslz' data-i18n='slz' class='sheet-flex'>Sleaze</label><input type='number' name='attr_matrixslz'>								
+							<label for='attr_matrixdp' data-i18n='dataproc' class='sheet-flex'>Data Proc.</label><input type='number' name='attr_matrixdp'>
+                            <label for='attr_matrixfw' data-i18n='firewall' class='sheet-flex'>Firewall</label><input type='number' name='attr_matrixfw'>
+                        </div>                        
+                        <div class='sheet-flexcontainer'>
+                            <label for='attr_matrixdev' data-i18n='devices' class='sheet-inlinelabel'>Devices</label>
+							<input type='text' name='attr_matrixdev' class='sheet-flex'>
+                            <label for='attr_matrixdev' data-i18n='dr' class='sheet-inlinelabel'>DR</label>
+							<input type='number' name='attr_matrixdr' value="1">
+                        </div>
+						<div class='sheet-flexcontainer'>
+                            <label data-i18n='programs' class='sheet-flex sheet-taleft'>Programs</label>
+						</div>
+                        <fieldset class='repeating_matrixprogs'>
+                        <div class='sheet-flexcontainer'>						
+                            <input type='text' name='attr_matrixprog' class='sheet-flex' data-i18n-placeholder="program" placeholder="Program">
+                        </div>
+						</fieldset>                         
+						<div class='sheet-damagetrack'>
+							<div class='sheet-dmgtrackheader'>Matrix Condition Monitor</div>
+							<input type='hidden' name='attr_matrixhide1' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage1'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide2' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage2'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_matrixhide3' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage3'>
+								<span>-1</span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide4' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage4'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide5' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage5'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide6' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage6'>
+								<span>-2</span>
+							</label></div>							
+							<input type='hidden' name='attr_matrixhide7' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage7'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide8' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage8'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide9' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage9'>
+								<span>-3</span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide10' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage10'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_matrixhide11' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage11'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide12' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage12'>
+								<span>-4</span>
+							</label></div>
+							<input type='hidden' name='attr_matrixdamagepoolmod' value='0'>
+                        </div>						
 			</div>
-			<div class='sheet-section sheet-vehicle'>
+			<div class='sheet-section sheet-vehicle'>				
                 <div class='sheet-headertext'>
-                    <p data-i18n='vehicle'>Vehicle</p>
+                    <p data-i18n='vehicle' class='sheet-il'>Vehicle</p><input type='checkbox' name='attr_hideveh' class='sheet-right' checked>
                 </div>
+				<input type='hidden' name='attr_hideveh' class='sheet-hideveh'>
+				<p class='sheet-hideoutput'><span name='attr_vehname'></span> (On <span name='attr_vehhandonroad'></span>/Off <span name='attr_vehhandoffroad'></span>) [<span name='attr_vehacc'></span>/<span name='attr_vehspdint'></span>/<span name='attr_vehtopspd'></span>/<span name='attr_vehbody'></span>/<span name='attr_veharmor'></span>/<span name='attr_vehpilot'></span>/<span name='attr_vehsensor'></span>/<span name='attr_vehseats'></span>]</p>
+				        <div class='sheet-flexcontainer'>
+                            <label for='attr_vehname' data-i18n='vehicle' class='sheet-inlinelabel'>Vehicle</label><input type='text' name='attr_vehname' class='sheet-flex' data-i18n-placeholder="name" placeholder="Name">					                            
+							<label for='attr_vehhand' data-i18n='handling' class='sheet-inlinelabel'>Handling</label><input type='number' name='attr_vehhandonroad'>/<input type='number' name='attr_vehhandoffroad'>								
+                        </div>                        
+                        <div class='sheet-flexcontainer'>
+                            <label for='attr_vehacc' data-i18n='acc' class='sheet-inlinelabel sheet-flex'>Acceleration</label><input type='number' name='attr_vehacc'>					                            
+							<label for='attr_vehspdint' data-i18n='spdint' class='sheet-inlinelabel sheet-flex'>Speed Interval</label><input type='number' name='attr_vehspdint'>								
+                        </div>                        
+                        <div class='sheet-flexcontainer'>
+                            <label for='attr_vehtopspd' data-i18n='topspd' class='sheet-inlinelabel sheet-flex'>Top Speed</label><input type='number' name='attr_vehtopspd'>
+							<label for='attr_vehbody' data-i18n='body' class='sheet-inlinelabel sheet-flex'>Body</label><input type='number' name='attr_vehbody'>								
+                        </div>                        
+                        <div class='sheet-flexcontainer'>
+                            <label for='attr_veharmor' data-i18n='armor' class='sheet-flex sheet-inlinelabel'>Armor</label><input type='number' name='attr_veharmor'>					                            
+							<label for='attr_vehpilot' data-i18n='pilot' class='sheet-inlinelabel sheet-flex'>Pilot</label><input type='number' name='attr_vehpilot'>								
+                        </div>                        
+                        <div class='sheet-flexcontainer'>
+                            <label for='attr_vehsensor' data-i18n='sensor' class='sheet-flex sheet-inlinelabel'>Sensor</label><input type='number' name='attr_vehsensor'>					                            
+							<label for='attr_vehseats' data-i18n='seats' class='sheet-flex sheet-inlinelabel sheet-labelright'>Seats</label><input type='number' name='attr_vehseats'>								
+                        </div>                        
+                        <div class='sheet-flexcontainer'>
+                            <label for='attr_vehnotes' data-i18n='notes' class='sheet-flex'>Notes</label>
+						</div>
+                        <div class='sheet-flexcontainer'>						
+							<textarea name='attr_vehnotes' class='sheet-flex' data-i18n-placeholder="notes" placeholder="Notes"></textarea>					                            	
+                        </div>                        
+                
 			</div>
 			<div class='sheet-section sheet-spells'>
                 <div class='sheet-headertext'>
                     <p data-i18n='spellprepritform'>Spells/Preparations/Rituals/Complex Forms</p>
                 </div>
-				<table>
-					<tr>
-						<th data-i18n="sprcf">S/P/R/CF</th>
-						<th data-i18n="typetarget">Type/Target</th>					
-						<th data-i18n="range">Range</th>
-						<th data-i18n="duration">Duration</th>
-						<th data-i18n="drain">Drain</th>
-					</tr>
-				</table>
 				<fieldset class='repeating_spells'>
-					<table>
-						<tr>
-							<td>
-								<select name='attr_spelltype'>
-									<option value='s'>Spell</option>
-									<option value='p'>Preparation</option>
-									<option value='r'>Ritual</option>
-									<option value='cf'>Complex Form</option>
-								</select>
-							</td>
-							<td><input type='text' name='attr_spelltarget'></td>
-							<td><input type='text' name='attr_spellrange'></td>
-							<td><input type='text' name='attr_spellduration'></td>
-							<td><input type='text' name='attr_spelldrain'></td>							
-						</tr>
-					</table>				
+					<input type='hidden' class='sheet-hidestuff' name='attr_spellhide' value='on'>
+					<p class='sheet-hideoutput sheet-il'><span name='attr_spellname'></span> (<span name='attr_spelltype'></span>) [<span name='attr_spelltarget'></span>,<span name='attr_spellrange'></span>]</p><input type='checkbox' name='attr_spellhide'  class='sheet-hideoutput sheet-right' checked>					
+					<div class='sheet-flexcontainer sheet-fullwidth'>					
+						<input type='text' name='attr_spellname' class='sheet-flex sheet-hideinput'>
+						<select name='attr_spelltype' class='sheet-hideinput'>
+							<option value='s'>Spell</option>
+							<option value='p'>Preparation</option>
+							<option value='r'>Ritual</option>
+							<option value='cf'>Complex Form</option>
+						</select>
+						<input type='checkbox' name='attr_spellhide'  class='sheet-hideinput sheet-right' checked>	
+					</div>
+					<div class='sheet-flexcontainer sheet-fullwidth'>					
+						<input type='text' name='attr_spelltarget' class='sheet-flex sheet-hideinput' data-i18n-placeholder="targtype" placeholder="Target/Type">
+						<input type='text' name='attr_spellrange' class='sheet-flex sheet-hideinput' data-i18n-placeholder="range" placeholder="Range">
+						<input type='text' name='attr_spellduration' class='sheet-flex sheet-hideinput' data-i18n-placeholder="duration" placeholder="Duration">
+						<span class='sheet-hideinput'>DV</span><input type='number' name='attr_spelldrain' value="1" class='sheet-hideinput'>
+					</div>
 				</fieldset>				
 			</div>
-			<div class='sheet-powers'>
+			<div class='sheet-section sheet-powers'>
                 <div class='sheet-headertext'>
                     <p data-i18n='adeptpowers'>Adept Powers or Other Abilities</p>
                 </div>
-				<table>
-					<tr>
-						<th data-i18n="name">Name</th>
-						<th data-i18n="level">Level</th>
-						<th data-i18n="notes">Notes</th>
-					</tr>
-				</table>
 				<fieldset class='repeating_powers'>
-					<table>
-						<tr>
-							<td><input type='text' name='attr_powername'></td>
-							<td><input type='text' name='attr_powerlevel'></td>
-							<td><input type='text' name='attr_powernotes'></td>
-						</tr>
-					</table>				
+					<input type='hidden' class='sheet-hidestuff' name='attr_powerhide' value='on'>
+					<p class='sheet-hideoutput sheet-il'><span name='attr_powername'></span> (<span name='attr_powerlevel'></span>)</p><input type='checkbox' name='attr_powerhide'  class='sheet-hideoutput sheet-right' checked>					
+					<div class='sheet-flexcontainer'>
+							<input type='text' name='attr_powername' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name" placeholder="Name">
+							<input type='text' name='attr_powerlevel' class='sheet-flex sheet-hideinput' data-i18n-placeholder="level" placeholder="Level">
+							<input type='checkbox' name='attr_powerhide'  class='sheet-hideinput sheet-right' checked>	
+					</div>
+					<div class='sheet-flexcontainer'>		
+						<textarea name='attr_powernotes' class='sheet-flex sheet-hideinput' data-i18n-placeholder="notes" placeholder="Notes"></textarea>
+					</div>
 				</fieldset>				
 			</div>			
 		</div>
 	</div>
 </div>
 <div class='sheet-page sheet-page3'>
+    <div class='sheet-header'>
+        <input type='text' name='attr_character_name'>
+    </div>
+	<div class='sheet-pagetogglediv'>	
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage'  type='radio' value="1" checked>
+			<span class="sheet-pfradio">1
+			</span>
+		</label>
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="2" >
+			<span class="sheet-pfradio">2
+			</span>		
+		</label>
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="3" >
+			<span class="sheet-pfradio">3
+			</span>		
+		</label>			
+	</div>	
+    <p>Nothing here...yet.</p>
 </div>
 <div class='sheet-page sheet-page4'>
 </div>
-<rolltemplate class="sheet-rolltemplate-iafattack">
+</div>
+<rolltemplate class="sheet-rolltemplate-shadowtest">
+	<table class='sheet-rolltemplate-{{table}}'>
+		<tr>
+			<td class='sheet-rolltemplate-byline'>
+			 {{attr}}{{#skill}}+{{skill}}{{/skill}}{{#modifier}}+Modifier{{/modifier}}
+			</td>
+		</tr>
+		<tr>
+			<td class='sheet-rolltemplate-dieline'>
+			  {{dierow}}
+			</td>
+		</tr>
+		<tr>
+			<td><span class='sheet-rolltemplate-result-pass'>
+				{{total}} hits
+			</span>
+			<span class='sheet-rolltemplate-result-fail'>			
+				No hits
+			</span>			
+			<span class='sheet-rolltemplate-result-glitch'>			
+				Glitch
+			</span>
+			<span class='sheet-rolltemplate-result-critglitch'>
+				Critical Glitch
+			</span>
+			</td>
+		</tr>
+	</table>
 </rolltemplate>
-<script type='text/worker'></script>
+<script type='text/worker'>
+on("change:physdamage1 change:physdamage2 change:physdamage3 change:physdamage4 change:physdamage5 change:physdamage6 change:physdamage7 change:physdamage8 change:physdamage9 change:physdamage10 change:physdamage11 change:physdamage12 change:physdamage13 change:physdamage14 change:physdamage15 change:physdamage16 change:physdamage17 change:physdamage18 change:stunsdamage1 change:stunsdamage2 change:stunsdamage3 change:stunsdamage4 change:stunsdamage5 change:stunsdamage6 change:stunsdamage7 change:stunsdamage8 change:stunsdamage9 change:stunsdamage10 change:stunsdamage11 change:stunsdamage12 change:matrixdamage1 change:matrixdamage2 change:matrixdamage3 change:matrixdamage4 change:matrixdamage5 change:matrixdamage6 change:matrixdamage7 change:matrixdamage8 change:matrixdamage9 change:matrixdamage10 change:matrixdamage11 change:matrixdamage12",function (eventInfo) {
+		let numchanged = parseInt(eventInfo.sourceAttribute.match(/\d+/));
+		let typechanges = "";
+		let numoftype = 12;
+		switch (eventInfo.sourceAttribute[0]) {
+			case 'p':
+			typechanges = "physdamage";
+			numoftype = 18;
+			break;
+			case 's':
+			typechanges = "stunsdamage";
+			numoftype = 12;
+			break;
+			case 'm':
+			typechanges = "matrixdamage";
+			numoftype = 12;
+			break;
+		}
+		
+		console.log("DEBUG: "+numchanged+","+typechanges+","+numoftype)
+		let out = [];
+		for(let i = 1; i <= numchanged; i++) {
+			out[typechanges+i] = "on";
+		}
+		for(let i = numchanged+1; i <= numoftype; i++) {
+			out[typechanges+i] = "";
+		}
+		out[typechanges+"poolmod"] = Math.floor(numchanged / 3);
+		setAttrs(out,{"silent":true});
+});
+
+on("change:body",function (eventInfo) {
+	let newbod = 8+Math.ceil(parseInt(eventInfo.newValue)/2);
+	let out = [];
+		for(let i = 1; i <= newbod; i++) {
+			out["physhide"+i] = "0";
+		}
+		for(let i = newbod+1; i <= 16; i++) {
+			out["physhide"+i] = "on";
+			out["physdamage"+i] = "";
+		}
+		getAttrs(["physdamagepoolmod"],function(values) {
+			if(values.physdamagepoolmod > Math.floor(newbod/3)) { out['physdamagepoolmod'] = Math.floor(newbod/3); }
+			setAttrs(out,{"silent":true});
+		});
+});	
+on("change:willpower",function (eventInfo) {
+	let newbod = 8+Math.ceil(parseInt(eventInfo.newValue)/2);
+	let out = [];
+		for(let i = 1; i <= newbod; i++) {
+			out["stunshide"+i] = "0";
+		}
+		for(let i = newbod+1; i <= 12; i++) {
+			out["stunshide"+i] = "on";
+			out["stunsdamage"+i] = "";			
+		}
+		getAttrs(["stunsdamagepoolmod"],function(values) {
+			if(values.stunsdamagepoolmod > Math.floor(newbod/3)) { out['stunsdamagepoolmod'] = Math.floor(newbod/3); }
+			setAttrs(out,{"silent":true});		
+		});
+});
+
+on("change:matrixdr",function (eventInfo) {
+	let newbod = 8+Math.ceil(parseInt(eventInfo.newValue)/2);
+	let out = [];
+		for(let i = 1; i <= newbod; i++) {
+			out["matrixhide"+i] = "0";
+		}
+		for(let i = newbod+1; i <= 12; i++) {
+			out["matrixhide"+i] = "on";
+			out["matrixdamage"+i] = "";			
+		}
+		getAttrs(["matrixdamagepoolmod"],function(values) {
+			if(values.matrixdamagepoolmod > Math.floor(newbod/3)) { out['matrixdamagepoolmod'] = Math.floor(newbod/3); }
+			setAttrs(out,{"silent":true});		
+		});
+});
+
+on("change:repeating_skills:skillattr",function(eventInfo) {
+	getAttrs([eventInfo.newValue],function(values) {
+		console.log(values);
+		for(value in values) {
+			console.log(value);
+			setAttrs({"repeating_skills_skillattrvalue":values[value]});
+		}
+	});
+});
+
+on("change:repeating_skills:skillrank change:repeating_skills:skilltype",function(eventInfo) {
+	getAttrs(["repeating_skills_skillrank","repeating_skills_skilltype"], function(values) {
+		console.log(values);
+	   setAttrs({"repeating_skills_skillrankhidden":parseInt(values.repeating_skills_skillrank)+parseInt(values.repeating_skills_skilltype)});
+	});
+})
+</script>

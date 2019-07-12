@@ -9,8 +9,66 @@
 }
 
 .sheet-page {
+	display: none;
+}
+.sheet-rolltemplate-shadowtest,
+.sheet-bg {
 	background: url("https://shadowrequiem.com/tempshare/sheetback.png");
 	/* background: url("https://www.github.com/EtoileLion/Project-Dataslave/blob/master/images/sheetback.png?raw=true"); */
+}
+/* Page Toggler */
+.sheet-sheetpage[value="1"] ~ .sheet-page1,
+.sheet-sheetpage[value="2"] ~ .sheet-page2,
+.sheet-sheetpage[value="3"] ~ .sheet-page3,
+.sheet-sheetpage[value="4"] ~ .sheet-page4
+{
+	display: inline;
+}
+
+.sheet-pfcontainer {
+    display: inline;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sheet-pfcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.sheet-pfradio {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 19px;
+	width: 19px;
+	background-color: #eee;
+	border-radius: 25%;
+	font-family: AmpCB;	
+	text-align: center;
+}
+.sheet-pfcontainer:hover input ~ .sheet-pfradio {
+    background-color: #ccc;
+}
+.sheet-pfcontainer input:checked ~ .sheet-pfradio:after {
+	display: block;
+}
+.sheet-sheetpage[value="3"] ~ .sheet-page3 .sheet-pagetogglediv .sheet-pfcontainer input[value="3"] ~ .sheet-pfradio,
+.sheet-sheetpage[value="1"] ~ .sheet-page1 .sheet-pagetogglediv .sheet-pfcontainer input[value="1"] ~ .sheet-pfradio,
+.sheet-sheetpage[value="2"] ~ .sheet-page2 .sheet-pagetogglediv .sheet-pfcontainer input[value="2"] ~ .sheet-pfradio {
+	background-color: #800d6d;
+	color: #aaa;
+}
+.sheet-pagetogglediv {
+	position: relative;
+	left: 10px;
+	top:-50px;	
 }
 
 .sheet-header input {
@@ -33,6 +91,13 @@ th,
 	font-size: 1em;
 	font-family: AmpCB;
 	margin-bottom: unset;
+}
+.sheet-dmgtrackheader {
+	font-size: 1.3em;
+	font-family: AmpCB;
+	margin-bottom: unset;
+	width: 100%;
+	text-align: center;
 }
 
 .sheet-ghostlabel {
@@ -83,6 +148,8 @@ select,
 	font-family: AmpCB;
 	font-size: 1em;
 }
+.sheet-matrix label,
+.sheet-vehicle label,
 .sheet-attributes label {
 	text-align: right;
 }
@@ -153,11 +220,14 @@ select,
 	font-family: Njord;
 	font-weight: bold;
 }
+.sheet-hideveh[value="on"] ~ .sheet-hideoutput,
+.sheet-vehicle .sheet-flexcontainer,
 .sheet-skill,.sheet-spec,.sheet-exp,
 .sheet-hidestuff[value='on'] ~ .sheet-hideoutput,
 .sheet-hideinput {
 	display: none;
 }
+.sheet-hideveh[value="on"] ~ .sheet-flexcontainer,
 .sheet-skilltype[value="skill"] ~ .sheet-hideoutput .sheet-skill,
 .sheet-skilltype[value="spec"] ~ .sheet-hideoutput .sheet-spec,
 .sheet-skilltype[value="exp"] ~ .sheet-hideoutput .sheet-exp,
@@ -285,6 +355,7 @@ select,
     -ms-user-select: none;
     user-select: none;
 }
+.sheet-matrixdamagemarker input,
 .sheet-phydamagemarker input,
 .sheet-stundamagemarker input {
     position: absolute;
@@ -307,14 +378,55 @@ select,
 	color: #666;
 	text-align: center;
 }
+.sheet-matrixdamagemarker:hover input ~ span,
 .sheet-phydamagemarker:hover input ~ span,
 .sheet-stundamagemarker:hover input ~ span {
     background-color: #ccc;
 }
+.sheet-matrixdamagemarker input:checked ~ span,
 .sheet-stundamagemarker input:checked ~ span,
 .sheet-phydamagemarker input:checked ~ span {
 	background-color: #844;
 	color: #CCC;
+}
+.sheet-matrix .sheet-damagetrack {
+	text-align: center;
+}
+
+.sheet-matrix .sheet-dmtrackcell {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin-bottom: 4px;
+}
+.sheet-matrixdamagemarker {
+    display: inline;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sheet-matrixdamagemarker span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: #eee;
+	border: 1px solid #800d6d;
+	font-size: 12px;
+	line-height: 22px;
+	color: #666;
+	text-align: center;
+}
+
+.sheet-hidedamage[value="on"] + .sheet-dmtrackcell {
+	display: none;
 }
 .sheet-mini {
 	font-size: xx-small;
@@ -332,9 +444,9 @@ select,
 .sheet-hideinput {
 	display: none;
 }
-.sheet-skilltype[value="skill"] ~ .sheet-hideoutput .sheet-skill,
-.sheet-skilltype[value="spec"] ~ .sheet-hideoutput .sheet-spec,
-.sheet-skilltype[value="exp"] ~ .sheet-hideoutput .sheet-exp,
+.sheet-skilltype[value="0"] ~ .sheet-hideoutput .sheet-skill,
+.sheet-skilltype[value="2"] ~ .sheet-hideoutput .sheet-spec,
+.sheet-skilltype[value="3"] ~ .sheet-hideoutput .sheet-exp,
 .sheet-hidestuff[value='on'] ~ .sheet-hideinput,
 .sheet-hidestuff[value='on'] ~ .sheet-flexcontainer .sheet-hideinput {
 	display: inline;
@@ -343,4 +455,54 @@ select,
 	float: right;
 }
 
+.sheet-taleft {
+	text-align: left !important;
+}
+.sheet-rolltemplate-shadowtest table {
+	border: 2px solid #800d6d;	
+	padding: 7px;
+	font-family: AmpCB;
+	text-align: center;
+	width: 100%;
+}
+.sheet-rolltemplate-shadowtest table tr:nth-child(3) td span {
+	display: none;
+}
+.sheet-rolltemplate-passedtest .sheet-rolltemplate-result-pass,
+.sheet-rolltemplate-failedtest .sheet-rolltemplate-result-fail,
+.sheet-rolltemplate-glitchedtest .sheet-rolltemplate-result-glitch,
+.sheet-rolltemplate-critglitchedtest .sheet-rolltemplate-result-critglitch {
+	display: block !important;
+}
+.sheet-rolltemplate-passedtest .sheet-critdie,
+.sheet-rolltemplate-result-pass {
+	color: #262;
+}
+.sheet-rolltemplate-glitchedtest .sheet-cfaildie,
+.sheet-rolltemplate-critglitchedtest .sheet-cfaildie,
+.sheet-rolltemplate-result-glitch,
+.sheet-rolltemplate-result-critglitch {
+	color: #922f2f;
+}
 
+.sheet-rolltemplate-byline {
+	color: #800d6d;
+    font-family: Njord;
+    font-size: large;
+    text-transform: capitalize;
+}
+.sheet-page button[type='roll'] {
+	background: transparent;
+	border: none;
+	font-size: 1em !important;
+}
+.sheet-skills button[type='roll'] {
+	font-weight: bold;
+}
+.sheet-page button[type='roll']:before {
+	content: none !important;
+}
+.sheet-page button[type='roll']:hover span,
+.sheet-page button[type='roll']:hover label {
+	color: #800d6d;
+}
