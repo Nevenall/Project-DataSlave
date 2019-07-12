@@ -83,13 +83,13 @@
                 <table>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{body}|0|?{Dice Pool Modifier|0}|Body||@{character_name}'><label for='attr_body' data-i18n='body'>Body</label></button>			
+                            <button  type='roll' value='!shadowtest @{body}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Body||@{character_name}'><label for='attr_body' data-i18n='body'>Body</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_body' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{essence}|0|?{Dice Pool Modifier|0}|Essence||@{character_name}'><label for='attr_essence' data-i18n='essence'>Essence</label></button>
+                            <button  type='roll' value='!shadowtest @{essence}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Essence||@{character_name}'><label for='attr_essence' data-i18n='essence'>Essence</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_essence' min=0>					
@@ -97,13 +97,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{agility}|0|?{Dice Pool Modifier|0}|Agility||@{character_name}'><label for='attr_agility' data-i18n='agility'>Agility</label></button>			
+                            <button  type='roll' value='!shadowtest @{agility}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility||@{character_name}'><label for='attr_agility' data-i18n='agility'>Agility</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_agility' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{magic}|0|?{Dice Pool Modifier|0}|Magic||@{character_name}'><label for='attr_magic' data-i18n='magic'></label></button>
+                            <button  type='roll' value='!shadowtest @{magic}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic||@{character_name}'><label for='attr_magic' data-i18n='magic'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_magic' min=0>					
@@ -111,13 +111,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{reaction}|0|?{Dice Pool Modifier|0}|Reaction||@{character_name}'><label for='attr_reaction' data-i18n='reaction'></label></button>			
+                            <button  type='roll' value='!shadowtest @{reaction}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Reaction||@{character_name}'><label for='attr_reaction' data-i18n='reaction'></label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_reaction' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='&{template:shadowsum} {{attr=Initiative}} {{roll=[[[[@{initiative}+?{Dice Pool Modifier|0}]]d6]]}}'><label for='attr_initiative' data-i18n='initiative'></label></button>
+                            <button  type='roll' value='&{template:shadowsum} {{attr=Initiative}} {{roll=[[[[@{initiative}+?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]d6]]}}'><label for='attr_initiative' data-i18n='initiative'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_initiative' min=0>					
@@ -125,13 +125,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{strength}|0|?{Dice Pool Modifier|0}|Strength||@{character_name}'><label for='attr_strength' data-i18n='strength'></label></button>			
+                            <button  type='roll' value='!shadowtest @{strength}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Strength||@{character_name}'><label for='attr_strength' data-i18n='strength'></label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_strength' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='&{template:shadowsum} {{attr=Matrix Initiative}} {{roll=[[[[@{matrix-initiative}+?{Dice Pool Modifier|0}]]d6]]}}'><label for='attr_matrix-initiative' data-i18n='matrix-initiative'></label></button>
+                            <button  type='roll' value='&{template:shadowsum} {{attr=Matrix Initiative}} {{roll=[[[[@{matrix-initiative}+?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]d6]]}}'><label for='attr_matrix-initiative' data-i18n='matrix-initiative'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_matrix-initiative' min=0>					
@@ -139,13 +139,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{willpower}|0|?{Dice Pool Modifier|0}|Willpower||@{character_name}'><label for='attr_willpower' data-i18n='willpower'></label></button>			
+                            <button  type='roll' value='!shadowtest @{willpower}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Willpower||@{character_name}'><label for='attr_willpower' data-i18n='willpower'></label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_willpower' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='&{template:shadowsum} {{attr=Astral Initiative}} {{roll=[[[[@{astral-initiative}+?{Dice Pool Modifier|0}]]d6]]}}'><label for='attr_astral-initiative' data-i18n='astral-initiative'></label></button>
+                            <button  type='roll' value='&{template:shadowsum} {{attr=Astral Initiative}} {{roll=[[[[@{astral-initiative}+?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]d6]]}}'><label for='attr_astral-initiative' data-i18n='astral-initiative'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_astral-initiative' min=0>					
@@ -153,13 +153,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{logic}|0|?{Dice Pool Modifier|0}|Logic||@{character_name}'><label for='attr_logic' data-i18n='logic'></label></button>			
+                            <button  type='roll' value='!shadowtest @{logic}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic||@{character_name}'><label for='attr_logic' data-i18n='logic'></label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_logic' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{composure}|0|?{Dice Pool Modifier|0}|Composure||@{character_name}'><label for='attr_composure' data-i18n='composure'></label></button>
+                            <button  type='roll' value='!shadowtest @{composure}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Composure||@{character_name}'><label for='attr_composure' data-i18n='composure'></label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_composure' min=0>					
@@ -167,13 +167,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{intuition}|0|?{Dice Pool Modifier|0}|Intuition||@{character_name}'><label for='attr_intuition' data-i18n='intuition'>intuition</label></button>			
+                            <button  type='roll' value='!shadowtest @{intuition}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition||@{character_name}'><label for='attr_intuition' data-i18n='intuition'>intuition</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_intuition' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{judge-intentions}|0|?{Dice Pool Modifier|0}|Judge Intentions||@{character_name}'><label for='attr_judge-intentions' data-i18n='judge-intentions'>judge-intentions</label></button>
+                            <button  type='roll' value='!shadowtest @{judge-intentions}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Judge Intentions||@{character_name}'><label for='attr_judge-intentions' data-i18n='judge-intentions'>judge-intentions</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_judge-intentions' min=0>					
@@ -181,13 +181,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{charisma}|0|?{Dice Pool Modifier|0}|Charisma||@{character_name}'><label for='attr_charisma' data-i18n='charisma'>charisma</label></button>			
+                            <button  type='roll' value='!shadowtest @{charisma}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Charisma||@{character_name}'><label for='attr_charisma' data-i18n='charisma'>charisma</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_charisma' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{memory}|0|?{Dice Pool Modifier|0}|Memory||@{character_name}'><label for='attr_memory' data-i18n='memory'>memory</label></button>
+                            <button  type='roll' value='!shadowtest @{memory}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Memory||@{character_name}'><label for='attr_memory' data-i18n='memory'>memory</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_memory' min=0>					
@@ -195,13 +195,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{edge}|0|?{Dice Pool Modifier|0}|Edge||@{character_name}'><label for='attr_edge' data-i18n='edge'>edge</label></button>			
+                            <button  type='roll' value='!shadowtest @{edge}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Edge||@{character_name}'><label for='attr_edge' data-i18n='edge'>edge</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_edge' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{lift-carry}|0|?{Dice Pool Modifier|0}|Lift/Carry||@{character_name}'><label for='attr_lift-carry' data-i18n='lift-carry'>lift-carry</label></button>
+                            <button  type='roll' value='!shadowtest @{lift-carry}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Lift/Carry||@{character_name}'><label for='attr_lift-carry' data-i18n='lift-carry'>lift-carry</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_lift-carry' min=0>					
@@ -209,13 +209,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{edgepoints}|0|?{Dice Pool Modifier|0}|Edge Points||@{character_name}'><label for='attr_edgepoints' data-i18n='edgepoints'>edgepoints</label></button>			
+                            <button  type='roll' value='!shadowtest @{edgepoints}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Edge Points||@{character_name}'><label for='attr_edgepoints' data-i18n='edgepoints'>edgepoints</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_edgepoints' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{movement}|0|?{Dice Pool Modifier|0}|Movement||@{character_name}'><label for='attr_movement' data-i18n='movement'>movement</label></button>
+                            <button  type='roll' value='!shadowtest @{movement}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Movement||@{character_name}'><label for='attr_movement' data-i18n='movement'>movement</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_movement' min=0>					
@@ -223,13 +223,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <button  type='roll' value='!shadowtest @{unarmed}|0|?{Dice Pool Modifier|0}|Unarmed||@{character_name}'><label for='attr_unarmed' data-i18n='unarmed'>unarmed</label></button>			
+                            <button  type='roll' value='!shadowtest @{unarmed}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Unarmed||@{character_name}'><label for='attr_unarmed' data-i18n='unarmed'>unarmed</label></button>			
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_unarmed' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{defenserating}|0|?{Dice Pool Modifier|0}|Defense Rating||@{character_name}'><label for='attr_defenserating' data-i18n='defenserating'>defenserating</label></button>
+                            <button  type='roll' value='!shadowtest @{defenserating}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Defense Rating||@{character_name}'><label for='attr_defenserating' data-i18n='defenserating'>defenserating</label></button>
                         </td>
                         <td>
                             <input type='number' value="1" name='attr_defenserating' min=0>					
@@ -245,7 +245,7 @@
 					<input type='hidden' name='attr_skillhide' class='sheet-hidestuff' value='on'>
 					<input type='hidden' name='attr_skilltype' class='sheet-skilltype' value='skill'>
 					<table class='hideoutput fullwidth'><tr><td>
-					<button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|?{Dice Pool Modifier|0}|@{skillattr}|@{skillname}|@{character_name}' class='sheet-il sheet-hideoutput'><span name='attr_skillname'></span></button></td><td><p class='sheet-hideoutput sheet-flexcontainer'> (<span name='attr_skillattr'></span>) <span class='sheet-skill'>S</span><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><input type='checkbox' name='attr_skillhide' class='sheet-right sheet-il' checked></p></td></tr></table>
+					<button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}' class='sheet-il sheet-hideoutput'><span name='attr_skillname'></span></button></td><td><p class='sheet-hideoutput sheet-flexcontainer'> (<span name='attr_skillattr'></span>) <span class='sheet-skill'>S</span><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><input type='checkbox' name='attr_skillhide' class='sheet-right sheet-il' checked></p></td></tr></table>
 				    <div class='sheet-flexcontainer sheet-fullwidth'>
 					<input type='text' name='attr_skillname' class='sheet-flex sheet-hideinput'>
 					<input type='number' name='attr_skillrank' class='sheet-hideinput'>
@@ -993,10 +993,8 @@ on("change:physdamage1 change:physdamage2 change:physdamage3 change:physdamage4 
 			numoftype = 12;
 			break;
 		}
-		
-		console.log("DEBUG: "+numchanged+","+typechanges+","+numoftype)
 		let out = [];
-		for(let i = 1; i <= numchanged; i++) {
+		for(let i = 1; i < numchanged; i++) {
 			out[typechanges+i] = "on";
 		}
 		for(let i = numchanged+1; i <= numoftype; i++) {
