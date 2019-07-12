@@ -1,11 +1,11 @@
 @font-face {
 	font-family: Njord;
-	src: url("https://shadowrequiem.com/tempshare/Njord.otf");
+	src: url("https://github.com/EtoileLion/Project-DataSlave/blob/master/fonts/AmpCB.otf?raw=true");
 }
 
 @font-face {
 	font-family: AmpCB;
-	src: url("https://shadowrequiem.com/tempshare/AmpCB.otf");
+	src: url("https://github.com/EtoileLion/Project-DataSlave/blob/master/fonts/AmpCB.otf?raw=true");
 }
 
 .sheet-page {
@@ -14,8 +14,7 @@
 .sheet-rolltemplate-shadowsum,
 .sheet-rolltemplate-shadowtest,
 .sheet-bg {
-	background: url("https://shadowrequiem.com/tempshare/sheetback.png");
-	/* background: url("https://www.github.com/EtoileLion/Project-Dataslave/blob/master/images/sheetback.png?raw=true"); */
+	background: url("https://www.github.com/EtoileLion/Project-Dataslave/blob/master/images/sheetback.png?raw=true");
 }
 /* Page Toggler */
 .sheet-sheetpage[value="1"] ~ .sheet-page1,
