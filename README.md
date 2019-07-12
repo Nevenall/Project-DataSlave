@@ -19,3 +19,7 @@ This version of the sheet requires a Pro level account with Roll20, in order to 
 5. In the [Game Settings](https://wiki.roll20.net/Game_Management#Game_Settings) page for the game, select the Translation tab.    
   * Copy the contents of [translation.json](./translation.json) and paste them into the text box.
 6. Click the Save Changes button below the text box.
+7. Return to the game lobby, and navigate to the [API Scripts](https://wiki.roll20.net/Game_Management#API_Scripts) for the game.
+8. Click on the New Script tab. You can give the script any name you like.
+9. Copy the contents of [shadowrundice.js](./shadowrundice.js) and paste them into the upper text box.
+10. Click the Save Script button below the textbox.
