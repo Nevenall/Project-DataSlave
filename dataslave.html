@@ -245,7 +245,7 @@
 					<input type='hidden' name='attr_skillhide' class='sheet-hidestuff' value='on'>
 					<input type='hidden' name='attr_skilltype' class='sheet-skilltype' value='skill'>
 					<table class='hideoutput fullwidth'><tr><td>
-					<button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}' class='sheet-il sheet-hideoutput'><span name='attr_skillname'></span></button></td><td><p class='sheet-hideoutput sheet-flexcontainer'> (<span name='attr_skillattr'></span>) <span class='sheet-skill'>S</span><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><input type='checkbox' name='attr_skillhide' class='sheet-right sheet-il' checked></p></td></tr></table>
+					<p class='sheet-hideoutput sheet-flexcontainer'><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}' class='sheet-il sheet-hideoutput'><span name='attr_skillname'></span></button> (<span name='attr_skillattr'></span>) <span class='sheet-skill'>S</span><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><input type='checkbox' name='attr_skillhide' class='sheet-right sheet-il' checked></p></td></tr></table>
 				    <div class='sheet-flexcontainer sheet-fullwidth'>
 					<input type='text' name='attr_skillname' class='sheet-flex sheet-hideinput'>
 					<input type='number' name='attr_skillrank' class='sheet-hideinput'>
@@ -283,101 +283,9 @@
 					</div>
 					
                 </fieldset>
-            </div>
-            <div class='sheet-section sheet-lifestyles'>
-                <div class='sheet-headertext'>			
-                    <p data-i18n='idlifecurrency'>Id<sub>s</sub>/Lifestyles/Currency</p>
-                </div>
-                <table class='sheet-fullwidth'>
-                    <tr>
-                        <td colspan='2'>
-                            <label for='attr_primarylife' data-i18n='primarylife'>Primary Lifestyle</label>
-                            <input type='text' name='attr_primarylife' class='sheet-fullwidth'>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class='sheet-flexcontainer'>
-                            <label for='attr_nuyen' data-i18n='nuyen' class='sheet-flex' value="0">Nuyen</label>
-							<label for='attr_licenses' data-i18n='licenses' class='sheet-flex'>Licenses</label>
-                        </td>
-                        <td class='sheet-flexcontainer'>
-							<input type='number' name='attr_nuyen' class='sheet-flex'>
-                            <input type='text' name='attr_licenses' class='sheet-flex'>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan='2'>
-                            <label data-i18n='fakes'>Fake IDs/Related Lifestyles/Funds/Licenses</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan='2'>
-							<fieldset class='repeating_fakes'>
-                            <input name='attr_fakes' class='sheet-fullwidth'>
-							</fieldset>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+            </div> 
         </div>
 		<div class='sheet-col'>
-			<div class='sheet-section sheet-corecombat'>			
-                <div class='sheet-headertext'>
-                    <p data-i18n='corecombat'>Core Combat Info</p>
-                </div>
-				<table class='sheet-fullwidth'>
-					<tr>
-					<td class='sheet-flexcontainer'>
-						<label for='attr_priarmor' data-i18n="priarmor" class='sheet-inlinelabel'>Primary Armor</label>
-						<input type='text' name='attr_priarmor' class='sheet-flex'>						
-						<label for='attr_priarmorrating' data-i18n="rating" class='sheet-inlinelabel'></label>
-						<input name='attr_primarmorrating' type='number'>
-					</td>
-					</tr>
-					<tr>
-						<td class='sheet-flexcontainer'>
-							<label for='attr_priranged' data-i18n="priranged" class='sheet-inlinelabel'>Primary Ranged Weapon</label>
-							<input type='text' name='attr_priranged' class='sheet-flex'>
-						</td>
-					</tr>
-					<tr>
-						<td class='sheet-flexcontainer'>
-							<label class='sheet-ghostlabel' data-i18n="dv">DV</label>
-							<label class='sheet-ghostlabel' data-i18n="mode">Mode</label>
-							<label class='sheet-ghostlabel' data-i18n="close">Close</label>
-							<label class='sheet-ghostlabel' data-i18n="near">Near</label>
-							<label class='sheet-ghostlabel' data-i18n="far">Far</label>
-							<label class='sheet-ghostlabel' data-i18n="extreme">Extreme</label>
-							<label class='sheet-ghostlabel' data-i18n="ammo">Ammo</label>							
-						</td>
-					</tr>
-					<tr>
-						<td class='sheet-flexcontainer'>
-							<input class='sheet-flex' type='number' name='attr_priranged-dv'>
-							<input class='sheet-flex' type='number' name='attr_priranged-mode'>
-							<input class='sheet-flex' type='number' name='attr_priranged-close'>
-							<input class='sheet-flex' type='number' name='attr_priranged-near'>
-							<input class='sheet-flex' type='number' name='attr_priranged-far'>
-							<input class='sheet-flex' type='number' name='attr_priranged-extreme'>
-							<input class='sheet-flex' type='number' name='attr_priranged-ammo'>						
-						</td>
-					</tr>
-					<tr>
-						<td class='sheet-flexcontainer'>
-							<label for='attr_primelee' data-i18n="primelee" class='sheet-inlinelabel'>Primary Melee Weapon</label>
-							<input type='text' name='attr_primelee' class='sheet-flex'>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label class='sheet-ghostlabel' data-i18n="dv">DV</label>
-							<input type='number' name='attr_priranged-dv'>
-							<label class='sheet-ghostlabel' data-i18n="close">Close</label>
-							<input type='number' name='attr_priranged-close'>					
-						</td>
-					</tr>
-				</table>
-			</div>
 			<div class='sheet-section sheet-conditionmonitor'>
                 <div class='sheet-headertext'>
                     <p data-i18n='conditionmonitor'>Condition Monitor</p>
@@ -600,11 +508,54 @@
 						<input type='hidden' name='attr_contacthide' class='sheet-hidestuff'>
 						<p class='sheet-hideoutput sheet-il'><span name='attr_contactname'></span>&nbsp;(C<span name='attr_contactloyalty'></span>/L<span name='attr_contactconnection'></span>)</p>
 						<input type='text' name='attr_contactname' class='sheet-hideinput'><input type='checkbox' name='attr_contacthide' data-i18n-placeholder='contactname' checked class='sheet-right'>
-						<input type='number' name='attr_contactloyalty' class='sheet-hideinput' value=0>
-						<input type='number' name='attr_contactconnection' class='sheet-hideinput' value=0>
-						<textarea name='attr_contactnotes' class='sheet-hideinput' data-i18n-placeholder='contactnotes'></textarea>
+						<label for='attr_contactloyalty' class='sheet-ghostlabel sheet-hideinput' data-i18n='loyaltylabel'>L:</label><input type='number' name='attr_contactloyalty' class='sheet-hideinput' value=0>
+						<label for='attr_contactconnection' class='sheet-ghostlabel sheet-hideinput' data-i18n='connectionlabel'>C:</label><input type='number' name='attr_contactconnection' class='sheet-hideinput' value=0>
+						<textarea name='attr_contactnotes' class='sheet-hideinput' data-i18n-placeholder='notes'></textarea>
 				</fieldset>				
 			</div>
+			<div class='sheet-section sheet-lifestyles'>
+                <div class='sheet-headertext'>			
+                    <p data-i18n='idlifecurrency'>Id<sub>s</sub>/Lifestyles/Currency</p>
+                </div>
+                <table class='sheet-fullwidth'>
+                    <tr>
+                        <td colspan='2'>
+                            <label for='attr_primarylife' data-i18n='primarylife'>Primary Lifestyle</label>
+                            <input type='text' name='attr_primarylife' class='sheet-fullwidth'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-flexcontainer'>
+                            <label for='attr_nuyen' data-i18n='nuyen' class='sheet-flex'>Nuyen</label>
+							<label for='attr_nuyen' data-i18n='karma' class='sheet-flex'>Karma</label>
+                        </td>
+                        <td class='sheet-flexcontainer'>
+							<input type='number' name='attr_nuyen' class='sheet-flex' value="0">
+                            <input type='number' name='attr_karma' class='sheet-flex' value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-flexcontainer'>
+                         	<label for='attr_licenses' data-i18n='licenses' class='sheet-flex'>Licenses</label>
+                        </td>
+                        <td class='sheet-flexcontainer'>
+						   <input type='text' name='attr_licenses' class='sheet-flex'>
+                        </td>
+                    </tr>					
+                    <tr>
+                        <td colspan='2'>
+                            <label data-i18n='fakes'>Fake IDs/Related Lifestyles/Funds/Licenses</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+							<fieldset class='repeating_fakes'>
+                            <input name='attr_fakes' class='sheet-fullwidth'>
+							</fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 		</div>    
 	</div>
 </div>
@@ -951,7 +902,7 @@
 				No hits
 			</span>			
 			<span class='sheet-rolltemplate-result-glitch'>			
-				Glitch
+			&nbsp;Glitch
 			</span>
 			<span class='sheet-rolltemplate-result-critglitch'>
 				Critical Glitch

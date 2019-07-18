@@ -96,5 +96,7 @@
 "pilot":"Pilot",
 "sensor":"Sensor",
 "seats":"Seats",
-"programs":"Programs"
+"programs":"Programs",
+"loyaltylabel":"L:",
+"connectionlabel":"C:"
 }
