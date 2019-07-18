@@ -203,7 +203,7 @@ select,
 	display: inline;
 }
 
-
+.sheet-overflowmarker input,
 .sheet-matrixdamagemarker input,
 .sheet-phydamagemarker input,
 .sheet-stundamagemarker input {
@@ -227,11 +227,13 @@ select,
 	color: #666;
 	text-align: center;
 }
+.sheet-overflowdamagemarker:hover input ~ span,
 .sheet-matrixdamagemarker:hover input ~ span,
 .sheet-phydamagemarker:hover input ~ span,
 .sheet-stundamagemarker:hover input ~ span {
     background-color: #ccc;
 }
+.sheet-overflowdamagemarker input:checked ~ span,
 .sheet-matrixdamagemarker input:checked ~ span,
 .sheet-stundamagemarker input:checked ~ span,
 .sheet-phydamagemarker input:checked ~ span {
@@ -242,12 +244,15 @@ select,
 	text-align: center;
 }
 
+.sheet-overflowtrack .sheet-dmtrackcell,
 .sheet-matrix .sheet-dmtrackcell {
 	width: 20px;
 	height: 20px;
 	display: inline-block;
 	margin-bottom: 4px;
 }
+
+.sheet-overflowdamagemarker,
 .sheet-matrixdamagemarker {
     display: inline;
     position: relative;
@@ -260,6 +265,8 @@ select,
     -ms-user-select: none;
     user-select: none;
 }
+
+.sheet-overflowdamagemarker span,
 .sheet-matrixdamagemarker span {
 	position: absolute;
 	top: 0;
@@ -272,6 +279,10 @@ select,
 	line-height: 22px;
 	color: #666;
 	text-align: center;
+}
+
+.sheet-overflowdamagemarker span {
+	border: 1px solid #E00000;
 }
 
 .sheet-hidedamage[value="on"] + .sheet-dmtrackcell {
