@@ -98,5 +98,11 @@
 "seats":"Seats",
 "programs":"Programs",
 "loyaltylabel":"L:",
-"connectionlabel":"C:"
+"connectionlabel":"C:",
+"config":"Config Settings",
+"extraphysdmg":"Extra Physical Condition Track Boxes",
+"extrastundmg":"Extra Stun Condition Track Boxes",
+"extramatrixdmg":"Extra Matrix Condition Track Boxes",
+"extraoverdmg":"Extra Overflow Condition Track Boxes",
+"cost":"(Cost)"
 }

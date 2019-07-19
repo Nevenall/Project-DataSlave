@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Njord;
-	src: url("https://github.com/EtoileLion/Project-DataSlave/blob/master/fonts/AmpCB.otf?raw=true");
+	src: url("https://github.com/EtoileLion/Project-DataSlave/blob/master/fonts/Njord.otf?raw=true");
 }
 
 @font-face {
@@ -100,6 +100,11 @@ th,
 	text-align: center;
 }
 
+.sheet-il,
+.sheet-ghostlabel {
+	display: inline;
+}
+
 .sheet-flexcontainer {
 	display: flex;
 }
@@ -178,14 +183,11 @@ select,
 	font-family: Njord;
 	font-weight: bold;
 }
-.sheet-hideveh[value="on"] ~ .sheet-hideoutput,
-.sheet-vehicle .sheet-flexcontainer,
 .sheet-skill,.sheet-spec,.sheet-exp,
 .sheet-hidestuff[value='on'] ~ .sheet-hideoutput,
 .sheet-hideinput {
 	display: none;
 }
-.sheet-hideveh[value="on"] ~ .sheet-flexcontainer,
 .sheet-skilltype[value="skill"] ~ .sheet-hideoutput .sheet-skill,
 .sheet-skilltype[value="spec"] ~ .sheet-hideoutput .sheet-spec,
 .sheet-skilltype[value="exp"] ~ .sheet-hideoutput .sheet-exp,
@@ -198,12 +200,9 @@ select,
 }
 
 
-.sheet-il,
-.sheet-ghostlabel {
-	display: inline;
-}
 
-.sheet-overflowmarker input,
+
+.sheet-overflowdamagemarker input,
 .sheet-matrixdamagemarker input,
 .sheet-phydamagemarker input,
 .sheet-stundamagemarker input {

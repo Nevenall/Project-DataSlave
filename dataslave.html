@@ -117,10 +117,10 @@
                             <input type='number' value="1" name='attr_reaction' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='&{template:shadowsum} {{attr=Initiative}} {{roll=[[[[@{initiative}+?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]d6]]}}'><label for='attr_initiative' data-i18n='initiative'></label></button>
+                            <button  type='roll' value='&{template:shadowsum} {{attr=Initiative}} {{roll=[[[[{[[@{initiative}+?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]],0}kh1]]d6+@{initiativebase}]]}}'><label for='attr_initiative' data-i18n='initiative'></label></button>
                         </td>
                         <td>
-                            <input type='number' value="1" name='attr_initiative' min=0>					
+                            <input type='number' value="0" name='attr_initiative' min=0>d6+<input type='number' value="1" name='attr_initiativebase' min=0>					
                         </td>
                     </tr>
                     <tr>
@@ -131,10 +131,10 @@
                             <input type='number' value="1" name='attr_strength' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='&{template:shadowsum} {{attr=Matrix Initiative}} {{roll=[[[[@{matrix-initiative}+?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]d6]]}}'><label for='attr_matrix-initiative' data-i18n='matrix-initiative'></label></button>
+                            <button  type='roll' value='&{template:shadowsum} {{attr=Matrix Initiative}} {{roll=[[[[{[[@{matrix-initiative}+?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]],0}kh1]]d6+@{matrix-initiativebase}]]}}'><label for='attr_matrix-initiative' data-i18n='matrix-initiative'></label></button>
                         </td>
                         <td>
-                            <input type='number' value="1" name='attr_matrix-initiative' min=0>					
+                            <input type='number' value="0" name='attr_matrix-initiative' min=0>d6+<input type='number' value="1" name='attr_matrix-initiativebase' min=0>									
                         </td>
                     </tr>
                     <tr>
@@ -145,10 +145,10 @@
                             <input type='number' value="1" name='attr_willpower' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='&{template:shadowsum} {{attr=Astral Initiative}} {{roll=[[[[@{astral-initiative}+?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]d6]]}}'><label for='attr_astral-initiative' data-i18n='astral-initiative'></label></button>
+                            <button  type='roll' value='&{template:shadowsum} {{attr=Astral Initiative}} {{roll=[[[[{[[@{astral-initiative}+?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]],0}kh1]]d6+@{astral-initiativebase}]]}}'><label for='attr_astral-initiative' data-i18n='astral-initiative'></label></button>
                         </td>
                         <td>
-                            <input type='number' value="1" name='attr_astral-initiative' min=0>					
+                            <input type='number' value="0" name='attr_astral-initiative' min=0>d6+<input type='number' value="1" name='attr_astral-initiativebase' min=0>					
                         </td>
                     </tr>
                     <tr>
@@ -405,8 +405,7 @@
 							<span>-6</span>
 							</label></div>
 							<input type='hidden' name='attr_physdamagepoolmod' value='0'>
-						</div>
-						<label for='attr_extraphysdmg'></label><input type='number' name='attr_extraphysdmg'> 
+						</div>						
 						<div class='sheet-damagetrack sheet-overflowtrack'>
 							<div class='sheet-dmgtrackheader'>Overflow</div>
 							<input type='hidden' name='attr_overflowhide1' class='sheet-hidedamage' value=''>
@@ -595,7 +594,6 @@
 								<span>-4</span>
 							</label></div>
 							<input type='hidden' name='attr_stunsdamagepoolmod' value='0'>							
-							<label for='attr_extrastundmg'></label><input type='number' name='attr_extrastundmg'>
 						</div>
 						<p class='sheet-mini'>For every 3 boxes of damage on any one damage track, the character takes a -1 Dice Pool Modifier on tests.
 						</p>
@@ -709,14 +707,16 @@
 						<input type='checkbox' name='attr_rangedhide'  class='sheet-hideinput sheet-right' checked>
 					</div>
 					<div class='sheet-flexcontainer sheet-fullwidth'>
-						<span class='sheet-hideinput sheet-il'>Cl</span><input type='number' name='attr_rangedweaponclose' class='sheet-hideinput' value="0"><span class='sheet-hideinput sheet-il'>/</span>
-						<span class='sheet-hideinput sheet-il'>Nr</span><input type='number' name='attr_rangedweaponnear' class='sheet-hideinput' value="0"><span class='sheet-hideinput sheet-il'>/</span>
-						<span class='sheet-hideinput sheet-il'>Fr</span><input type='number' name='attr_rangedweaponfar' class='sheet-hideinput' value="0"><span class='sheet-hideinput sheet-il'>/</span>
-						<span class='sheet-hideinput sheet-il'>Ex</span><input type='number' name='attr_rangedweaponextreme' class='sheet-hideinput' value="0">
+						<label class='sheet-hideinput sheet-il'>Cl</label><input type='number' name='attr_rangedweaponclose' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>/</label>
+						<label class='sheet-hideinput sheet-il'>Nr</label><input type='number' name='attr_rangedweaponnear' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>/</label>
+						<label class='sheet-hideinput sheet-il'>Fr</label><input type='number' name='attr_rangedweaponfar' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>/</label>
+						<label class='sheet-hideinput sheet-il'>Ex</label><input type='number' name='attr_rangedweaponextreme' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>&nbsp;</label>
+						<label class='sheet-hideinput sheet-il'>Rate</label><input type='number' name='attr_rangedweaponrating' class='sheet-hideinput' value="0">
 					</div>
 					<div class='sheet-flexcontainer sheet-fullwidth'>						
 						<input type='text' name='attr_rangedweaponmode' class='sheet-flex sheet-hideinput' data-i18n-placeholder="mode" placeholder="Mode">
 						<input type='text' name='attr_rangedweaponammo' class='sheet-flex sheet-hideinput' data-i18n-placeholder="ammo" placeholder="Ammo">											
+						<input type='text' name='attr_rangedweaponcost' class='sheet-flex sheet-hideinput' data-i18n-placeholder="cost" placeholder="Cost">
 					</div>
 				</fieldset>				
 			</div>
@@ -729,7 +729,7 @@
 					<p class='sheet-hideoutput sheet-il'><span name='attr_armorname'></span> (<span name='attr_armorrating'></span>)<input type='checkbox' name='attr_armorhide' class='sheet-right' checked></p>
 					<div class='sheet-flexcontainer'>
 						<input type='text' name='attr_armorname' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name" placeholder="Name">
-						<span class='sheet-hideinput sheet-il'>R:</span><input type='number' name='attr_armorrating' class='sheet-hideinput'>
+						<label class='sheet-hideinput sheet-il'>R:</label><input type='number' name='attr_armorrating' class='sheet-hideinput'><input type='text' name='attr_armorcost' class='sheet-flex sheet-hideinput' data-i18n-placeholder="cost" placeholder="Cost">
 						<input type='checkbox' name='attr_armorhide' class='sheet-right sheet-hideinput' checked>
 					</div>
 					<div class='sheet-flexcontainer'>	
@@ -753,11 +753,14 @@
 							<option value="B">Betaware</option>
 							<option value="D">Deltaware</option>
 						</select>						
-						<span class='sheet-hideinput sheet-il'>E:</span><input type='number' name='attr_augmentationessence' step="0.1" value="0.1" class='sheet-hideinput'>
+						<label class='sheet-hideinput sheet-il'>E:</label><input type='number' name='attr_augmentationessence' step="0.1" value="0.1" class='sheet-hideinput'>
 						<input type='checkbox' name='attr_augmentationhide' class='sheet-right sheet-hideinput' checked>
 					</div>
 					<div class='sheet-flexcontainer'>
 						<textarea name='attr_augmentationnotes' class='sheet-flex sheet-hideinput' data-i18n-placeholder="notes" placeholder="Notes"></textarea>
+					</div>
+					<div class='sheet-flexcontainer'>
+						<input type='text' name='attr_augmentationcost' class='sheet-flex sheet-hideinput' data-i18n-placeholder="cost" placeholder="Cost">
 					</div>
 				</fieldset>				
 			</div>
@@ -766,10 +769,17 @@
                     <p data-i18n='gear'>Gear</p>
                 </div>
 				<fieldset class='repeating_gear'>
+					<input type='hidden' class='sheet-hidestuff' name='attr_gearhide' value='on'>
+					<p class='sheet-hideoutput'><span name='attr_gearitem'></span> (R<span name='attr_gearrating'></span>) [<span name='attr_gearquant'></span>] <input type='checkbox' name='attr_gearhide' class='sheet-right' checked></p>
 					<div class='sheet-flexcontainer'>
-						<input type='text' name='attr_gearitem' class='sheet-flex'>
-						<span>R:</span>
-						<input type='number' name='attr_gearrating'>
+						<input type='text' name='attr_gearitem' class='sheet-flex sheet-hideinput'>
+						<label class='sheet-hideinput'>R:</label>
+						<input type='number' name='attr_gearrating' class='sheet-hideinput'>
+						<input type='checkbox' name='attr_gearhide' class='sheet-right sheet-hideinput' checked>
+					</div>
+					<div class='sheet-flexcontainer'>
+						<input type='text' name='attr_gearcost' class='sheet-flex sheet-hideinput' data-i18n-placeholder="cost" placeholder="Cost">
+						<label class='sheet-hideinput'>Q:</label><input type='number' name='attr_gearquant' class='sheet-hideinput' value="1">
 					</div>
 				</fieldset>				
 			</div>			
@@ -783,10 +793,14 @@
 					<input type='hidden' class='sheet-hidestuff' name='attr_meleehide' value='on'>
 					<p class='sheet-hideoutput sheet-il'><span name='attr_meleeweaponname'></span> (<span name='attr_meleeweaponclose'></span>) [<span name='attr_meleeweapondv'></span>]</p><input type='checkbox' name='attr_meleehide'  class='sheet-hideoutput sheet-right' checked>					
 					<div class='sheet-flexcontainer sheet-fullwidth'>
-						<input type='text' name='attr_meleeweaponname' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name" placeholder="Name">
-						<input type='text' name='attr_meleeweapondv' class='sheet-flex sheet-hideinput' data-i18n-placeholder="dv" placeholder="DV">
-						<span class='sheet-hideinput sheet-il'>Cl</span><input type='number' name='attr_meleeweaponclose' class='sheet-hideinput' value="0">
+						<input type='text' name='attr_meleeweaponname' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name" placeholder="Name">						
+						<input type='text' name='attr_meleeweapondv' class='sheet-flex sheet-hideinput' data-i18n-placeholder="dv" placeholder="DV">						
 						<input type='checkbox' name='attr_meleehide'  class='sheet-hideinput sheet-right' checked>
+					</div>
+					<div class='sheet-flexcontainer sheet-fullwidth'>
+						<label class='sheet-hideinput sheet-il'>Rating&nbsp;</label><input type='number' name='attr_meleeweaponrating' class='sheet-hideinput' value="0">
+						<label class='sheet-hideinput sheet-il'>Cl</label><input type='number' name='attr_meleeweaponclose' class='sheet-hideinput' value="0">
+						<input type='text' name='attr_meleeweaponcost' class='sheet-flex sheet-hideinput' data-i18n-placeholder="cost" placeholder="Cost">
 					</div>
 				</fieldset>				
 			</div>
@@ -896,34 +910,37 @@
                     <p data-i18n='vehicle' class='sheet-il'>Vehicle</p>
                 </div>
 				<fieldset class="repeating_vehicles">
-					<input type='hidden' name='attr_hideveh' class='sheet-hideveh'>
+					<input type='hidden' name='attr_hideveh' class='sheet-hidestuff' value="on">
 					<p class='sheet-hideoutput'><span name='attr_vehname'></span> (On <span name='attr_vehhandonroad'></span>/Off <span name='attr_vehhandoffroad'></span>) [<span name='attr_vehacc'></span>/<span name='attr_vehspdint'></span>/<span name='attr_vehtopspd'></span>/<span name='attr_vehbody'></span>/<span name='attr_veharmor'></span>/<span name='attr_vehpilot'></span>/<span name='attr_vehsensor'></span>/<span name='attr_vehseats'></span>]<input type='checkbox' name='attr_hideveh' class='sheet-right sheet-hideoutput' checked></p>
 				        <div class='sheet-flexcontainer'>
-                            <label for='attr_vehname' data-i18n='vehicle' class='sheet-inlinelabel'>Vehicle</label><input type='text' name='attr_vehname' class='sheet-flex' data-i18n-placeholder="name" placeholder="Name">					                            
-							<label for='attr_vehhand' data-i18n='handling' class='sheet-inlinelabel'>Handling</label><input type='number' name='attr_vehhandonroad'>/<input type='number' name='attr_vehhandoffroad'>
+                            <label for='attr_vehname' data-i18n='vehicle' class='sheet-inlinelabel sheet-hideinput'>Vehicle</label><input type='text' name='attr_vehname' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name" placeholder="Name">					                            
 							<input type='checkbox' name='attr_hideveh' class='sheet-right sheet-hideinput' checked>							
                         </div>                        
+						<div class='sheet-flexcontainer'>
+							<label for='attr_vehhand' data-i18n='handling' class='sheet-inlinelabel sheet-hideinput'>Handling</label><input type='number' name='attr_vehhandonroad' class='sheet-hideinput'><span class='sheet-hideinput'>/</span><input type='number' name='attr_vehhandoffroad' class='sheet-hideinput'>
+							<input type='text' name='attr_vehcost' class='sheet-flex sheet-hideinput' data-i18n-placeholder="cost" placeholder="Cost">							
+						</div>
                         <div class='sheet-flexcontainer'>
-                            <label for='attr_vehacc' data-i18n='acc' class='sheet-inlinelabel sheet-flex'>Acceleration</label><input type='number' name='attr_vehacc'>					                            
-							<label for='attr_vehspdint' data-i18n='spdint' class='sheet-inlinelabel sheet-flex'>Speed Interval</label><input type='number' name='attr_vehspdint'>								
+                            <label for='attr_vehacc' data-i18n='acc' class='sheet-inlinelabel sheet-flex sheet-hideinput'>Acceleration</label><input type='number' name='attr_vehacc' class='sheet-hideinput'>					                            
+							<label for='attr_vehspdint' data-i18n='spdint' class='sheet-inlinelabel sheet-flex sheet-hideinput'>Speed Interval</label><input type='number' name='attr_vehspdint' class='sheet-hideinput'>								
                         </div>                        
                         <div class='sheet-flexcontainer'>
-                            <label for='attr_vehtopspd' data-i18n='topspd' class='sheet-inlinelabel sheet-flex'>Top Speed</label><input type='number' name='attr_vehtopspd'>
-							<label for='attr_vehbody' data-i18n='body' class='sheet-inlinelabel sheet-flex'>Body</label><input type='number' name='attr_vehbody'>								
+                            <label for='attr_vehtopspd' data-i18n='topspd' class='sheet-inlinelabel sheet-flex sheet-hideinput'>Top Speed</label><input type='number' name='attr_vehtopspd' class='sheet-hideinput'>
+							<label for='attr_vehbody' data-i18n='body' class='sheet-inlinelabel sheet-flex sheet-hideinput'>Body</label><input type='number' name='attr_vehbody' class='sheet-hideinput'>
                         </div>                        
                         <div class='sheet-flexcontainer'>
-                            <label for='attr_veharmor' data-i18n='armor' class='sheet-flex sheet-inlinelabel'>Armor</label><input type='number' name='attr_veharmor'>					                            
-							<label for='attr_vehpilot' data-i18n='pilot' class='sheet-inlinelabel sheet-flex'>Pilot</label><input type='number' name='attr_vehpilot'>								
+                            <label for='attr_veharmor' data-i18n='armor' class='sheet-flex sheet-inlinelabel sheet-hideinput'>Armor</label><input type='number' name='attr_veharmor' class='sheet-hideinput'>					                            
+							<label for='attr_vehpilot' data-i18n='pilot' class='sheet-inlinelabel sheet-flex sheet-hideinput'>Pilot</label><input type='number' name='attr_vehpilot' class='sheet-hideinput'>
                         </div>                        
                         <div class='sheet-flexcontainer'>
-                            <label for='attr_vehsensor' data-i18n='sensor' class='sheet-flex sheet-inlinelabel'>Sensor</label><input type='number' name='attr_vehsensor'>					                            
-							<label for='attr_vehseats' data-i18n='seats' class='sheet-flex sheet-inlinelabel sheet-labelright'>Seats</label><input type='number' name='attr_vehseats'>								
+                            <label for='attr_vehsensor' data-i18n='sensor' class='sheet-flex sheet-inlinelabel sheet-hideinput'>Sensor</label><input type='number' name='attr_vehsensor' class='sheet-hideinput'>					                            
+							<label for='attr_vehseats' data-i18n='seats' class='sheet-flex sheet-inlinelabel sheet-labelright sheet-hideinput'>Seats</label><input type='number' name='attr_vehseats' class='sheet-hideinput'>								
                         </div>                        
                         <div class='sheet-flexcontainer'>
-                            <label for='attr_vehnotes' data-i18n='notes' class='sheet-flex'>Notes</label>
+                            <label for='attr_vehnotes' data-i18n='notes' class='sheet-flex sheet-hideinput'>Notes</label>
 						</div>
                         <div class='sheet-flexcontainer'>						
-							<textarea name='attr_vehnotes' class='sheet-flex' data-i18n-placeholder="notes" placeholder="Notes"></textarea>					                            	
+							<textarea name='attr_vehnotes' class='sheet-flex sheet-hideinput' data-i18n-placeholder="notes" placeholder="Notes"></textarea>					                            	
                         </div>                        
                 </fieldset>
 			</div>
@@ -993,7 +1010,45 @@
 			</span>		
 		</label>			
 	</div>	
-    <p>Nothing here...yet.</p>
+    <div class='sheet-section'>
+		<div class='sheet-headertext'>
+            <p data-i18n='config'>Config Options</p>
+        </div>
+		<table>
+			<tr>
+				<td>
+					<label for='attr_physdamageextra' data-i18n='extraphysdmg'></label>
+				</td>
+				<td>
+					<input type='number' name='attr_physdamageextra' value="0"> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for='attr_overdamageextra' data-i18n='extraoverdmg'></label>
+				</td>
+				<td>
+					<input type='number' name='attr_overdamageextra' value="0"> 
+				</td>
+			</tr>			
+			<tr>
+				<td>
+					<label for='attr_stunsdamageextra' data-i18n='extrastundmg'></label>
+				</td>
+				<td>
+					<input type='number' name='attr_stunsdamageextra' value="0"> 
+				</td>
+			</tr>	
+			<tr>
+				<td>			
+					<label for='attr_matrixdamageextra' data-i18n='extramatrixdmg'></label>
+				</td>
+				<td>
+					<input type='number' name='attr_matrixdamageextra' value="0"> 
+				</td>
+			</tr>	
+		</table>
+	</div>
 </div>
 <div class='sheet-page sheet-page4'>
 </div>
@@ -1043,6 +1098,7 @@
 </rolltemplate>
 <script type='text/worker'>
 on("change:physdamage1 change:physdamage2 change:physdamage3 change:physdamage4 change:physdamage5 change:physdamage6 change:physdamage7 change:physdamage8 change:physdamage9 change:physdamage10 change:physdamage11 change:physdamage12 change:physdamage13 change:physdamage14 change:physdamage15 change:physdamage16 change:physdamage17 change:physdamage18 change:stunsdamage1 change:stunsdamage2 change:stunsdamage3 change:stunsdamage4 change:stunsdamage5 change:stunsdamage6 change:stunsdamage7 change:stunsdamage8 change:stunsdamage9 change:stunsdamage10 change:stunsdamage11 change:stunsdamage12 change:matrixdamage1 change:matrixdamage2 change:matrixdamage3 change:matrixdamage4 change:matrixdamage5 change:matrixdamage6 change:matrixdamage7 change:matrixdamage8 change:matrixdamage9 change:matrixdamage10 change:matrixdamage11 change:matrixdamage12 change:overflowdamage1 change:overflowdamage2 change:overflowdamage3 change:overflowdamage4 change:overflowdamage5 change:overflowdamage6 change:overflowdamage7 change:overflowdamage8 change:overflowdamage9 change:overflowdamage10 change:overflowdamage11 change:overflowdamage12 change:overflowdamage13 change:overflowdamage14 change:overflowdamage15 change:overflowdamage16 change:overflowdamage17 change:overflowdamage18",function (eventInfo) {
+        console.log("Enter DmgChange");
 		let numchanged = parseInt(eventInfo.sourceAttribute.match(/\d+/));
 		let typechanges = "";
 		let numoftype = 12;
@@ -1075,23 +1131,34 @@ on("change:physdamage1 change:physdamage2 change:physdamage3 change:physdamage4 
 		setAttrs(out,{"silent":true});
 });
 
-on("change:body",function (eventInfo) {
-	let newbod = 8+Math.ceil(parseInt(eventInfo.newValue)/2);
-	let out = [];
-		for(let i = 1; i <= newbod; i++) {
-			out["physhide"+i] = "0";
-		}
-		for(let i = newbod+1; i <= 18; i++) {
-			out["physhide"+i] = "on";
-			out["physdamage"+i] = "";
-		}
-		setAttrs(out,{"silent":true});
-		getAttrs(["physdamagepoolmod"],function(values) {
-			if(values.physdamagepoolmod > Math.floor(newbod/3)) { setAttrs({"physdamagepoolmod": Math.floor(newbod/3)}); }
-		});
+on("change:body change:physdamageextra change:overdamageextra",function (eventInfo) {
+    getAttrs(["physdamageextra","overdamageextra","physdamagepoolmod","body"], function(values) {
+		let newbod = 8+Math.ceil(parseInt(values.body)/2)+parseInt(values.physdamageextra);
+		let newovr = (parseInt(values.body)*2)+parseInt(values.overdamageextra);
+		console.log(newbod);
+		console.log(newovr);
+		let out = [];
+			for(let i = 1; i <= newbod; i++) {
+				out["physhide"+i] = "0";
+			}
+			for(let i = newbod+1; i <= 18; i++) {
+				out["physhide"+i] = "on";
+				out["physdamage"+i] = "";
+			}
+			for(let i = 1; i <= newovr; i++) {
+				out["overflowhide"+i] = "0";
+			}
+			for(let i = newovr+1; i <= 18; i++) {
+				out["overflowhide"+i] = "on";
+				out["overflowdamage"+i] = "";
+			}
+			if(parseInt(values.physdamagepoolmod) > Math.floor(newbod/3)) { out["physdamagepoolmod"] = Math.floor(newbod/3); }
+			setAttrs(out,{"silent":true});
+	});
 });
 
-on("change:body change:physdamagepoolmod",function (eventInfo) {
+/*on("change:body change:physdamagepoolmod",function (eventInfo) {
+		console.log("Enter Overflow");
 		getAttrs(["physdamagepoolmod"],function(values) {
 			let newbod = (parseInt(eventInfo.newValue)*2)-values.physdamagepoolmod;
 			let out = [];
@@ -1102,9 +1169,12 @@ on("change:body change:physdamagepoolmod",function (eventInfo) {
 				out["overflowhide"+i] = "on";
 				out["overflowdamage"+i] = "";
 			}
+			console.log(out);
 			setAttrs(out,{"silent":true});
 		});
-});	
+		console.log("Exit Overflow");
+});
+*/	
 	
 on("change:willpower",function (eventInfo) {
 	let newbod = 8+Math.ceil(parseInt(eventInfo.newValue)/2);
