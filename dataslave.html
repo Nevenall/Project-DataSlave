@@ -241,7 +241,14 @@
                 <div class='sheet-headertext'>
                     <p data-i18n='skills'>Skills</p>
                 </div>
-				<
+				<div class=''>
+					<label>Astral</label><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Intuit</button><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Will</button>
+					<fieldset class='repeating_astralspecs'>
+						<p class='sheet-hideoutput sheet-flexcontainer'><button type='roll' value='!shadowtest @{astral}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}' class='sheet-il sheet-hideoutput'><span name='attr_skillname'></span></button> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><input type='checkbox' name='attr_skillhide' class='sheet-right sheet-il' checked></p></td></tr></table>
+						<label>Astral</label><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Intuit</button><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Will</button>
+					
+					</fieldset>
+				</div>
                 <fieldset class="repeating_skills">
 					<input type='hidden' name='attr_skillhide' class='sheet-hidestuff' value='on'>
 					<input type='hidden' name='attr_skilltype' class='sheet-skilltype' value='skill'>
