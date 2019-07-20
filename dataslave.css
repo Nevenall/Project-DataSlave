@@ -342,6 +342,11 @@ select,
     font-size: large;
     text-transform: capitalize;
 }
+
+.sheet-rolltemplate-shadowsum .sheet-rolltemplate-dieline span {
+	background-color: transparent !important;
+	border: none !important;
+}
 .sheet-page button[type='roll'] {
 	background: transparent;
 	border: none;
