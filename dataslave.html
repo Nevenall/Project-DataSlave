@@ -1,5 +1,5 @@
 <!--- Project Dataslave --->
-<!--- Version 0.1 Alpha --->
+<!--- Version 0.6 Beta --->
 <!--- By EtoileLion --->
 <div class='sheet-bg'>
 <input type='hidden' name='attr_sheetpage' class='sheet-sheetpage' value='1'>
@@ -237,61 +237,74 @@
                     </tr>
                 </table>
             </div>
-            <div class='sheet-section sheet-skills'>
+			<div class='sheet-section sheet-qualities'>
                 <div class='sheet-headertext'>
-                    <p data-i18n='skills'>Skills</p>
+                    <p data-i18n='qualities'>Qualities</p>
                 </div>
-				<div class=''>
-					<label>Astral</label><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Intuit</button><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Will</button>
-					<fieldset class='repeating_astralspecs'>
-						<p class='sheet-hideoutput sheet-flexcontainer'><button type='roll' value='!shadowtest @{astral}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}' class='sheet-il sheet-hideoutput'><span name='attr_skillname'></span></button> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><input type='checkbox' name='attr_skillhide' class='sheet-right sheet-il' checked></p></td></tr></table>
-						<label>Astral</label><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Intuit</button><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Will</button>
-					
-					</fieldset>
-				</div>
-                <fieldset class="repeating_skills">
-					<input type='hidden' name='attr_skillhide' class='sheet-hidestuff' value='on'>
-					<input type='hidden' name='attr_skilltype' class='sheet-skilltype' value='skill'>
-					<table class='hideoutput fullwidth'><tr><td>
-					<p class='sheet-hideoutput sheet-flexcontainer'><button type='roll' value='!shadowtest @{skillattrvalue}|@{skillrankhidden}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{skillattr}|@{skillname}|@{character_name}' class='sheet-il sheet-hideoutput'><span name='attr_skillname'></span></button> (<span name='attr_skillattr'></span>) <span class='sheet-skill'>S</span><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span><input type='checkbox' name='attr_skillhide' class='sheet-right sheet-il' checked></p></td></tr></table>
-				    <div class='sheet-flexcontainer sheet-fullwidth'>
-					<input type='text' name='attr_skillname' class='sheet-flex sheet-hideinput'>
-					<input type='number' name='attr_skillrank' class='sheet-hideinput'>
-					<input type='hidden' name='attr_skillattrvalue' value='0'>
-					<input type='hidden' name='attr_skillrankhidden' value='0'>
-					<select name='attr_skillattr'  class='sheet-inlinelabel sheet-hideinput'>
-                                    <option value='body' data-i18n='body'></option>
-                                    <option value='essence' data-i18n='essence'></option>
-                                    <option value='agility' data-i18n='agility'></option>
-                                    <option value='magic' data-i18n='magic'></option>
-                                    <option value='reaction' data-i18n='reaction'></option>
-                                    <option value='initiative' data-i18n='initiative'></option>
-                                    <option value='strength' data-i18n='strength'></option>
-                                    <option value='matrix-initiative' data-i18n='matrix-initiative'></option>
-                                    <option value='willpower' data-i18n='willpower'></option>
-                                    <option value='astral-initiative' data-i18n='astral-initiative'></option>
-                                    <option value='logic' data-i18n='logic'></option>
-                                    <option value='composure' data-i18n='composure'></option>
-                                    <option value='intuition' data-i18n='intuition'></option>
-                                    <option value='judge-intentions' data-i18n='judge-intentions'></option>
-                                    <option value='charisma' data-i18n='charisma'></option>
-                                    <option value='memory' data-i18n='memory'></option>
-                                    <option value='edge' data-i18n='edge'></option>
-                                    <option value='lift-carry' data-i18n='lift-carry'></option>
-                                    <option value='movement' data-i18n='movement'></option>
-                                    <option value='unarmed' data-i18n='unarmed'></option>
-                                    <option value='defenserating' data-i18n='defenserating'></option>
-                                </select>
-								<select name='attr_skilltype' class=' sheet-hideinput'>
-									<option value='0' data-i18n='skill'></option>
-									<option value='2' data-i18n='spec'></option>
-									<option value='3' data-i18n='exp'></option>
-								</select>
-								<input type='checkbox' name='attr_skillhide' class='sheet-right sheet-hideinput' checked>
-					</div>
-					
-                </fieldset>
-            </div> 
+
+				<fieldset class='repeating_qualities'>
+					<input type='hidden' name='attr_qualityhide' class='sheet-hidestuff'>
+					<span class='sheet-hideoutput' name='attr_qualityname'></span>
+					<input type='text' name='attr_qualityname' class='sheet-hideinput'><input type='checkbox'  class='sheet-right' name='attr_qualityhide' data-i18n-placeholder='qualityname' checked>
+					<textarea name='attr_qualitynote'  class='sheet-hideinput' data-i18n-placeholder='qualitynote'></textarea>					
+				</fieldset>
+			</div>
+			<div class='sheet-section sheet-contacts'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='contacts'>Contacts</p>
+                </div>
+				<fieldset class='repeating_contacts'>
+						<input type='hidden' name='attr_contacthide' class='sheet-hidestuff'>
+						<p class='sheet-hideoutput sheet-il'><span name='attr_contactname'></span>&nbsp;(C<span name='attr_contactloyalty'></span>/L<span name='attr_contactconnection'></span>)</p>
+						<input type='text' name='attr_contactname' class='sheet-hideinput'><input type='checkbox' name='attr_contacthide' data-i18n-placeholder='contactname' checked class='sheet-right'>
+						<label for='attr_contactloyalty' class='sheet-ghostlabel sheet-hideinput' data-i18n='loyaltylabel'>L:</label><input type='number' name='attr_contactloyalty' class='sheet-hideinput' value=0>
+						<label for='attr_contactconnection' class='sheet-ghostlabel sheet-hideinput' data-i18n='connectionlabel'>C:</label><input type='number' name='attr_contactconnection' class='sheet-hideinput' value=0>
+						<textarea name='attr_contactnotes' class='sheet-hideinput' data-i18n-placeholder='notes'></textarea>
+				</fieldset>				
+			</div>
+			<div class='sheet-section sheet-lifestyles'>
+                <div class='sheet-headertext'>			
+                    <p data-i18n='idlifecurrency'>Id<sub>s</sub>/Lifestyles/Currency</p>
+                </div>
+                <table class='sheet-fullwidth'>
+                    <tr>
+                        <td colspan='2'>
+                            <label for='attr_primarylife' data-i18n='primarylife'>Primary Lifestyle</label>
+                            <input type='text' name='attr_primarylife' class='sheet-fullwidth'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-flexcontainer'>
+                            <label for='attr_nuyen' data-i18n='nuyen' class='sheet-flex'>Nuyen</label>
+							<label for='attr_nuyen' data-i18n='karma' class='sheet-flex'>Karma</label>
+                        </td>
+                        <td class='sheet-flexcontainer'>
+							<input type='number' name='attr_nuyen' class='sheet-flex' value="0">
+                            <input type='number' name='attr_karma' class='sheet-flex' value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='sheet-flexcontainer'>
+                         	<label for='attr_licenses' data-i18n='licenses' class='sheet-flex'>Licenses</label>
+                        </td>
+                        <td class='sheet-flexcontainer'>
+						   <input type='text' name='attr_licenses' class='sheet-flex'>
+                        </td>
+                    </tr>					
+                    <tr>
+                        <td colspan='2'>
+                            <label data-i18n='fakes'>Fake IDs/Related Lifestyles/Funds/Licenses</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+							<fieldset class='repeating_fakes'>
+                            <input name='attr_fakes' class='sheet-fullwidth'>
+							</fieldset>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
 		<div class='sheet-col'>
 			<div class='sheet-section sheet-conditionmonitor'>
@@ -302,7 +315,14 @@
 					<div class='sheet-col'>
 						<div class='sheet-dmgtrackheader'>Physical Damage Track</div>
 						<div class='sheet-damagetrack'>
-							<input type='hidden' name='attr_physhide1' class='sheet-hidedamage' value=''>
+						<input type='hidden' name='attr_physdamagepenalty0' class='sheet-hidedamage' value='0'>
+						<input type='hidden' name='attr_physdamagepenalty1' class='sheet-hidedamage' value='-1'>
+						<input type='hidden' name='attr_physdamagepenalty2' class='sheet-hidedamage' value='-2'>
+						<input type='hidden' name='attr_physdamagepenalty3' class='sheet-hidedamage' value='-3'>
+						<input type='hidden' name='attr_physdamagepenalty4' class='sheet-hidedamage' value='-4'>
+						<input type='hidden' name='attr_physdamagepenalty5' class='sheet-hidedamage' value='-5'>
+						<input type='hidden' name='attr_physdamagepenalty6' class='sheet-hidedamage' value='-6'>
+							<input type='hidden' name='attr_physhide1' class='sheet-hidedamage' value=''>							
 							<div class='sheet-dmtrackcell'>
 							<label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage1'>
@@ -319,7 +339,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage3'>
-							<span>-1</span>
+							<span name='attr_physdamagepenalty1'></span>
 							</label></div>
 							<input type='hidden' name='attr_physhide4' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
@@ -337,7 +357,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage6'>
-							<span>-2</span>
+							<span name='attr_physdamagepenalty2'></span>
 							</label></div>
 							<input type='hidden' name='attr_physhide7' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
@@ -355,7 +375,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage9'>
-							<span>-3</span>
+							<span name='attr_physdamagepenalty3'></span>
 							</label></div>
 							<input type='hidden' name='attr_physhide10' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
@@ -373,7 +393,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage12'>
-							<span>-4</span>
+							<span name='attr_physdamagepenalty4'></span>
 							</label></div>
 							<input type='hidden' name='attr_physhide13' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
@@ -391,7 +411,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage15'>
-							<span>-5</span>
+							<span name='attr_physdamagepenalty5'></span>
 							</label></div>
 							<input type='hidden' name='attr_physhide16' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
@@ -409,7 +429,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='phydamagemarker'>
 							<input type='checkbox' name='attr_physdamage18'>
-							<span>-6</span>
+							<span name='attr_physdamagepenalty6'></span>
 							</label></div>
 							<input type='hidden' name='attr_physdamagepoolmod' value='0'>
 						</div>						
@@ -528,6 +548,14 @@
 					<div class='sheet-col'>
 						<div class='sheet-damagetrack'>
 							<div class='sheet-dmgtrackheader'>Stun Damage Track</div>
+						<input type='hidden' name='attr_stunsdamagepenalty0' class='sheet-hidedamage' value='0'>
+						<input type='hidden' name='attr_stunsdamagepenalty1' class='sheet-hidedamage' value='-1'>
+						<input type='hidden' name='attr_stunsdamagepenalty2' class='sheet-hidedamage' value='-2'>
+						<input type='hidden' name='attr_stunsdamagepenalty3' class='sheet-hidedamage' value='-3'>
+						<input type='hidden' name='attr_stunsdamagepenalty4' class='sheet-hidedamage' value='-4'>
+						<input type='hidden' name='attr_stunsdamagepenalty5' class='sheet-hidedamage' value='-5'>
+						<input type='hidden' name='attr_stunsdamagepenalty6' class='sheet-hidedamage' value='-6'>
+
 							<input type='hidden' name='attr_stunshide1' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
@@ -544,7 +572,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage3'>
-								<span>-1</span>
+								<span name='attr_physdamagepenalty1'></span>
 							</label></div>
 							<input type='hidden' name='attr_stunshide4' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
@@ -562,7 +590,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage6'>
-								<span>-2</span>
+								<span name='attr_physdamagepenalty2'></span>
 							</label></div>							
 							<input type='hidden' name='attr_stunshide7' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
@@ -580,7 +608,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage9'>
-								<span>-3</span>
+								<span name='attr_physdamagepenalty3'></span>
 							</label></div>
 							<input type='hidden' name='attr_stunshide10' class='sheet-hidedamage' value='on'>
 							<div class='sheet-dmtrackcell'>
@@ -598,7 +626,7 @@
 							<div class='sheet-dmtrackcell'>
 <label class='stundamagemarker'>
 								<input type='checkbox' name='attr_stunsdamage12'>
-								<span>-4</span>
+								<span name='attr_physdamagepenalty4'></span>
 							</label></div>
 							<input type='hidden' name='attr_stunsdamagepoolmod' value='0'>							
 						</div>
@@ -607,74 +635,749 @@
 					</div>
 				</div>
 			</div>
-			<div class='sheet-section sheet-qualities'>
+			<div class='sheet-section sheet-skills'>
                 <div class='sheet-headertext'>
-                    <p data-i18n='qualities'>Qualities</p>
+                    <p data-i18n='skills'>Skills</p>
                 </div>
-
-				<fieldset class='repeating_qualities'>
-					<input type='hidden' name='attr_qualityhide' class='sheet-hidestuff'>
-					<span class='sheet-hideoutput' name='attr_qualityname'></span>
-					<input type='text' name='attr_qualityname' class='sheet-hideinput'><input type='checkbox'  class='sheet-right' name='attr_qualityhide' data-i18n-placeholder='qualityname' checked>
-					<textarea name='attr_qualitynote'  class='sheet-hideinput' data-i18n-placeholder='qualitynote'></textarea>					
-				</fieldset>
-			</div>
-			<div class='sheet-section sheet-contacts'>
-                <div class='sheet-headertext'>
-                    <p data-i18n='contacts'>Contacts</p>
-                </div>
-				<fieldset class='repeating_contacts'>
-						<input type='hidden' name='attr_contacthide' class='sheet-hidestuff'>
-						<p class='sheet-hideoutput sheet-il'><span name='attr_contactname'></span>&nbsp;(C<span name='attr_contactloyalty'></span>/L<span name='attr_contactconnection'></span>)</p>
-						<input type='text' name='attr_contactname' class='sheet-hideinput'><input type='checkbox' name='attr_contacthide' data-i18n-placeholder='contactname' checked class='sheet-right'>
-						<label for='attr_contactloyalty' class='sheet-ghostlabel sheet-hideinput' data-i18n='loyaltylabel'>L:</label><input type='number' name='attr_contactloyalty' class='sheet-hideinput' value=0>
-						<label for='attr_contactconnection' class='sheet-ghostlabel sheet-hideinput' data-i18n='connectionlabel'>C:</label><input type='number' name='attr_contactconnection' class='sheet-hideinput' value=0>
-						<textarea name='attr_contactnotes' class='sheet-hideinput' data-i18n-placeholder='notes'></textarea>
-				</fieldset>				
-			</div>
-			<div class='sheet-section sheet-lifestyles'>
-                <div class='sheet-headertext'>			
-                    <p data-i18n='idlifecurrency'>Id<sub>s</sub>/Lifestyles/Currency</p>
-                </div>
-                <table class='sheet-fullwidth'>
-                    <tr>
-                        <td colspan='2'>
-                            <label for='attr_primarylife' data-i18n='primarylife'>Primary Lifestyle</label>
-                            <input type='text' name='attr_primarylife' class='sheet-fullwidth'>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class='sheet-flexcontainer'>
-                            <label for='attr_nuyen' data-i18n='nuyen' class='sheet-flex'>Nuyen</label>
-							<label for='attr_nuyen' data-i18n='karma' class='sheet-flex'>Karma</label>
-                        </td>
-                        <td class='sheet-flexcontainer'>
-							<input type='number' name='attr_nuyen' class='sheet-flex' value="0">
-                            <input type='number' name='attr_karma' class='sheet-flex' value="0">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class='sheet-flexcontainer'>
-                         	<label for='attr_licenses' data-i18n='licenses' class='sheet-flex'>Licenses</label>
-                        </td>
-                        <td class='sheet-flexcontainer'>
-						   <input type='text' name='attr_licenses' class='sheet-flex'>
-                        </td>
-                    </tr>					
-                    <tr>
-                        <td colspan='2'>
-                            <label data-i18n='fakes'>Fake IDs/Related Lifestyles/Funds/Licenses</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan='2'>
-							<fieldset class='repeating_fakes'>
-                            <input name='attr_fakes' class='sheet-fullwidth'>
-							</fieldset>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Astral</label><input type='number' name='attr_astral' value="0"><button type='roll' value='!shadowtest @{intuition}|@{astral}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Astral|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Intuit</button><button type='roll' value='!shadowtest @{willpower}|@{astral}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Willpower|Astral|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Will</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_astralspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_astralspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_astralspec1name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{astral}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Astral (@{astralspec1name})|@{character_name}|@{astralspec1type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{willpower}|@{astral}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Willpower|Astral (@{astralspec1name})|@{character_name}|@{astralspec1type}' class='sheet-il sheet-hideoutput'>+Will</button>
+						<input type='checkbox' name='attr_astralspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_astralspec1name'>							
+							<select name='attr_astralspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_astralspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_astralspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_astralspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_astralspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_astralspec2name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{astral}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Astral (@{astralspec2name})|@{character_name}|@{astralspec2type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{willpower}|@{astral}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Willpower|Astral (@{astralspec2name})|@{character_name}|@{astralspec2type}' class='sheet-il sheet-hideoutput'>+Will</button>
+						<input type='checkbox' name='attr_astralspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_astralspec2name'>							
+							<select name='attr_astralspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_astralspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Athletics</label><input type='number' name='attr_athletics' value="0"><button type='roll' value='!shadowtest @{agility}|@{athletics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Athletics|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Agi</button><button type='roll' value='!shadowtest @{strength}|@{athletics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Strength|Athletics|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Str</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_athleticsspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_athleticsspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_athleticsspec1name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{athletics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Athletics (@{athleticsspec1name})|@{character_name}|@{athleticsspec1type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<button type='roll' value='!shadowtest @{strength}|@{athletics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Strength|Athletics (@{athleticsspec1name})|@{character_name}|@{athleticsspec1type}' class='sheet-il sheet-hideoutput'>+Str</button>
+						<input type='checkbox' name='attr_athleticsspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_athleticsspec1name'>							
+							<select name='attr_athleticsspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_athleticsspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_athleticsspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_athleticsspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_athleticsspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_athleticsspec2name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{athletics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Athletics (@{athleticsspec2name})|@{character_name}|@{athleticsspec2type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<button type='roll' value='!shadowtest @{strength}|@{athletics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Strength|Athletics (@{athleticsspec2name})|@{character_name}|@{athleticsspec2type}' class='sheet-il sheet-hideoutput'>+Str</button>
+						<input type='checkbox' name='attr_athleticsspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_athleticsspec2name'>							
+							<select name='attr_athleticsspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_athleticsspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Biotech</label><input type='number' name='attr_biotech' value="0"><button type='roll' value='!shadowtest @{intuition}|@{biotech}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Biotech|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Intuit</button><button type='roll' value='!shadowtest @{logic}|@{biotech}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Biotech|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Log</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_biotechspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_biotechspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_biotechspec1name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{biotech}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Biotech (@{biotechspec1name})|@{character_name}|@{biotechspec1type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{logic}|@{biotech}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Biotech (@{biotechspec1name})|@{character_name}|@{biotechspec1type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_biotechspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_biotechspec1name'>							
+							<select name='attr_biotechspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_biotechspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_biotechspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_biotechspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_biotechspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_biotechspec2name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{biotech}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Biotech (@{biotechspec2name})|@{character_name}|@{biotechspec2type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{logic}|@{biotech}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Biotech (@{biotechspec2name})|@{character_name}|@{biotechspec2type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_biotechspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_biotechspec2name'>							
+							<select name='attr_biotechspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_biotechspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Close Combat</label><input type='number' name='attr_closecombat' value="0"><button type='roll' value='!shadowtest @{agility}|@{closecombat}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Close Combat|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Agi</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_closecombatspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_closecombatspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_closecombatspec1name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{closecombat}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Close Combat (@{closecombatspec1name})|@{character_name}|@{closecombatspec1type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<input type='checkbox' name='attr_closecombatspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_closecombatspec1name'>							
+							<select name='attr_closecombatspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_closecombatspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_closecombatspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_closecombatspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_closecombatspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_closecombatspec2name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{closecombat}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Close Combat (@{closecombatspec2name})|@{character_name}|@{closecombatspec2type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<input type='checkbox' name='attr_closecombatspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_closecombatspec2name'>							
+							<select name='attr_closecombatspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_closecombatspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Con</label><input type='number' name='attr_con' value="0"><button type='roll' value='!shadowtest @{charisma}|@{con}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Charisma|Con|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Cha</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_conspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_conspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_conspec1name'></span>
+						<button type='roll' value='!shadowtest @{charisma}|@{con}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Charisma|Con (@{conspec1name})|@{character_name}|@{conspec1type}' class='sheet-il sheet-hideoutput'>+Cha</button>
+						<input type='checkbox' name='attr_conspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_conspec1name'>							
+							<select name='attr_conspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_conspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_conspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_conspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_conspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_conspec2name'></span>
+						<button type='roll' value='!shadowtest @{charisma}|@{con}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Charisma|Con (@{conspec2name})|@{character_name}|@{conspec2type}' class='sheet-il sheet-hideoutput'>+Cha</button>
+						<input type='checkbox' name='attr_conspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_conspec2name'>							
+							<select name='attr_conspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_conspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Conjuring</label><input type='number' name='attr_conjuring' value="0"><button type='roll' value='!shadowtest @{magic}|@{conjuring}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic|Conjuring|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Mag</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_conjuringspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_conjuringspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_conjuringspec1name'></span>
+						<button type='roll' value='!shadowtest @{magic}|@{conjuring}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic|Conjuring (@{conjuringspec1name})|@{character_name}|@{conjuringspec1type}' class='sheet-il sheet-hideoutput'>+Mag</button>
+						<input type='checkbox' name='attr_conjuringspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_conjuringspec1name'>							
+							<select name='attr_conjuringspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_conjuringspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_conjuringspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_conjuringspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_conjuringspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_conjuringspec2name'></span>
+						<button type='roll' value='!shadowtest @{magic}|@{conjuring}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic|Conjuring (@{conjuringspec2name})|@{character_name}|@{conjuringspec2type}' class='sheet-il sheet-hideoutput'>+Mag</button>
+						<input type='checkbox' name='attr_conjuringspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_conjuringspec2name'>							
+							<select name='attr_conjuringspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_conjuringspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Cracking</label><input type='number' name='attr_cracking' value="0"><button type='roll' value='!shadowtest @{logic}|@{cracking}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Cracking|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Log</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_crackingspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_crackingspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_crackingspec1name'></span>
+						<button type='roll' value='!shadowtest @{logic}|@{cracking}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Cracking (@{crackingspec1name})|@{character_name}|@{crackingspec1type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_crackingspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_crackingspec1name'>							
+							<select name='attr_crackingspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_crackingspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_crackingspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_crackingspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_crackingspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_crackingspec2name'></span>
+						<button type='roll' value='!shadowtest @{logic}|@{cracking}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Cracking (@{crackingspec2name})|@{character_name}|@{crackingspec2type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_crackingspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_crackingspec2name'>							
+							<select name='attr_crackingspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_crackingspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Electronics</label><input type='number' name='attr_electronics' value="0"><button type='roll' value='!shadowtest @{intuition}|@{electronics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Electronics|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Intuit</button><button type='roll' value='!shadowtest @{logic}|@{electronics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Electronics|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Log</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_electronicsspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_electronicsspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_electronicsspec1name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{electronics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Electronics (@{electronicsspec1name})|@{character_name}|@{electronicsspec1type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{logic}|@{electronics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Electronics (@{electronicsspec1name})|@{character_name}|@{electronicsspec1type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_electronicsspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_electronicsspec1name'>							
+							<select name='attr_electronicsspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_electronicsspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_electronicsspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_electronicsspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_electronicsspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_electronicsspec2name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{electronics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Electronics (@{electronicsspec2name})|@{character_name}|@{electronicsspec2type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{logic}|@{electronics}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Electronics (@{electronicsspec2name})|@{character_name}|@{electronicsspec2type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_electronicsspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_electronicsspec2name'>							
+							<select name='attr_electronicsspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_electronicsspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Enchanting</label><input type='number' name='attr_enchanting' value="0"><button type='roll' value='!shadowtest @{magic}|@{enchanting}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic|Enchanting|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Mag</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_enchantingspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_enchantingspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_enchantingspec1name'></span>
+						<button type='roll' value='!shadowtest @{magic}|@{enchanting}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic|Enchanting (@{enchantingspec1name})|@{character_name}|@{enchantingspec1type}' class='sheet-il sheet-hideoutput'>+Mag</button>
+						<input type='checkbox' name='attr_enchantingspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_enchantingspec1name'>							
+							<select name='attr_enchantingspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_enchantingspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_enchantingspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_enchantingspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_enchantingspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_enchantingspec2name'></span>
+						<button type='roll' value='!shadowtest @{magic}|@{enchanting}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic|Enchanting (@{enchantingspec2name})|@{character_name}|@{enchantingspec2type}' class='sheet-il sheet-hideoutput'>+Mag</button>
+						<input type='checkbox' name='attr_enchantingspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_enchantingspec2name'>							
+							<select name='attr_enchantingspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_enchantingspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Engineering</label><input type='number' name='attr_engineering' value="0"><button type='roll' value='!shadowtest @{intuition}|@{engineering}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Engineering|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Intuit</button><button type='roll' value='!shadowtest @{logic}|@{engineering}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Engineering|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Log</button><button type='roll' value='!shadowtest @{agility}|@{engineering}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Engineering|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Agi</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_engineeringspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_engineeringspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_engineeringspec1name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{engineering}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Engineering (@{engineeringspec1name})|@{character_name}|@{engineeringspec1type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{logic}|@{engineering}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Engineering (@{engineeringspec1name})|@{character_name}|@{engineeringspec1type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<button type='roll' value='!shadowtest @{agility}|@{engineering}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Engineering (@{engineeringspec1name})|@{character_name}|@{engineeringspec1type}' class='sheet-il sheet-hideoutput'>+Agi</button>						
+						<input type='checkbox' name='attr_engineeringspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_engineeringspec1name'>							
+							<select name='attr_engineeringspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_engineeringspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_engineeringspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_engineeringspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_engineeringspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_engineeringspec2name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{engineering}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Engineering (@{engineeringspec2name})|@{character_name}|@{engineeringspec2type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{logic}|@{engineering}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Engineering (@{engineeringspec2name})|@{character_name}|@{engineeringspec2type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<button type='roll' value='!shadowtest @{agility}|@{engineering}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Engineering (@{engineeringspec1name})|@{character_name}|@{engineeringspec2type}' class='sheet-il sheet-hideoutput'>+Agi</button>												
+						<input type='checkbox' name='attr_engineeringspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_engineeringspec2name'>							
+							<select name='attr_engineeringspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_engineeringspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Exotic Weapons</label><input type='number' name='attr_exoticweapons' value="0"><button type='roll' value='!shadowtest @{agility}|@{exoticweapons}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Exotic Weapons|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Agi</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_exoticweaponsspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_exoticweaponsspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_exoticweaponsspec1name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{exoticweapons}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Exotic Weapons (@{exoticweaponsspec1name})|@{character_name}|@{exoticweaponsspec1type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<input type='checkbox' name='attr_exoticweaponsspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_exoticweaponsspec1name'>							
+							<select name='attr_exoticweaponsspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_exoticweaponsspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_exoticweaponsspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_exoticweaponsspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_exoticweaponsspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_exoticweaponsspec2name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{exoticweapons}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Exotic Weapons (@{exoticweaponsspec2name})|@{character_name}|@{exoticweaponsspec2type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<input type='checkbox' name='attr_exoticweaponsspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_exoticweaponsspec2name'>							
+							<select name='attr_exoticweaponsspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_exoticweaponsspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Firearms</label><input type='number' name='attr_firearms' value="0"><button type='roll' value='!shadowtest @{agility}|@{firearms}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Firearms|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Agi</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_firearmsspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_firearmsspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_firearmsspec1name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{firearms}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Firearms (@{firearmsspec1name})|@{character_name}|@{firearmsspec1type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<input type='checkbox' name='attr_firearmsspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_firearmsspec1name'>							
+							<select name='attr_firearmsspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_firearmsspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_firearmsspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_firearmsspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_firearmsspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_firearmsspec2name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{firearms}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Firearms (@{firearmsspec2name})|@{character_name}|@{firearmsspec2type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<input type='checkbox' name='attr_firearmsspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_firearmsspec2name'>							
+							<select name='attr_firearmsspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_firearmsspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Influence</label><input type='number' name='attr_influence' value="0"><button type='roll' value='!shadowtest @{charisma}|@{influence}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Charisma|Influence|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Cha</button><button type='roll' value='!shadowtest @{logic}|@{influence}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Influence|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Log</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_influencespec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_influencespec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_influencespec1name'></span>
+						<button type='roll' value='!shadowtest @{charisma}|@{influence}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Charisma|Influence (@{influencespec1name})|@{character_name}|@{influencespec1type}' class='sheet-il sheet-hideoutput'>+Cha</button>
+						<button type='roll' value='!shadowtest @{logic}|@{influence}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Influence (@{influencespec1name})|@{character_name}|@{influencespec1type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_influencespec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_influencespec1name'>							
+							<select name='attr_influencespec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_influencespec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_influencespec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_influencespec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_influencespec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_influencespec2name'></span>
+						<button type='roll' value='!shadowtest @{charisma}|@{influence}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Charisma|Influence (@{influencespec2name})|@{character_name}|@{influencespec2type}' class='sheet-il sheet-hideoutput'>+Cha</button>
+						<button type='roll' value='!shadowtest @{logic}|@{influence}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Influence (@{influencespec2name})|@{character_name}|@{influencespec2type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_influencespec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_influencespec2name'>							
+							<select name='attr_influencespec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_influencespec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Outdoors</label><input type='number' name='attr_outdoors' value="0"><button type='roll' value='!shadowtest @{intuition}|@{outdoors}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Outdoors|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Intuit</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_outdoorsspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_outdoorsspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_outdoorsspec1name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{outdoors}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Outdoors (@{outdoorsspec1name})|@{character_name}|@{outdoorsspec1type}' class='sheet-il sheet-hideoutput'>+Intuit</button>						
+						<input type='checkbox' name='attr_outdoorsspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_outdoorsspec1name'>							
+							<select name='attr_outdoorsspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_outdoorsspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_outdoorsspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_outdoorsspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_outdoorsspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_outdoorsspec2name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{outdoors}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Outdoors (@{outdoorsspec2name})|@{character_name}|@{outdoorsspec2type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<input type='checkbox' name='attr_outdoorsspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_outdoorsspec2name'>							
+							<select name='attr_outdoorsspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_outdoorsspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Perception</label><input type='number' name='attr_perception' value="0"><button type='roll' value='!shadowtest @{intuition}|@{perception}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Perception|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Intuit</button><button type='roll' value='!shadowtest @{logic}|@{perception}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Perception|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Log</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_perceptionspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_perceptionspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_perceptionspec1name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{perception}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Perception (@{perceptionspec1name})|@{character_name}|@{perceptionspec1type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{logic}|@{perception}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Perception (@{perceptionspec1name})|@{character_name}|@{perceptionspec1type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_perceptionspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_perceptionspec1name'>							
+							<select name='attr_perceptionspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_perceptionspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_perceptionspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_perceptionspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_perceptionspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_perceptionspec2name'></span>
+						<button type='roll' value='!shadowtest @{intuition}|@{perception}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Intuition|Perception (@{perceptionspec2name})|@{character_name}|@{perceptionspec2type}' class='sheet-il sheet-hideoutput'>+Intuit</button>
+						<button type='roll' value='!shadowtest @{logic}|@{perception}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Perception (@{perceptionspec2name})|@{character_name}|@{perceptionspec2type}' class='sheet-il sheet-hideoutput'>+Log</button>
+						<input type='checkbox' name='attr_perceptionspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_perceptionspec2name'>							
+							<select name='attr_perceptionspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_perceptionspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Piloting</label><input type='number' name='attr_piloting' value="0"><button type='roll' value='!shadowtest @{reaction}|@{piloting}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Reaction|Piloting|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+React</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_pilotingspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_pilotingspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_pilotingspec1name'></span>
+						<button type='roll' value='!shadowtest @{reaction}|@{piloting}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Reaction|Piloting (@{pilotingspec1name})|@{character_name}|@{pilotingspec1type}' class='sheet-il sheet-hideoutput'>+React</button>
+						<input type='checkbox' name='attr_pilotingspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_pilotingspec1name'>							
+							<select name='attr_pilotingspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_pilotingspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_pilotingspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_pilotingspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_pilotingspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_pilotingspec2name'></span>
+						<button type='roll' value='!shadowtest @{reaction}|@{piloting}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Reaction|Piloting (@{pilotingspec2name})|@{character_name}|@{pilotingspec2type}' class='sheet-il sheet-hideoutput'>+React</button>
+						<input type='checkbox' name='attr_pilotingspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_pilotingspec2name'>							
+							<select name='attr_pilotingspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_pilotingspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Sorcery</label><input type='number' name='attr_sorcery' value="0"><button type='roll' value='!shadowtest @{magic}|@{sorcery}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic|Sorcery|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Mag</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_sorceryspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_sorceryspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_sorceryspec1name'></span>
+						<button type='roll' value='!shadowtest @{magic}|@{sorcery}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic|Sorcery (@{sorceryspec1name})|@{character_name}|@{sorceryspec1type}' class='sheet-il sheet-hideoutput'>+Mag</button>
+						<input type='checkbox' name='attr_sorceryspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_sorceryspec1name'>							
+							<select name='attr_sorceryspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_sorceryspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_sorceryspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_sorceryspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_sorceryspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_sorceryspec2name'></span>
+						<button type='roll' value='!shadowtest @{magic}|@{sorcery}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Magic|Sorcery (@{sorceryspec2name})|@{character_name}|@{sorceryspec2type}' class='sheet-il sheet-hideoutput'>+Mag</button>
+						<input type='checkbox' name='attr_sorceryspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_sorceryspec2name'>							
+							<select name='attr_sorceryspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_sorceryspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Stealth</label><input type='number' name='attr_stealth' value="0"><button type='roll' value='!shadowtest @{agility}|@{stealth}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Stealth|@{character_name}|Y' class='sheet-il sheet-hideoutput'>+Agi</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_stealthspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_stealthspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_stealthspec1name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{stealth}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Stealth (@{stealthspec1name})|@{character_name}|@{stealthspec1type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<input type='checkbox' name='attr_stealthspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_stealthspec1name'>							
+							<select name='attr_stealthspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_stealthspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_stealthspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_stealthspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_stealthspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_stealthspec2name'></span>
+						<button type='roll' value='!shadowtest @{agility}|@{stealth}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Agility|Stealth (@{stealthspec2name})|@{character_name}|@{stealthspec2type}' class='sheet-il sheet-hideoutput'>+Agi</button>
+						<input type='checkbox' name='attr_stealthspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_stealthspec2name'>							
+							<select name='attr_stealthspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_stealthspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>
+				<div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead'>Tasking</label><input type='number' name='attr_tasking' value="0"><button type='roll' value='!shadowtest @{magic}|@{tasking}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Resonance|Tasking|@{character_name}|N' class='sheet-il sheet-hideoutput'>+Res</button>
+				</div>
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_taskingspec1hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_taskingspec1type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_taskingspec1name'></span>
+						<button type='roll' value='!shadowtest @{magic}|@{tasking}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Resonance|Tasking (@{taskingspec1name})|@{character_name}|@{taskingspec1type}' class='sheet-il sheet-hideoutput'>+Res</button>
+						<input type='checkbox' name='attr_taskingspec1hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_taskingspec1name'>							
+							<select name='attr_taskingspec1type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_taskingspec1hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>
+				<input type='hidden' class='sheet-hidespec2' name='attr_taskingspec1type' value="0">				
+				<div>
+						<input type='hidden' class='sheet-hidestuff' name='attr_taskingspec2hide' value="0">
+						<input type='hidden' class='sheet-hidespec' name='attr_taskingspec2type' value="0">
+						<p class='sheet-hideoutput sheet-flexcontainer'> <span class='sheet-spec'>*</span><span class='sheet-exp'>**</span>&nbsp;<span name='attr_taskingspec2name'></span>
+						<button type='roll' value='!shadowtest @{magic}|@{tasking}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Resonance|Tasking (@{taskingspec2name})|@{character_name}|@{taskingspec2type}' class='sheet-il sheet-hideoutput'>+Res</button>
+						<input type='checkbox' name='attr_taskingspec2hide' class='sheet-right sheet-il' ></p>
+						<div class='flexcontainer'>
+							<input type='text' class='sheet-hideinput sheet-flex' name='attr_taskingspec2name'>							
+							<select name='attr_taskingspec2type' class=' sheet-hideinput'>
+								<option value='0' data-i18n="none"></option>
+								<option value='2' data-i18n='spec'></option>
+								<option value='3' data-i18n='exp'></option>
+							</select>
+							<input type='checkbox' name='attr_taskingspec2hide' class='sheet-right sheet-hideinput' ></p>
+						</div>
+				</div>				
+				</div>				
+            </div> 
 		</div>    
 	</div>
 </div>
@@ -714,11 +1417,7 @@
 						<input type='checkbox' name='attr_rangedhide'  class='sheet-hideinput sheet-right' checked>
 					</div>
 					<div class='sheet-flexcontainer sheet-fullwidth'>
-						<label class='sheet-hideinput sheet-il'>Cl</label><input type='number' name='attr_rangedweaponclose' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>/</label>
-						<label class='sheet-hideinput sheet-il'>Nr</label><input type='number' name='attr_rangedweaponnear' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>/</label>
-						<label class='sheet-hideinput sheet-il'>Fr</label><input type='number' name='attr_rangedweaponfar' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>/</label>
-						<label class='sheet-hideinput sheet-il'>Ex</label><input type='number' name='attr_rangedweaponextreme' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>&nbsp;</label>
-						<label class='sheet-hideinput sheet-il'>Rate</label><input type='number' name='attr_rangedweaponrating' class='sheet-hideinput' value="0">
+						<label class='sheet-hideinput sheet-il'>Cl</label><input type='number' name='attr_rangedweaponclose' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>/ Nr</label><input type='number' name='attr_rangedweaponnear' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>/ Fr</label><input type='number' name='attr_rangedweaponfar' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>/ Ex</label><input type='number' name='attr_rangedweaponextreme' class='sheet-hideinput' value="0"><label class='sheet-hideinput sheet-il'>&nbsp;Rate</label><input type='number' name='attr_rangedweaponrating' class='sheet-hideinput' value="0">
 					</div>
 					<div class='sheet-flexcontainer sheet-fullwidth'>						
 						<input type='text' name='attr_rangedweaponmode' class='sheet-flex sheet-hideinput' data-i18n-placeholder="mode" placeholder="Mode">
@@ -837,6 +1536,13 @@
 						</fieldset>                         
 						<div class='sheet-damagetrack'>
 							<div class='sheet-dmgtrackheader'>Matrix Condition Monitor</div>
+							<input type='hidden' name='attr_matrixdamagepenalty0' class='sheet-hidedamage' value='0'>
+						<input type='hidden' name='attr_matrixdamagepenalty1' class='sheet-hidedamage' value='-1'>
+						<input type='hidden' name='attr_matrixdamagepenalty2' class='sheet-hidedamage' value='-2'>
+						<input type='hidden' name='attr_matrixdamagepenalty3' class='sheet-hidedamage' value='-3'>
+						<input type='hidden' name='attr_matrixdamagepenalty4' class='sheet-hidedamage' value='-4'>
+						<input type='hidden' name='attr_matrixdamagepenalty5' class='sheet-hidedamage' value='-5'>
+						<input type='hidden' name='attr_matrixdamagepenalty6' class='sheet-hidedamage' value='-6'>
 							<input type='hidden' name='attr_matrixhide1' class='sheet-hidedamage' value=''>
 							<div class='sheet-dmtrackcell'>
 <label class='matrixdamagemarker'>
@@ -992,6 +1698,27 @@
 						<textarea name='attr_powernotes' class='sheet-flex sheet-hideinput' data-i18n-placeholder="notes" placeholder="Notes"></textarea>
 					</div>
 				</fieldset>				
+			</div>
+			<div class='sheet-section sheet-knowledge'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='knowledgeheader'>Knowledge/Languages</p>
+                </div>
+				<fieldset class='repeating_knowledges'>
+					<input type='hidden' class='sheet-hidestuff' name='attr_knowledgehide' value='on'>
+					<input type='hidden' class='sheet-hidelevel' name='attr_knowledgelevel' value='knowledge'>
+					<p class='sheet-hideoutput sheet-il'><span name='attr_knowledgename'></span> <span class='sheet-klevelspan'>(<span name='attr_knowledgelevel'></span>)</span></p><input type='checkbox' name='attr_knowledgehide'  class='sheet-hideoutput sheet-right' checked>					
+					<div class='sheet-flexcontainer'>
+							<input type='text' name='attr_knowledgename' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name" placeholder="Name">
+							<select name='attr_knowledgelevel' class=' sheet-hideinput'>
+									<option data-i18n-value='knowledge' data-i18n='knowledge'></option>
+									<option data-i18n-value='language' data-i18n='language'></option>
+									<option data-i18n-value='specialist' data-i18n='specialist'></option>
+									<option data-i18n-value='expert' data-i18n='expert'></option>
+									<option data-i18n-value='native' data-i18n='native'></option>									
+								</select>
+							<input type='checkbox' name='attr_knowledgehide'  class='sheet-hideinput sheet-right' checked>	
+					</div>	
+				</fieldset>				
 			</div>			
 		</div>
 	</div>
@@ -1021,6 +1748,8 @@
 		<div class='sheet-headertext'>
             <p data-i18n='config'>Config Options</p>
         </div>
+		<div class='sheet-2colrow'>
+		<div class='sheet-col'>
 		<table>
 			<tr>
 				<td>
@@ -1055,6 +1784,53 @@
 				</td>
 			</tr>	
 		</table>
+		</div>
+		<div class='sheet-col'>
+		<table>
+			<tr>
+				<td>
+					<label for='attr_physdamageshift' data-i18n='shiftphysdmg'></label>
+				</td>
+				<td>
+					<input type='number' name='attr_physdamageshift' value="0"> 
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;
+				</td>
+				<td>
+				</td>
+			</tr>			
+			<tr>
+				<td>
+					<label for='attr_stunsdamageshift' data-i18n='shiftstundmg'></label>
+				</td>
+				<td>
+					<input type='number' name='attr_stunsdamageshift' value="0"> 
+				</td>
+			</tr>	
+			<tr>
+				<td>			
+					<label for='attr_matrixdamageshift' data-i18n='shiftmatrixdmg'></label>
+				</td>
+				<td>
+					<input type='number' name='attr_matrixdamageshift' value="0"> 
+				</td>
+			</tr>	
+		</table>
+		</div>		
+		</div>
+	</div>
+	<div class='sheet-section'>
+		<div class='sheet-headertext'>
+            <p>Old Skill Recovery Info</p>
+        </div>	
+	                <fieldset class="repeating_skills">
+					<input type='hidden' name='attr_skilltype' class='sheet-skilltype' value='skill'>
+					<table class='hideoutput fullwidth'><tr><td>
+					<p class='sheet-hideoutput sheet-flexcontainer'><span name='attr_skillname'></span>&nbsp;<span class='sheet-skill'>S</span><span class='sheet-spec'>*</span><span class='sheet-exp'>**</span> [<span name='sheet-skillrank'></span>]</p></td></tr></table>
+					
+                </fieldset>
 	</div>
 </div>
 <div class='sheet-page sheet-page4'>
@@ -1127,15 +1903,50 @@ on("change:physdamage1 change:physdamage2 change:physdamage3 change:physdamage4 
 			numoftype = 12;
 			break;
 		}
-		let out = [];
+		let out = {};
 		for(let i = 1; i < numchanged; i++) {
 			out[typechanges+i] = "on";
 		}
 		for(let i = numchanged+1; i <= numoftype; i++) {
 			out[typechanges+i] = "";
 		}
-		out[typechanges+"poolmod"] = Math.floor(numchanged / 3);
+		getAttrs([typechanges+"penalty0",typechanges+"penalty1",typechanges+"penalty2",typechanges+"penalty3",typechanges+"penalty4",typechanges+"penalty5",typechanges+"penalty6"], function(values) {	
+			out[typechanges+"poolmod"] = Math.abs(values[typechanges+"penalty"+Math.floor(((eventInfo.newValue == "on" )? numchanged : numchanged - 1) / 3)]);
+			setAttrs(out,{"silent":true});
+		});
+});
+
+on("change:physdamageshift", function (eventInfo) {
+    let out = {"physdamagepenalty0":0};
+	for(let i = 1; i <= 6; i++) {
+		out["physdamagepenalty"+i] = (-1*i)+parseInt(eventInfo.newValue);
+	}
+	getAttrs(["physdamagepoolmod"], function(values) {	
+		console.log("physdamagepenalty"+values.physdamagepoolmod);
+		out["physdamagepoolmod"] = -1*out["physdamagepenalty"+values.physdamagepoolmod];
+		console.log(out);
 		setAttrs(out,{"silent":true});
+	});
+});
+on("change:matrixdamageshift", function (eventInfo) {
+    let out = {"matrixdamagepenalty0":0};
+	for(let i = 1; i <= 6; i++) {
+		out["matrixdamagepenalty"+i] = (-1*i)+parseInt(eventInfo.newValue);
+	}
+	getAttrs(["matrixdamagepoolmod"], function(values) {	
+		out["matrixdamagepoolmod"] = -1*out["matrixdamagepenalty"+values.matrixdamagepoolmod];
+		setAttrs(out,{"silent":true});
+	});
+});
+on("change:stunsdamageshift", function (eventInfo) {
+    let out = {"stunsdamagepenalty0":0};
+	for(let i = 1; i <= 6; i++) {
+		out["stunsdamagepenalty"+i] = (-1*i)+parseInt(eventInfo.newValue);
+	}
+	getAttrs(["stunsdamagepoolmod"], function(values) {	
+		out["stunsdamagepoolmod"] = -1*out["stunsdamagepenalty"+values.stunsdamagepoolmod];
+		setAttrs(out,{"silent":true});
+	});
 });
 
 on("change:body change:physdamageextra change:overdamageextra",function (eventInfo) {
@@ -1183,8 +1994,9 @@ on("change:body change:physdamageextra change:overdamageextra",function (eventIn
 });
 */	
 	
-on("change:willpower",function (eventInfo) {
-	let newbod = 8+Math.ceil(parseInt(eventInfo.newValue)/2);
+on("change:willpower change:matrixdamageextra",function (eventInfo) {
+	getAttrs(['willpower','stunsdamageextra','stunsdamagepoolmod'], function (values) {
+	let newbod = 8+Math.ceil(parseInt(values.willpower)/2)+parseInt(values.stunsdamageextra);
 	let out = [];
 		for(let i = 1; i <= newbod; i++) {
 			out["stunshide"+i] = "0";
@@ -1193,15 +2005,16 @@ on("change:willpower",function (eventInfo) {
 			out["stunshide"+i] = "on";
 			out["stunsdamage"+i] = "";			
 		}
-		getAttrs(["stunsdamagepoolmod"],function(values) {
-			if(values.stunsdamagepoolmod > Math.floor(newbod/3)) { out['stunsdamagepoolmod'] = Math.floor(newbod/3); }
-			setAttrs(out,{"silent":true});		
-		});
+		if(values.stunsdamagepoolmod > Math.floor(newbod/3)) { out['stunsdamagepoolmod'] = Math.floor(newbod/3); }
+
+		setAttrs(out,{"silent":true});		
+	});
 });
 
-on("change:matrixdr",function (eventInfo) {
-	let newbod = 8+Math.ceil(parseInt(eventInfo.newValue)/2);
-	let out = [];
+on("change:matrixdr change:matrixdamageextra",function (eventInfo) {
+	getAttrs(["matrixdamagepoolmod","matrixdr","matrixdamageextra"],function(values) {
+		let newbod = 8+Math.ceil(parseInt(values.matrixdr)/2)+parseInt(values.matrixdamageextra);
+		let out = [];
 		for(let i = 1; i <= newbod; i++) {
 			out["matrixhide"+i] = "0";
 		}
@@ -1209,26 +2022,8 @@ on("change:matrixdr",function (eventInfo) {
 			out["matrixhide"+i] = "on";
 			out["matrixdamage"+i] = "";			
 		}
-		getAttrs(["matrixdamagepoolmod"],function(values) {
-			if(values.matrixdamagepoolmod > Math.floor(newbod/3)) { out['matrixdamagepoolmod'] = Math.floor(newbod/3); }
-			setAttrs(out,{"silent":true});		
-		});
-});
-
-on("change:repeating_skills:skillattr",function(eventInfo) {
-	getAttrs([eventInfo.newValue],function(values) {
-		console.log(values);
-		for(value in values) {
-			console.log(value);
-			setAttrs({"repeating_skills_skillattrvalue":values[value]});
-		}
+		if(values.matrixdamagepoolmod > Math.floor(newbod/3)) { out['matrixdamagepoolmod'] = Math.floor(newbod/3); }
+		setAttrs(out,{"silent":true});		
 	});
 });
-
-on("change:repeating_skills:skillrank change:repeating_skills:skilltype",function(eventInfo) {
-	getAttrs(["repeating_skills_skillrank","repeating_skills_skilltype"], function(values) {
-		console.log(values);
-	   setAttrs({"repeating_skills_skillrankhidden":parseInt(values.repeating_skills_skillrank)+parseInt(values.repeating_skills_skilltype)});
-	});
-})
 </script>

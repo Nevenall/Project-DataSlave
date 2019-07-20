@@ -104,5 +104,15 @@
 "extrastundmg":"Extra Stun Condition Track Boxes",
 "extramatrixdmg":"Extra Matrix Condition Track Boxes",
 "extraoverdmg":"Extra Overflow Condition Track Boxes",
-"cost":"(Cost)"
+"shiftphysdmg":"Physical Condition Penalty Adjustment",
+"shiftstundmg":"Stun Condition Penalty Adjustment",
+"shiftmatrixdmg":"Matrix Condition Penalty Adjustment",
+"shiftoverdmg":"Overflow Condition Penalty Adjustment",
+"cost":"Cost",
+"knowledgeheader":"Knowledge/Languages",
+"knowledge":"Knowledge",
+"language":"Language",
+"specialist":"Specialist",
+"expert":"Expert",
+"native":"Native"
 }

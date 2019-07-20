@@ -91,6 +91,7 @@ th,
 	font-size: 1em;
 	font-family: AmpCB;
 	margin-bottom: unset;
+	width: auto;
 }
 .sheet-dmgtrackheader {
 	font-size: 1.3em;
@@ -142,7 +143,7 @@ select,
 	padding-left: 2px;
 }
 .sheet-matrix label,
-.sheet-vehicle label,
+.sheet-vehicle label:not([for="attr_vehnotes"]),
 .sheet-attributes label {
 	text-align: right;
 }
@@ -178,6 +179,9 @@ select,
 }
 .sheet-numtag {
 	width: 3.5em;
+}
+.sheet-skillhead {
+	font-family: Njord !important;
 }
 .sheet-hideoutput {
 	font-family: Njord;
@@ -283,14 +287,16 @@ select,
 .sheet-overflowdamagemarker span {
 	border: 1px solid #E00000;
 }
-
+.sheet-hidespec2[value="0"] + div,
+.sheet-hidespec[value="0"] ~ .sheet-hideoutput button,
+.sheet-hidelevel[value="knowledge"] ~ p > .sheet-klevelspan,
 .sheet-hidedamage[value="on"] + .sheet-dmtrackcell {
 	display: none;
 }
 
-.sheet-skilltype[value="0"] ~ .sheet-hideoutput .sheet-skill,
-.sheet-skilltype[value="2"] ~ .sheet-hideoutput .sheet-spec,
-.sheet-skilltype[value="3"] ~ .sheet-hideoutput .sheet-exp,
+
+.sheet-hidespec[value="2"] ~ .sheet-hideoutput .sheet-spec,
+.sheet-hidespec[value="3"] ~ .sheet-hideoutput .sheet-exp,
 .sheet-hidestuff[value='on'] ~ .sheet-hideinput,
 .sheet-hidestuff[value='on'] ~ .sheet-flexcontainer .sheet-hideinput {
 	display: inline;
@@ -347,7 +353,12 @@ select,
 .sheet-page button[type='roll']:before {
 	content: none !important;
 }
+.sheet-page button[type='roll']:hover,
 .sheet-page button[type='roll']:hover span,
 .sheet-page button[type='roll']:hover label {
 	color: #800d6d;
+}
+.sheet-skills span,
+.sheet-skills button[type='roll'] {
+	font-family: AmpCB;
 }
