@@ -8,6 +8,10 @@
 	src: url("https://github.com/EtoileLion/Project-DataSlave/blob/master/fonts/AmpCB.otf?raw=true");
 }
 
+textarea {
+	width: 95%;
+}
+
 .sheet-page {
 	display: none;
 }
@@ -85,6 +89,7 @@
 	font-size: x-large;
 	text-transform: capitalize;
 }
+.sheet-spectable td:nth-child(1),
 .sheet-tablehead,
 th,
 .sheet-page label {
@@ -366,4 +371,11 @@ select,
 .sheet-skills span,
 .sheet-skills button[type='roll'] {
 	font-family: AmpCB;
+}
+
+.sheet-hideskillrank[value="0"] + .sheet-untrainedskill label {
+	color: #800d6d;
+}
+.sheet-hideskillrank[value="0"] + div:not(.sheet-untrainedskill) label {
+	color: #AAA;
 }

@@ -14,7 +14,7 @@
 "body":"Body",
 "essence":"Essence",
 "agility":"Agility",
-"magic":"Magic",
+"magic":"Magic/Res",
 "reaction":"Reaction",
 "initiative":"Initiative",
 "strength":"Strength",
@@ -114,5 +114,6 @@
 "language":"Language",
 "specialist":"Specialist",
 "expert":"Expert",
-"native":"Native"
+"native":"Native",
+"doublephysdmg":"Double Physical Condition Penalties"
 }

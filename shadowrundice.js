@@ -22,7 +22,7 @@ on("chat:message", function(msg) {
 			options[2] -= 1;
 		}
 		// Special: Spec Skill
-		if(options.length == 7 && options[6] != "Y") {
+		if(options.length == 7 && options[6] != "Y" && options[7] != "N") {
 		    options[1] += parseInt(options[6])
 		}
 		log(options)
