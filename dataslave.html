@@ -2529,8 +2529,9 @@ on("change:physdamage1 change:physdamage2 change:physdamage3 change:physdamage4 
 on("change:physdamageshift change:doublephysdamage", function (eventInfo) {
     let out = {"physdamagepenalty0":0};
 	getAttrs(["doublephysdamage","physdamagepoolmod"], function(values) {	
+		console.log(values.doublephysdamage)
 		for(let i = 1; i <= 6; i++) {
-			out["physdamagepenalty"+i] = ((-1*i)+parseInt(eventInfo.newValue))*((values.doublephysdamage == "on") ? 1 : 2);
+			out["physdamagepenalty"+i] = ((-1*i)+parseInt(eventInfo.newValue))*((values.doublephysdamage == "on") ? 2 : 1);
 		}	
 		console.log("physdamagepenalty"+values.physdamagepoolmod);
 		out["physdamagepoolmod"] = -1*out["physdamagepenalty"+values.physdamagepoolmod];
