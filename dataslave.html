@@ -22,7 +22,12 @@
 			<input name='attr_sheetpage' type='radio' value="3" >
 			<span class="sheet-pfradio">3
 			</span>		
-		</label>			
+		</label>
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="4" >
+			<span class="sheet-pfradio">4
+			</span>		
+		</label>		
 	</div>	
     <div class='sheet-2colrow'>
         <div class='sheet-col'>
@@ -1896,7 +1901,12 @@
 				<input name='attr_sheetpage' type='radio' value="3" >
 				<span class="sheet-pfradio">3
 				</span>		
-			</label>			
+			</label>
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="4" >
+			<span class="sheet-pfradio">4
+			</span>		
+		</label>			
 		</div>	
     <div class='sheet-2colrow'>
         <div class='sheet-col'>
@@ -2008,114 +2018,6 @@
 						<input type='text' name='attr_meleeweaponcost' class='sheet-flex sheet-hideinput' data-i18n-placeholder="cost" placeholder="Cost">
 					</div>
 				</fieldset>				
-			</div>
-			<div class='sheet-section sheet-matrix'>
-                <div class='sheet-headertext'>
-                    <p data-i18n='matrixstats'>Matrix Stats</p>
-                </div>						
-                        <div class='sheet-flexcontainer'>
-                            <label for='attr_matrixatk' data-i18n='atk' class='sheet-flex'>Attack</label><input type='number' name='attr_matrixatk'>					                            
-							<label for='attr_matrixslz' data-i18n='slz' class='sheet-flex'>Sleaze</label><input type='number' name='attr_matrixslz'>								
-							<label for='attr_matrixdp' data-i18n='dataproc' class='sheet-flex'>Data Proc.</label><input type='number' name='attr_matrixdp'>
-                            <label for='attr_matrixfw' data-i18n='firewall' class='sheet-flex'>Firewall</label><input type='number' name='attr_matrixfw'>
-                        </div>                        
-                        <div class='sheet-flexcontainer'>
-                            <label for='attr_matrixdev' data-i18n='devices' class='sheet-inlinelabel'>Devices</label>
-							<input type='text' name='attr_matrixdev' class='sheet-flex'>
-                            <label for='attr_matrixdev' data-i18n='dr' class='sheet-inlinelabel'>DR</label>
-							<input type='number' name='attr_matrixdr' value="1">
-                        </div>
-						<div class='sheet-flexcontainer'>
-                            <label data-i18n='programs' class='sheet-flex sheet-taleft'>Programs</label>
-						</div>
-                        <fieldset class='repeating_matrixprogs'>
-                        <div class='sheet-flexcontainer'>						
-                            <input type='text' name='attr_matrixprog' class='sheet-flex' data-i18n-placeholder="program" placeholder="Program">
-                        </div>
-						</fieldset>                         
-						<div class='sheet-damagetrack'>
-							<div class='sheet-dmgtrackheader'>Matrix Condition Monitor</div>
-							<input type='hidden' name='attr_matrixdamagepenalty0' class='sheet-hidedamage' value='0'>
-						<input type='hidden' name='attr_matrixdamagepenalty1' class='sheet-hidedamage' value='-1'>
-						<input type='hidden' name='attr_matrixdamagepenalty2' class='sheet-hidedamage' value='-2'>
-						<input type='hidden' name='attr_matrixdamagepenalty3' class='sheet-hidedamage' value='-3'>
-						<input type='hidden' name='attr_matrixdamagepenalty4' class='sheet-hidedamage' value='-4'>
-						<input type='hidden' name='attr_matrixdamagepenalty5' class='sheet-hidedamage' value='-5'>
-						<input type='hidden' name='attr_matrixdamagepenalty6' class='sheet-hidedamage' value='-6'>
-							<input type='hidden' name='attr_matrixhide1' class='sheet-hidedamage' value=''>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage1'>
-								<span></span>
-							</label></div>
-							<input type='hidden' name='attr_matrixhide2' class='sheet-hidedamage' value=''>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage2'>
-								<span></span>
-							</label></div>							
-							<input type='hidden' name='attr_matrixhide3' class='sheet-hidedamage' value=''>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage3'>
-								<span>-1</span>
-							</label></div>
-							<input type='hidden' name='attr_matrixhide4' class='sheet-hidedamage' value=''>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage4'>
-								<span></span>
-							</label></div>
-							<input type='hidden' name='attr_matrixhide5' class='sheet-hidedamage' value=''>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage5'>
-								<span></span>
-							</label></div>
-							<input type='hidden' name='attr_matrixhide6' class='sheet-hidedamage' value=''>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage6'>
-								<span>-2</span>
-							</label></div>							
-							<input type='hidden' name='attr_matrixhide7' class='sheet-hidedamage' value=''>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage7'>
-								<span></span>
-							</label></div>
-							<input type='hidden' name='attr_matrixhide8' class='sheet-hidedamage' value=''>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage8'>
-								<span></span>
-							</label></div>
-							<input type='hidden' name='attr_matrixhide9' class='sheet-hidedamage' value=''>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage9'>
-								<span>-3</span>
-							</label></div>
-							<input type='hidden' name='attr_matrixhide10' class='sheet-hidedamage' value='on'>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage10'>
-								<span></span>
-							</label></div>							
-							<input type='hidden' name='attr_matrixhide11' class='sheet-hidedamage' value='on'>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage11'>
-								<span></span>
-							</label></div>
-							<input type='hidden' name='attr_matrixhide12' class='sheet-hidedamage' value='on'>
-							<div class='sheet-dmtrackcell'>
-<label class='matrixdamagemarker'>
-								<input type='checkbox' name='attr_matrixdamage12'>
-								<span>-4</span>
-							</label></div>
-							<input type='hidden' name='attr_matrixdamagepoolmod' value='0'>
-                        </div>						
 			</div>
 			<div class='sheet-section sheet-vehicle'>				
                 <div class='sheet-headertext'>
@@ -2243,6 +2145,158 @@
 			<span class="sheet-pfradio">3
 			</span>		
 		</label>			
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="4" >
+			<span class="sheet-pfradio">4
+			</span>		
+		</label>
+	</div>	
+	<div class='sheet-2colrow'>
+		<div class='sheet-col'>
+			<div class='sheet-section'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='matrixconfig'>Matrix Config</p>
+                </div>
+				<label for='attr_istechnomancer'>This character is a Technomancer</label><input type='checkbox' name='attr_istechnomancer'>
+            </div>
+			<div class='sheet-section sheet-matrix'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='matrixstats'>Matrix Stats</p>
+                </div>						
+                        <div class='sheet-flexcontainer'>
+                            <label for='attr_matrixatk' data-i18n='atk' class='sheet-flex sheet-matrixstatlabel'>Attack</label><input type='number' name='attr_matrixatk'>					                            
+							<label for='attr_matrixslz' data-i18n='slz' class='sheet-flex sheet-matrixstatlabel'>Sleaze</label><input type='number' name='attr_matrixslz'>								
+							<label for='attr_matrixdp' data-i18n='dataproc' class='sheet-flex sheet-matrixstatlabel'>Data Proc.</label><input type='number' name='attr_matrixdp'>
+                            <label for='attr_matrixfw' data-i18n='firewall' class='sheet-flex sheet-matrixstatlabel'>Firewall</label><input type='number' name='attr_matrixfw'>
+                        </div>                        
+                        <div class='sheet-flexcontainer'>
+                            <label for='attr_matrixdev' data-i18n='devices' class='sheet-inlinelabel sheet-matrixstatlabel'>Devices</label>
+							<input type='text' name='attr_matrixdev' class='sheet-flex'>
+                            <label for='attr_matrixdev' data-i18n='dr' class='sheet-inlinelabel sheet-matrixstatlabel'>DR</label>
+							<input type='number' name='attr_matrixdr' value="1">
+                        </div>
+						<div class='sheet-flexcontainer'>
+                            <label data-i18n='programs' class='sheet-flex sheet-taleft'>Programs</label>
+						</div>
+                        <fieldset class='repeating_matrixprogs'>
+                        <div class='sheet-flexcontainer'>						
+                            <input type='text' name='attr_matrixprog' class='sheet-flex' data-i18n-placeholder="program" placeholder="Program">
+                        </div>
+						</fieldset>                         
+						<div class='sheet-damagetrack'>
+							<div class='sheet-dmgtrackheader'>Matrix Condition Monitor</div>
+							<input type='hidden' name='attr_matrixdamagepenalty0' class='sheet-hidedamage' value='0'>
+						<input type='hidden' name='attr_matrixdamagepenalty1' class='sheet-hidedamage' value='-1'>
+						<input type='hidden' name='attr_matrixdamagepenalty2' class='sheet-hidedamage' value='-2'>
+						<input type='hidden' name='attr_matrixdamagepenalty3' class='sheet-hidedamage' value='-3'>
+						<input type='hidden' name='attr_matrixdamagepenalty4' class='sheet-hidedamage' value='-4'>
+						<input type='hidden' name='attr_matrixdamagepenalty5' class='sheet-hidedamage' value='-5'>
+						<input type='hidden' name='attr_matrixdamagepenalty6' class='sheet-hidedamage' value='-6'>
+							<input type='hidden' name='attr_matrixhide1' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage1'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide2' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage2'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_matrixhide3' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage3'>
+								<span>-1</span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide4' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage4'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide5' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage5'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide6' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage6'>
+								<span>-2</span>
+							</label></div>							
+							<input type='hidden' name='attr_matrixhide7' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage7'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide8' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage8'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide9' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage9'>
+								<span>-3</span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide10' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage10'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_matrixhide11' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage11'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_matrixhide12' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='matrixdamagemarker'>
+								<input type='checkbox' name='attr_matrixdamage12'>
+								<span>-4</span>
+							</label></div>
+							<input type='hidden' name='attr_matrixdamagepoolmod' value='0'>
+                        </div>						
+			</div>
+		</div>
+		<div class='sheet-col'>
+		</div>
+	</div>
+</div>
+<div class='sheet-page sheet-page4'>
+    <div class='sheet-header'>
+        <input type='text' name='attr_character_name'>
+    </div>
+	<div class='sheet-pagetogglediv'>	
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage'  type='radio' value="1" checked>
+			<span class="sheet-pfradio">1
+			</span>
+		</label>
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="2" >
+			<span class="sheet-pfradio">2
+			</span>		
+		</label>
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="3" >
+			<span class="sheet-pfradio">3
+			</span>		
+		</label>			
+		<label class='sheet-pfcontainer'>
+			<input name='attr_sheetpage' type='radio' value="4" >
+			<span class="sheet-pfradio">4
+			</span>		
+		</label>
 	</div>	
     <div class='sheet-section'>
 		<div class='sheet-headertext'>
@@ -2442,8 +2496,6 @@
 					
                 </fieldset>
 	</div>
-</div>
-<div class='sheet-page sheet-page4'>
 </div>
 </div>
 <rolltemplate class="sheet-rolltemplate-shadowtest">
