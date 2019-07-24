@@ -15,6 +15,13 @@ textarea {
 .sheet-page {
 	display: none;
 }
+
+button[type='action'] {
+	background: transparent;
+	border: 2px solid #800d6d;
+	border-radius: 8px;
+	margin-top: 3px;
+}
 .sheet-rolltemplate-shadowsum,
 .sheet-rolltemplate-shadowtest,
 .sheet-bg {
@@ -63,6 +70,7 @@ textarea {
 .sheet-pfcontainer input:checked ~ .sheet-pfradio:after {
 	display: block;
 }
+.sheet-sheetpage[value="4"] ~ .sheet-page4 .sheet-pagetogglediv .sheet-pfcontainer input[value="4"] ~ .sheet-pfradio,
 .sheet-sheetpage[value="3"] ~ .sheet-page3 .sheet-pagetogglediv .sheet-pfcontainer input[value="3"] ~ .sheet-pfradio,
 .sheet-sheetpage[value="1"] ~ .sheet-page1 .sheet-pagetogglediv .sheet-pfcontainer input[value="1"] ~ .sheet-pfradio,
 .sheet-sheetpage[value="2"] ~ .sheet-page2 .sheet-pagetogglediv .sheet-pfcontainer input[value="2"] ~ .sheet-pfradio {
@@ -378,4 +386,14 @@ select,
 }
 .sheet-hideskillrank[value="0"] + div:not(.sheet-untrainedskill) label {
 	color: #AAA;
+}
+.sheet-technomancer,
+.sheet-istechnomancer[value="on"] ~ .sheet-matrix {
+	display: none;
+}
+.sheet-istechnomancer[value="on"] ~ .sheet-technomancer {
+	display: block;
+}
+.sheet-echoes .sheet-flexcontainer {
+	margin-bottom: 3px;
 }

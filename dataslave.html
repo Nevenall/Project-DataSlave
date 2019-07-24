@@ -28,7 +28,7 @@
 			<span class="sheet-pfradio">4
 			</span>		
 		</label>		
-	</div>	
+	</div>
     <div class='sheet-2colrow'>
         <div class='sheet-col'>
             <div class='sheet-section sheet-personaldata'>
@@ -312,6 +312,21 @@
             </div>
         </div>
 		<div class='sheet-col'>
+		
+    <div class='sheet-section'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='actiontracker'>Action Tracker</p>
+                </div>
+				<div class='sheet-flexcontainer'>
+					<label>Major</label><input type='number' name='attr_actionmajor' value="1">/<input type='number' name='attr_actionmajor_max' value="1">
+				</div>
+				<div class='sheet-flexcontainer'>
+					<label>Minor</label><input type='number' name='attr_actionminor' value="1" max="5">/<input type='number' name='attr_actionminor_max' value="1" max="5">					
+				</div>
+				<div class='sheet-flexcontainer'>
+					<button type='action' name='act_atreset'>Reset</button>
+				</div>				
+			</div>	
 			<div class='sheet-section sheet-conditionmonitor'>
                 <div class='sheet-headertext'>
                     <p data-i18n='conditionmonitor'>Condition Monitor</p>
@@ -1910,6 +1925,20 @@
 		</div>	
     <div class='sheet-2colrow'>
         <div class='sheet-col'>
+		    <div class='sheet-section'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='actiontracker'>Action Tracker</p>
+                </div>
+				<div class='sheet-flexcontainer'>
+					<label>Major</label><input type='number' name='attr_actionmajor' value="1">/<input type='number' name='attr_actionmajor_max' value="1">
+				</div>
+				<div class='sheet-flexcontainer'>
+					<label>Minor</label><input type='number' name='attr_actionminor' value="1" max="5">/<input type='number' name='attr_actionminor_max' value="1" max="5">					
+				</div>
+				<div class='sheet-flexcontainer'>
+					<button type='action' name='act_atreset'>Reset</button>
+				</div>
+			</div>	
 			<div class='sheet-section sheet-rangedweapons'>
                 <div class='sheet-headertext'>
                     <p data-i18n='rangedweapons'>Ranged Weapons</p>
@@ -1937,11 +1966,11 @@
                     <p data-i18n='armor'>Armor</p>
                 </div>
 				<fieldset class='repeating_armor'>
-					<input type='hidden' name='attr_armorhide' class='sheet-hidestuff' value='on'><input type='hidden' name='attr_armordrcalc' value='@{body}+@{armorrating}'>			
+					<input type='hidden' name='attr_armorhide' class='sheet-hidestuff' value='on'><input type='hidden' name='attr_armordrcalc' value='0'>			
 					<p class='sheet-hideoutput sheet-il'><span name='attr_armorname'></span> (<span name='attr_armordrcalc'></span>)<input type='checkbox' name='attr_armorhide' class='sheet-right' checked></p>
 					<div class='sheet-flexcontainer'>
 						<input type='text' name='attr_armorname' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name" placeholder="Name">
-						<label class='sheet-hideinput sheet-il'>R:</label><input type='number' name='attr_armorrating' class='sheet-hideinput'><input type='text' name='attr_armorcost' class='sheet-flex sheet-hideinput' data-i18n-placeholder="cost" placeholder="Cost">
+						<label class='sheet-hideinput sheet-il'>R:</label><input type='number' name='attr_armorrating' class='sheet-hideinput' value="0"><input type='text' name='attr_armorcost' class='sheet-flex sheet-hideinput' data-i18n-placeholder="cost" placeholder="Cost">
 						<input type='checkbox' name='attr_armorhide' class='sheet-right sheet-hideinput' checked>
 					</div>
 					<div class='sheet-flexcontainer'>	
@@ -1994,7 +2023,7 @@
 						<label class='sheet-hideinput'>Q:</label><input type='number' name='attr_gearquant' class='sheet-hideinput' value="1">
 					</div>
 					<div class='sheet-flexcontainer'>
-						<textarea name='attr_gearnotes' data-i18n-placeholder="notes" placeholder="Notes">						
+						<textarea name='attr_gearnotes' class='sheet-hideinput' data-i18n-placeholder="notes" placeholder="Notes"></textarea>						
 					</div>					
 				</fieldset>				
 			</div>			
@@ -2060,7 +2089,7 @@
 			</div>
 			<div class='sheet-section sheet-spells'>
                 <div class='sheet-headertext'>
-                    <p data-i18n='spellprepritform'>Spells/Preparations/Rituals/Complex Forms</p>
+                    <p data-i18n='spellprepritform'>Spells/Preparations/Rituals</p>
                 </div>
 				<fieldset class='repeating_spells'>
 					<input type='hidden' class='sheet-hidestuff' name='attr_spellhide' value='on'>
@@ -2071,7 +2100,6 @@
 							<option value='s'>Spell</option>
 							<option value='p'>Preparation</option>
 							<option value='r'>Ritual</option>
-							<option value='cf'>Complex Form</option>
 						</select>
 						<input type='checkbox' name='attr_spellhide'  class='sheet-hideinput sheet-right' checked>	
 					</div>
@@ -2080,7 +2108,7 @@
 						<input type='text' name='attr_spellrange' class='sheet-flex sheet-hideinput' data-i18n-placeholder="range" placeholder="Range">
 						<input type='text' name='attr_spellduration' class='sheet-flex sheet-hideinput' data-i18n-placeholder="duration" placeholder="Duration">
 						<span class='sheet-hideinput'>DV</span><input type='number' name='attr_spelldrain' value="1" class='sheet-hideinput'>
-						<textarea name='attr_spellnotes' data-i18n-placeholder="notes"></textarea>
+						<textarea name='attr_spellnotes' class='sheet-hideinput' data-i18n-placeholder="notes"></textarea>
 					</div>
 				</fieldset>				
 			</div>
@@ -2153,34 +2181,261 @@
 	</div>	
 	<div class='sheet-2colrow'>
 		<div class='sheet-col'>
+		    <div class='sheet-section'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='actiontracker'>Action Tracker</p>
+                </div>
+				<div class='sheet-flexcontainer'>
+					<label>Major</label><input type='number' name='attr_matactionmajor' value="1">/<input type='number' name='attr_matactionmajor_max' value="1">
+				</div>
+				<div class='sheet-flexcontainer'>
+					<label>Minor</label><input type='number' name='attr_matactionminor' value="1" max="5">/<input type='number' name='attr_matactionminor_max' value="1" max="5">					
+				</div>
+				<div class='sheet-flexcontainer'>
+					<button type='action' name='act_matreset'>Reset</button>
+				</div>
+			</div>	
 			<div class='sheet-section'>
                 <div class='sheet-headertext'>
-                    <p data-i18n='matrixconfig'>Matrix Config</p>
+                    <p data-i18n='matrixstats'>Matrix Stats</p>
                 </div>
-				<label for='attr_istechnomancer'>This character is a Technomancer</label><input type='checkbox' name='attr_istechnomancer'>
-            </div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead sheet-flex'>Attack</label><input type='number' name='attr_matrixatk' value="0">
+					<input type='hidden' name='attr_matrixatkattrvalue' value='0'>
+					<input type='hidden' name='attr_matrixatkattrname' value="">
+										<select name='attr_matrixatkattr'  class='sheet-inlinelabel'>
+                                    <option value='body' data-i18n='body'></option>
+                                    <option value='essence' data-i18n='essence'></option>
+                                    <option value='agility' data-i18n='agility'></option>
+                                    <option value='magic' data-i18n='magic'></option>
+                                    <option value='reaction' data-i18n='reaction'></option>
+                                    <option value='initiative' data-i18n='initiative' selected></option>
+                                    <option value='strength' data-i18n='strength'></option>
+                                    <option value='matrix-initiative' data-i18n='matrix-initiative'></option>
+                                    <option value='willpower' data-i18n='willpower'></option>
+                                    <option value='astral-initiative' data-i18n='astral-initiative'></option>
+                                    <option value='logic' data-i18n='logic'></option>
+                                    <option value='composure' data-i18n='composure'></option>
+                                    <option value='intuition' data-i18n='intuition'></option>
+                                    <option value='judge-intentions' data-i18n='judge-intentions'></option>
+                                    <option value='charisma' data-i18n='charisma'></option>
+                                    <option value='memory' data-i18n='memory'></option>
+                                    <option value='edge' data-i18n='edge'></option>
+                                    <option value='lift-carry' data-i18n='lift-carry'></option>
+                                    <option value='movement' data-i18n='movement'></option>
+                                    <option value='unarmed' data-i18n='unarmed'></option>
+                                    <option value='defenserating' data-i18n='defenserating'></option>
+									<option value='devicerating' data-i18n='devicerating'></option>									
+                                </select><button type='roll' value='!shadowtest @{matrixatkattrvalue}|@{matrixatk}|[[?{Dice Pool Modifier|0}-@{matrixdamagepoolmod}]]|@{matrixatkattrname}|Attack|@{character_name}|Y' class='sheet-il sheet-hideoutput'>Roll</button>														
+				</div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead sheet-flex'>Sleaze</label><input type='number' name='attr_matrixslz' value="0">
+					<input type='hidden' name='attr_matrixslzattrvalue' value='0'>
+					<input type='hidden' name='attr_matrixslzattrname' value="">
+										<select name='attr_matrixslzattr'  class='sheet-inlinelabel'>
+                                    <option value='body' data-i18n='body'></option>
+                                    <option value='essence' data-i18n='essence'></option>
+                                    <option value='agility' data-i18n='agility'></option>
+                                    <option value='magic' data-i18n='magic'></option>
+                                    <option value='reaction' data-i18n='reaction'></option>
+                                    <option value='initiative' data-i18n='initiative' selected></option>
+                                    <option value='strength' data-i18n='strength'></option>
+                                    <option value='matrix-initiative' data-i18n='matrix-initiative'></option>
+                                    <option value='willpower' data-i18n='willpower'></option>
+                                    <option value='astral-initiative' data-i18n='astral-initiative'></option>
+                                    <option value='logic' data-i18n='logic'></option>
+                                    <option value='composure' data-i18n='composure'></option>
+                                    <option value='intuition' data-i18n='intuition'></option>
+                                    <option value='judge-intentions' data-i18n='judge-intentions'></option>
+                                    <option value='charisma' data-i18n='charisma'></option>
+                                    <option value='memory' data-i18n='memory'></option>
+                                    <option value='edge' data-i18n='edge'></option>
+                                    <option value='lift-carry' data-i18n='lift-carry'></option>
+                                    <option value='movement' data-i18n='movement'></option>
+                                    <option value='unarmed' data-i18n='unarmed'></option>
+                                    <option value='defenserating' data-i18n='defenserating'></option>
+									<option value='devicerating' data-i18n='devicerating'></option>
+                                </select><button type='roll' value='!shadowtest @{matrixslzattrvalue}|@{matrixslz}|[[?{Dice Pool Modifier|0}-@{matrixdamagepoolmod}]]|@{matrixslzattrname}|Sleaze|@{character_name}|Y' class='sheet-il sheet-hideoutput'>Roll</button>														
+				</div>				
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead sheet-flex'>Data Processing</label><input type='number' name='attr_matrixdp' value="0">
+					<input type='hidden' name='attr_matrixdpattrvalue' value='0'>
+					<input type='hidden' name='attr_matrixdpattrname' value="">
+										<select name='attr_matrixdpattr'  class='sheet-inlinelabel'>
+                                    <option value='body' data-i18n='body'></option>
+                                    <option value='essence' data-i18n='essence'></option>
+                                    <option value='agility' data-i18n='agility'></option>
+                                    <option value='magic' data-i18n='magic'></option>
+                                    <option value='reaction' data-i18n='reaction'></option>
+                                    <option value='initiative' data-i18n='initiative' selected></option>
+                                    <option value='strength' data-i18n='strength'></option>
+                                    <option value='matrix-initiative' data-i18n='matrix-initiative'></option>
+                                    <option value='willpower' data-i18n='willpower'></option>
+                                    <option value='astral-initiative' data-i18n='astral-initiative'></option>
+                                    <option value='logic' data-i18n='logic'></option>
+                                    <option value='composure' data-i18n='composure'></option>
+                                    <option value='intuition' data-i18n='intuition'></option>
+                                    <option value='judge-intentions' data-i18n='judge-intentions'></option>
+                                    <option value='charisma' data-i18n='charisma'></option>
+                                    <option value='memory' data-i18n='memory'></option>
+                                    <option value='edge' data-i18n='edge'></option>
+                                    <option value='lift-carry' data-i18n='lift-carry'></option>
+                                    <option value='movement' data-i18n='movement'></option>
+                                    <option value='unarmed' data-i18n='unarmed'></option>
+                                    <option value='defenserating' data-i18n='defenserating'></option>
+									<option value='devicerating' data-i18n='devicerating'></option>
+                                </select><button type='roll' value='!shadowtest @{matrixdpattrvalue}|@{matrixdp}|[[?{Dice Pool Modifier|0}-@{matrixdamagepoolmod}]]|@{matrixdpattrname}|Data Processing|@{character_name}|Y' class='sheet-il sheet-hideoutput'>Roll</button>														
+				</div>				
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead sheet-flex'>Firewall</label><input type='number' name='attr_matrixfw' value="0">
+					<input type='hidden' name='attr_matrixfwattrvalue' value='0'>
+					<input type='hidden' name='attr_matrixfwattrname' value="">
+										<select name='attr_matrixfwattr'  class='sheet-inlinelabel'>
+                                    <option value='body' data-i18n='body'></option>
+                                    <option value='essence' data-i18n='essence'></option>
+                                    <option value='agility' data-i18n='agility'></option>
+                                    <option value='magic' data-i18n='magic'></option>
+                                    <option value='reaction' data-i18n='reaction'></option>
+                                    <option value='initiative' data-i18n='initiative' selected></option>
+                                    <option value='strength' data-i18n='strength'></option>
+                                    <option value='matrix-initiative' data-i18n='matrix-initiative'></option>
+                                    <option value='willpower' data-i18n='willpower'></option>
+                                    <option value='astral-initiative' data-i18n='astral-initiative'></option>
+                                    <option value='logic' data-i18n='logic'></option>
+                                    <option value='composure' data-i18n='composure'></option>
+                                    <option value='intuition' data-i18n='intuition'></option>
+                                    <option value='judge-intentions' data-i18n='judge-intentions'></option>
+                                    <option value='charisma' data-i18n='charisma'></option>
+                                    <option value='memory' data-i18n='memory'></option>
+                                    <option value='edge' data-i18n='edge'></option>
+                                    <option value='lift-carry' data-i18n='lift-carry'></option>
+                                    <option value='movement' data-i18n='movement'></option>
+                                    <option value='unarmed' data-i18n='unarmed'></option>
+                                    <option value='defenserating' data-i18n='defenserating'></option>
+									<option value='devicerating' data-i18n='devicerating'></option>
+                                </select><button type='roll' value='!shadowtest @{matrixfwattrvalue}|@{matrixfw}|[[?{Dice Pool Modifier|0}-@{matrixdamagepoolmod}]]|@{matrixfwattrname}|Firewall|@{character_name}|Y' class='sheet-il sheet-hideoutput'>Roll</button>														
+				</div>	
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead sheet-flex'>Devices</label><input type='number' name='attr_matrixdev' value="0">
+					<input type='hidden' name='attr_matrixdevattrvalue' value='0'>
+					<input type='hidden' name='attr_matrixdevattrname' value="">
+										<select name='attr_matrixdevattr'  class='sheet-inlinelabel'>
+                                    <option value='body' data-i18n='body'></option>
+                                    <option value='essence' data-i18n='essence'></option>
+                                    <option value='agility' data-i18n='agility'></option>
+                                    <option value='magic' data-i18n='magic'></option>
+                                    <option value='reaction' data-i18n='reaction'></option>
+                                    <option value='initiative' data-i18n='initiative' selected></option>
+                                    <option value='strength' data-i18n='strength'></option>
+                                    <option value='matrix-initiative' data-i18n='matrix-initiative'></option>
+                                    <option value='willpower' data-i18n='willpower'></option>
+                                    <option value='astral-initiative' data-i18n='astral-initiative'></option>
+                                    <option value='logic' data-i18n='logic'></option>
+                                    <option value='composure' data-i18n='composure'></option>
+                                    <option value='intuition' data-i18n='intuition'></option>
+                                    <option value='judge-intentions' data-i18n='judge-intentions'></option>
+                                    <option value='charisma' data-i18n='charisma'></option>
+                                    <option value='memory' data-i18n='memory'></option>
+                                    <option value='edge' data-i18n='edge'></option>
+                                    <option value='lift-carry' data-i18n='lift-carry'></option>
+                                    <option value='movement' data-i18n='movement'></option>
+                                    <option value='unarmed' data-i18n='unarmed'></option>
+                                    <option value='defenserating' data-i18n='defenserating'></option>
+									<option value='devicerating' data-i18n='devicerating'></option>
+                                </select><button type='roll' value='!shadowtest @{matrixdevattrvalue}|@{matrixdev}|[[?{Dice Pool Modifier|0}-@{matrixdamagepoolmod}]]|@{matrixdevattrname}|Devices|@{character_name}|Y' class='sheet-il sheet-hideoutput'>Roll</button>														
+				</div>					
+								<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead sheet-flex'>Device Rating</label><input type='number' name='attr_matrixdr' value="0">
+					<input type='hidden' name='attr_matrixdrattrvalue' value='0'>
+					<input type='hidden' name='attr_matrixdrattrname' value="">
+										<select name='attr_matrixdrattr'  class='sheet-inlinelabel'>
+                                    <option value='body' data-i18n='body'></option>
+                                    <option value='essence' data-i18n='essence'></option>
+                                    <option value='agility' data-i18n='agility'></option>
+                                    <option value='magic' data-i18n='magic'></option>
+                                    <option value='reaction' data-i18n='reaction'></option>
+                                    <option value='initiative' data-i18n='initiative' selected></option>
+                                    <option value='strength' data-i18n='strength'></option>
+                                    <option value='matrix-initiative' data-i18n='matrix-initiative'></option>
+                                    <option value='willpower' data-i18n='willpower'></option>
+                                    <option value='astral-initiative' data-i18n='astral-initiative'></option>
+                                    <option value='logic' data-i18n='logic'></option>
+                                    <option value='composure' data-i18n='composure'></option>
+                                    <option value='intuition' data-i18n='intuition'></option>
+                                    <option value='judge-intentions' data-i18n='judge-intentions'></option>
+                                    <option value='charisma' data-i18n='charisma'></option>
+                                    <option value='memory' data-i18n='memory'></option>
+                                    <option value='edge' data-i18n='edge'></option>
+                                    <option value='lift-carry' data-i18n='lift-carry'></option>
+                                    <option value='movement' data-i18n='movement'></option>
+                                    <option value='unarmed' data-i18n='unarmed'></option>
+                                    <option value='defenserating' data-i18n='defenserating'></option>
+									<option value='devicerating' data-i18n='devicerating'></option>
+                                </select><button type='roll' value='!shadowtest @{matrixdrattrvalue}|@{matrixdr}|[[?{Dice Pool Modifier|0}-@{matrixdamagepoolmod}]]|@{matrixdrattrname}|Device Rating|@{character_name}|Y' class='sheet-il sheet-hideoutput'>Roll</button>														
+				</div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead sheet-flex'>Matrix Attack Rating</label><span name='attr_matrixatkrating'></span>
+				</div>
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead sheet-flex'>Matrix Defense Rating</label><span name='attr_matrixdefrating'></span>					
+				</div>				
+				<div class='sheet-flexcontainer'>
+					<label class='sheet-skillhead sheet-flex'>Overwatch Score</label><input type='number' value="0">					
+				</div>				
+			</div>
+			<input type='hidden' name='attr_istechnomancer' class='sheet-istechnomancer' value="0">			
+			<div class='sheet-section sheet-technomancer sheet-echoes'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='echoes'>Echoes</p>
+                </div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">Submersion</label><input type='number' name='attr_submersion' value="0">
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">Living Network</label><input type='checkbox' name='attr_echoln'>
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">Machine Mind</label><input type='checkbox' name='attr_echomm'>
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">NeuroFilter</label><input type='checkbox' name='attr_echonf'><input type='checkbox' name='attr_echonf2'>
+				</div>
+				<div class='sheet-flexcontainer'>	
+				<label class="sheet-flex">Overclocking</label><input type='checkbox' name='attr_echoln'>
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label>Resonance Link</label><input class="sheet-flex" type='text' name='attr_echorl' data-i18n-placeholder="reslink">
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">Skinlink</label><input type='checkbox' name='attr_echosl'>
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">Matrix Attribute Upgrades</label>
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">Attack</label><input type='checkbox' name='attr_echoatk'><input type='checkbox' name='attr_echoatk2'>			
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">Sleaze</label><input type='checkbox' name='attr_echoslz'><input type='checkbox' name='attr_echoslz2'>
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">Data Processing</label><input type='checkbox' name='attr_echodp'><input type='checkbox' name='attr_echodp2'>
+				</div>
+				<div class='sheet-flexcontainer'>
+				<label class="sheet-flex">Firewall</label><input type='checkbox' name='attr_echofw'><input type='checkbox' name='attr_echofw2'>
+				</div>
+			</div>
+		</div>
+		<div class='sheet-col'>		
+			<input type='hidden' name='attr_istechnomancer' class='sheet-istechnomancer' value="0">
 			<div class='sheet-section sheet-matrix'>
                 <div class='sheet-headertext'>
-                    <p data-i18n='matrixstats'>Matrix Stats</p>
-                </div>						
-                        <div class='sheet-flexcontainer'>
-                            <label for='attr_matrixatk' data-i18n='atk' class='sheet-flex sheet-matrixstatlabel'>Attack</label><input type='number' name='attr_matrixatk'>					                            
-							<label for='attr_matrixslz' data-i18n='slz' class='sheet-flex sheet-matrixstatlabel'>Sleaze</label><input type='number' name='attr_matrixslz'>								
-							<label for='attr_matrixdp' data-i18n='dataproc' class='sheet-flex sheet-matrixstatlabel'>Data Proc.</label><input type='number' name='attr_matrixdp'>
-                            <label for='attr_matrixfw' data-i18n='firewall' class='sheet-flex sheet-matrixstatlabel'>Firewall</label><input type='number' name='attr_matrixfw'>
-                        </div>                        
-                        <div class='sheet-flexcontainer'>
-                            <label for='attr_matrixdev' data-i18n='devices' class='sheet-inlinelabel sheet-matrixstatlabel'>Devices</label>
-							<input type='text' name='attr_matrixdev' class='sheet-flex'>
-                            <label for='attr_matrixdev' data-i18n='dr' class='sheet-inlinelabel sheet-matrixstatlabel'>DR</label>
-							<input type='number' name='attr_matrixdr' value="1">
-                        </div>
-						<div class='sheet-flexcontainer'>
-                            <label data-i18n='programs' class='sheet-flex sheet-taleft'>Programs</label>
-						</div>
+                    <p data-i18n='programs'>Programs</p>
+                </div>
                         <fieldset class='repeating_matrixprogs'>
                         <div class='sheet-flexcontainer'>						
                             <input type='text' name='attr_matrixprog' class='sheet-flex' data-i18n-placeholder="program" placeholder="Program">
+							<label>Run:</label><input type='checkbox' name='attr_matrixprogrun'>
                         </div>
 						</fieldset>                         
 						<div class='sheet-damagetrack'>
@@ -2267,8 +2522,395 @@
 							<input type='hidden' name='attr_matrixdamagepoolmod' value='0'>
                         </div>						
 			</div>
-		</div>
-		<div class='sheet-col'>
+			<div class='sheet-section sheet-technomancer'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='complexforms'>Complex Forms</p>
+                </div>
+				<fieldset class='repeating_complexforms'>
+					<input type='hidden' class='sheet-hidestuff' name='attr_cfhide' value='on'>
+					<p class='sheet-hideoutput sheet-il'><span name='attr_cfname'></span> (<span name='attr_cfduration'></span>) [<span name='attr_cffade'></span>]</p><input type='checkbox' name='attr_cfhide'  class='sheet-hideoutput sheet-right' checked>					
+					<div class='sheet-flexcontainer sheet-fullwidth'>					
+						<input type='text' name='attr_cfname' class='sheet-flex sheet-hideinput' data-i18n-placeholder="name">
+						<select name='attr_cfduration' class='sheet-hideinput'>
+							<option value='I'>Instantaneous</option>
+							<option value='S'>Sustained</option>
+							<option value='P'>Permanent</option>
+						</select>
+						<label class='sheet-hideinput'>Fade Value</label><input type='number' name='attr_cffade' value="1" class='sheet-hideinput'>						
+						<input type='checkbox' name='attr_cfhide'  class='sheet-hideinput sheet-right' checked>	
+					</div>
+					<div class='sheet-flexcontainer sheet-fullwidth'>
+						<textarea name='attr_cfnotes' class='sheet-hideinput' data-i18n-placeholder="notes"></textarea>
+					</div>
+				</fieldset>
+			</div>
+			<div class='sheet-section sheet-technomancer'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='sprites'>Sprites</p>
+                </div>
+				<fieldset class='repeating_sprites'>
+					<input type='hidden' class='sheet-hidestuff' name='attr_sprhide' value='on'>
+					<p class='sheet-hideoutput sheet-il'><span name='attr_sprname'></span> (<span name='attr_sprtype'></span>) [<span name='attr_spratk'></span>/<span name='attr_sprslz'></span>/<span name='attr_sprdp'></span>/<span name='attr_sprfw'></span>/<span name='attr_sprinit'></span>/<span name='attr_sprres'></span>]</p><input type='checkbox' name='attr_sprhide'  class='sheet-hideoutput sheet-right' checked>					
+					<div class='sheet-flexcontainer sheet-fullwidth'>					
+						<input type='text' name='attr_sprname' class='sheet-flex sheet-hideinput'>
+						<select name='attr_sprtype' class='sheet-hideinput'>
+							<option value='Courier'>Courier</option>
+							<option value='Crack'>Crack</option>
+							<option value='Data'>Data</option>
+							<option value='Fault'>Fault</option>
+							<option value='Machine'>Machine</option>							
+						</select>						
+						<input type='checkbox' name='attr_sprhide'  class='sheet-hideinput sheet-right' checked>	
+					</div>
+					<div class='sheet-flexcontainer sheet-fullwidth'>
+						<label class='sheet-hideinput'>A:</label><input type='number' class='sheet-hideinput' name='attr_spratk'>
+						<label class='sheet-hideinput'>S:</label><input type='number' class='sheet-hideinput' name='attr_sprslz'>
+						<label class='sheet-hideinput'>DP:</label><input type='number' class='sheet-hideinput' name='attr_sprdp'>
+						<label class='sheet-hideinput'>FW:</label><input type='number' class='sheet-hideinput' name='attr_sprfw'>
+						<label class='sheet-hideinput'>I:</label><input type='number' class='sheet-hideinput' name='attr_sprinit'>
+						<label class='sheet-hideinput'>R:</label><input type='number' class='sheet-hideinput' name='attr_sprres'>
+					</div>
+					<div class='sheet-flexcontainer sheet-fullwidth'>
+						<label class='sheet-hideinput'>Skills</label>
+						<input type='text' name='attr_sprskills' class='sheet-hideinput sheet-flex'>
+					</div>					
+					<div class='sheet-flexcontainer sheet-fullwidth'>
+						<label class='sheet-hideinput'>Powers</label>
+						<input type='text' name='attr_sprpowers' class='sheet-hideinput sheet-flex'>
+					</div>					
+					<div class='sheet-flexcontainer sheet-fullwidth'>
+						<textarea name='attr_sprnotes' class='sheet-hideinput' data-i18n-placeholder="notes"></textarea>
+					</div>
+				</fieldset>
+			</div>			
+			<div class='sheet-section sheet-conditionmonitor sheet-technomancer'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='conditionmonitor'>Condition Monitor</p>
+                </div>
+				<div class='sheet-2col'>
+					<div class='sheet-col'>
+						<div class='sheet-dmgtrackheader'>Physical Damage Track</div>
+						<div class='sheet-damagetrack'>
+						<input type='hidden' name='attr_physdamagepenalty0' class='sheet-hidedamage' value='0'>
+						<input type='hidden' name='attr_physdamagepenalty1' class='sheet-hidedamage' value='-1'>
+						<input type='hidden' name='attr_physdamagepenalty2' class='sheet-hidedamage' value='-2'>
+						<input type='hidden' name='attr_physdamagepenalty3' class='sheet-hidedamage' value='-3'>
+						<input type='hidden' name='attr_physdamagepenalty4' class='sheet-hidedamage' value='-4'>
+						<input type='hidden' name='attr_physdamagepenalty5' class='sheet-hidedamage' value='-5'>
+						<input type='hidden' name='attr_physdamagepenalty6' class='sheet-hidedamage' value='-6'>
+							<input type='hidden' name='attr_physhide1' class='sheet-hidedamage' value=''>							
+							<div class='sheet-dmtrackcell'>
+							<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage1'>
+							<span></span>							
+							</label>	
+                            </div>							
+							<input type='hidden' name='attr_physhide2' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage2'>
+							<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_physhide3' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage3'>
+							<span name='attr_physdamagepenalty1'></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide4' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage4'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide5' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage5'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide6' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage6'>
+							<span name='attr_physdamagepenalty2'></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide7' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage7'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide8' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage8'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide9' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage9'>
+							<span name='attr_physdamagepenalty3'></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide10' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage10'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide11' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage11'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide12' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage12'>
+							<span name='attr_physdamagepenalty4'></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide13' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage13'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide14' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage14'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide15' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage15'>
+							<span name='attr_physdamagepenalty5'></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide16' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage16'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide17' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage17'>
+							<span></span>
+							</label></div>
+							<input type='hidden' name='attr_physhide18' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='phydamagemarker'>
+							<input type='checkbox' name='attr_physdamage18'>
+							<span name='attr_physdamagepenalty6'></span>
+							</label></div>
+							<input type='hidden' name='attr_physdamagepoolmod' value='0'>
+						</div>						
+						<div class='sheet-damagetrack sheet-overflowtrack'>
+							<div class='sheet-dmgtrackheader'>Overflow</div>
+							<input type='hidden' name='attr_overflowhide1' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage1'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide2' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage2'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_overflowhide3' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage3'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide4' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage4'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide5' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage5'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide6' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage6'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_overflowhide7' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage7'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide8' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage8'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide9' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage9'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide10' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage10'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_overflowhide11' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage11'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide12' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage12'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide13' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage13'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide14' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage14'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide15' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage15'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide16' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage16'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_overflowhide17' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage17'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_overflowhide18' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='overflowdamagemarker'>
+								<input type='checkbox' name='attr_overflowdamage18'>
+								<span></span>
+							</label></div>
+                        </div>	
+					</div>
+					<div class='sheet-col'>
+						<div class='sheet-damagetrack'>
+							<div class='sheet-dmgtrackheader'>Stun Damage Track</div>
+						<input type='hidden' name='attr_stunsdamagepenalty0' class='sheet-hidedamage' value='0'>
+						<input type='hidden' name='attr_stunsdamagepenalty1' class='sheet-hidedamage' value='-1'>
+						<input type='hidden' name='attr_stunsdamagepenalty2' class='sheet-hidedamage' value='-2'>
+						<input type='hidden' name='attr_stunsdamagepenalty3' class='sheet-hidedamage' value='-3'>
+						<input type='hidden' name='attr_stunsdamagepenalty4' class='sheet-hidedamage' value='-4'>
+						<input type='hidden' name='attr_stunsdamagepenalty5' class='sheet-hidedamage' value='-5'>
+						<input type='hidden' name='attr_stunsdamagepenalty6' class='sheet-hidedamage' value='-6'>
+
+							<input type='hidden' name='attr_stunshide1' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage1'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_stunshide2' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage2'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_stunshide3' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage3'>
+								<span name='attr_physdamagepenalty1'></span>
+							</label></div>
+							<input type='hidden' name='attr_stunshide4' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage4'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_stunshide5' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage5'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_stunshide6' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage6'>
+								<span name='attr_physdamagepenalty2'></span>
+							</label></div>							
+							<input type='hidden' name='attr_stunshide7' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage7'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_stunshide8' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage8'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_stunshide9' class='sheet-hidedamage' value=''>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage9'>
+								<span name='attr_physdamagepenalty3'></span>
+							</label></div>
+							<input type='hidden' name='attr_stunshide10' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage10'>
+								<span></span>
+							</label></div>							
+							<input type='hidden' name='attr_stunshide11' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage11'>
+								<span></span>
+							</label></div>
+							<input type='hidden' name='attr_stunshide12' class='sheet-hidedamage' value='on'>
+							<div class='sheet-dmtrackcell'>
+<label class='stundamagemarker'>
+								<input type='checkbox' name='attr_stunsdamage12'>
+								<span name='attr_physdamagepenalty4'></span>
+							</label></div>
+							<input type='hidden' name='attr_stunsdamagepoolmod' value='0'>							
+						</div>
+						<p class='sheet-mini'>For every 3 boxes of damage on any one damage track, the character takes a -1 Dice Pool Modifier on tests.
+						</p>
+					</div>
+				</div>
+			</div>			
 		</div>
 	</div>
 </div>
@@ -2377,7 +3019,9 @@
 		</div>		
 		</div>
 	</div>
-	<div class='sheet-section'>
+	<div class='sheet-2colrow'>
+	  <div class='sheet-col'>
+<div class='sheet-section'>
 		<div class='sheet-headertext'>
 			<p>Skill Specializations</p>
 		</div>
@@ -2484,6 +3128,18 @@
 				<td><input type='checkbox' name='attr_taskingspec2visible'></td>
 			</tr>			
 		</table>
+	</div>	  
+	  </div>
+	  <div class='sheet-col'>
+	  			<div class='sheet-section'>
+                <div class='sheet-headertext'>
+                    <p data-i18n='matrixconfig'>Matrix Config</p>
+                </div>
+				<div class='sheet-flexcontainer'>
+				<label class='sheet-flex' for='attr_istechnomancer'>This character is a Technomancer</label><input type='checkbox' name='attr_istechnomancer'>
+				</div>
+            </div>
+	  </div>
 	</div>
 	<div class='sheet-section'>
 		<div class='sheet-headertext'>
@@ -2714,6 +3370,7 @@ on("change:astralattr change:athleticsattr change:biotechattr change:closecombat
 		"movement":"Movement",
 		"unarmed":"Unarmed",
 		"defenserating":"Defense Rating",
+		"devicerating":"Device Rating"
 	}	
 	getAttrs([eventInfo.newValue],function(values) {
 		let out = {}
@@ -2721,6 +3378,48 @@ on("change:astralattr change:athleticsattr change:biotechattr change:closecombat
 		out[rootname+"attrvalue"] = values[eventInfo.newValue];		
 		console.log(out);
 		setAttrs(out);
+	});
+});
+
+on("change:matrixatk change:matrixslz", function(eventInfo) {
+   getAttrs(['matrixatk','matrixslz'], function (values) {
+      setAttrs({"matrixatkrating": parseInt(values.matrixatk)+parseInt(values.matrixslz)});
+   });
+});
+
+on("change:matrixdp change:matrixfw", function(eventInfo) {
+   getAttrs(['matrixdp','matrixfw'], function (values) {
+      setAttrs({"matrixdefrating": parseInt(values.matrixdp)+parseInt(values.matrixfw)});
+   });
+});
+
+on("change:body change:repeating_armor:armorrating", function(eventInfo) {
+		getSectionIDs("armor",function(idarray) {
+		    let gets = ["body"];
+			let sets = {}
+			for( let i = 0; i < idarray.length; i++) {
+				gets.push("repeating_armor_"+idarray[i]+"_armorrating")
+			}
+			getAttrs(gets, function (values) {						
+				for( let i = 0; i < idarray.length; i++) {
+					sets["repeating_armor_"+idarray[i]+"_armordrcalc"] = parseInt(values.body)+parseInt(values["repeating_armor_"+idarray[i]+"_armorrating"])
+				}
+				console.log(sets);
+				setAttrs(sets);
+			});
+		});
+});
+
+on("clicked:atreset", function(eventInfo) {
+	getAttrs(["actionmajor_max","actionminor_max"], function(values) {
+		console.log(values);	
+		setAttrs({"actionmajor":values.actionmajor_max,"actionminor":values.actionminor_max});
+	});
+});
+on("clicked:matreset", function(eventInfo) {
+	getAttrs(["matactionmajor_max","matactionminor_max"], function(values) {
+		console.log(values);
+		setAttrs({"matactionmajor":values.matactionmajor_max,"matactionminor":values.matactionminor_max});
 	});
 });
 </script>

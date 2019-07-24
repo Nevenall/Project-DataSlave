@@ -115,5 +115,12 @@
 "specialist":"Specialist",
 "expert":"Expert",
 "native":"Native",
-"doublephysdmg":"Double Physical Condition Penalties"
+"doublephysdmg":"Double Physical Condition Penalties",
+"echoes":"Echoes",
+"matrixconfig":"Matrix Config",
+"complexforms":"Complex Forms",
+"sprites":"Sprites",
+"program":"Program Name",
+"reslink":"Resonance Link Target",
+"actiontracker":"Action Tracker"
 }
