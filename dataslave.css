@@ -374,7 +374,11 @@ select,
 .sheet-page button[type='roll']:hover,
 .sheet-page button[type='roll']:hover span,
 .sheet-page button[type='roll']:hover label {
-	color: #800d6d;
+	color: #c00dcd !important;
+    cursor: pointer;	
+}
+.sheet-autocalclabel {
+	color: #400dcd;
 }
 .sheet-skills span,
 .sheet-skills button[type='roll'] {

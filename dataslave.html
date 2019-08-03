@@ -1,5 +1,5 @@
 <!--- Project Dataslave --->
-<!--- Version 0.75 Beta --->
+<!--- Version 1.1 --->
 <!--- By EtoileLion --->
 <div class='sheet-bg'>
 <input type='hidden' name='attr_sheetpage' class='sheet-sheetpage' value='1'>
@@ -164,10 +164,10 @@
                             <input type='number' value="1" name='attr_logic' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{composure}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Composure||@{character_name}'><label for='attr_composure' data-i18n='composure'></label></button>
+                            <button  type='roll' value='!shadowtest @{willpower}|@{charisma}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Willpower|Charisma|@{character_name}'><label for='attr_composure' data-i18n='composure' class='sheet-autocalclabel'></label></button>
                         </td>
                         <td>
-                            <input type='number' value="1" name='attr_composure' min=0>					
+                            <input type='number' value="@{willpower}+@{charisma}" name='attr_composure' min=0 disabled>					
                         </td>
                     </tr>
                     <tr>
@@ -178,10 +178,10 @@
                             <input type='number' value="1" name='attr_intuition' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{judge-intentions}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Judge Intentions||@{character_name}'><label for='attr_judge-intentions' data-i18n='judge-intentions'>judge-intentions</label></button>
+                            <button  type='roll' value='!shadowtest @{willpower}|@{intuition}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Willpower|Charisma|@{character_name}'><label for='attr_judge-intentions' data-i18n='judge-intentions' class='sheet-autocalclabel'>judge-intentions</label></button>
                         </td>
                         <td>
-                            <input type='number' value="1" name='attr_judge-intentions' min=0>					
+                            <input type='number' value="@{willpower}+@{charisma}" name='attr_judge-intentions' min=0 disabled>					
                         </td>
                     </tr>
                     <tr>
@@ -192,10 +192,10 @@
                             <input type='number' value="1" name='attr_charisma' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{memory}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Memory||@{character_name}'><label for='attr_memory' data-i18n='memory'>memory</label></button>
+                            <button  type='roll' value='!shadowtest @{logic}|@{intuition}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Logic|Intuition|@{character_name}'><label for='attr_memory' data-i18n='memory' class='sheet-autocalclabel'>memory</label></button>
                         </td>
                         <td>
-                            <input type='number' value="1" name='attr_memory' min=0>					
+                            <input type='number' value="@{logic}+@{intuition}" name='attr_memory' min=0 disabled>					
                         </td>
                     </tr>
                     <tr>
@@ -206,10 +206,10 @@
                             <input type='number' value="1" name='attr_edge' min=0>					
                         </td>
                         <td>
-                            <button  type='roll' value='!shadowtest @{lift-carry}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Lift/Carry||@{character_name}'><label for='attr_lift-carry' data-i18n='lift-carry'>lift-carry</label></button>
+                            <button  type='roll' value='!shadowtest @{body}|@{willpower}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Body|Willpower|@{character_name}'><label for='attr_lift-carry' data-i18n='lift-carry' class='sheet-autocalclabel'>lift-carry</label></button>
                         </td>
                         <td>
-                            <input type='number' value="1" name='attr_lift-carry' min=0>					
+                            <input type='number' value="@{body}+@{willpower}" name='attr_lift-carry' min=0 disabled>					
                         </td>
                     </tr>
                     <tr>
@@ -230,14 +230,85 @@
                         <td>
                             <button  type='roll' value='!shadowtest @{unarmed}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Unarmed||@{character_name}'><label for='attr_unarmed' data-i18n='unarmed'>unarmed</label></button>			
                         </td>
-                        <td>
+						<td>
                             <input type='number' value="1" name='attr_unarmed' min=0>					
                         </td>
+                        <td>
+                            <button  type='roll' value='!shadowtest @{reaction}|@{intuition}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Reaction|Intuition|@{character_name}'><label for='attr_unarmed' data-i18n='defensetest' class='sheet-autocalclabel'>defensetest</label></button>			
+                        </td>
+						<td>
+                            <input type='number' value="@{reaction}+@{intuition}" name='attr_defensetest' min=0 disabled>					
+                        </td>
+					</tr>
+					<tr>				
+                        <td>
+                            <button  type='roll' value='!shadowtest @{attackrating}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Defense Rating||@{character_name}'><label for='attr_attackrating' data-i18n='attackrating'>attackrating</label></button>
+                        </td>
+                        <td>
+                            <input type='number' value="1" name='attr_attackrating' min=0>
+                        </td>                        
                         <td>
                             <button  type='roll' value='!shadowtest @{defenserating}|0|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|Defense Rating||@{character_name}'><label for='attr_defenserating' data-i18n='defenserating'>defenserating</label></button>
                         </td>
                         <td>
-                            <input type='number' value="1" name='attr_defenserating' min=0>					
+                            <input type='number' value="1" name='attr_defenserating' min=0>							
+                        </td>
+                    </tr>
+					<tr>				
+                        <td>
+                        </td>
+                        <td>
+                         	(<span name='attr_attackratingac'></span>)
+							<input type='hidden' name='attr_attackratingac' value="2">
+                        </td>                        
+                        <td>                         
+                        </td>
+                        <td>
+                            (<span name='attr_defenseratingac'></span>)
+							<input type='hidden' name='attr_defenseratingac' value="2">
+                        </td>
+                    </tr>					
+					<tr>				
+                        <td>							
+                            <button  type='roll' value='!shadowtest @{tat1value}|@{tat2value}|[[?{Dice Pool Modifier|0}-@{physdamagepoolmod}-@{stunsdamagepoolmod}]]|@{tat1name}|@{tat2name}|@{character_name}'><label data-i18n='tatlabel'>Two-Attribute Test</label></button>
+                        </td>                        
+                        <td colspan='3'>
+							<input type='hidden' name='attr_tat1value' value="1">
+							<input type='hidden' name='attr_tat2value' value="1">
+							<input type='hidden' name='attr_tat1name' value="Body">
+							<input type='hidden' name='attr_tat2name' value="Body">
+							<select name='attr_tat1sel'>
+                                    <option value='body' data-i18n='body' selected></option>
+                                    <option value='essence' data-i18n='essence'></option>
+                                    <option value='agility' data-i18n='agility'></option>
+                                    <option value='magic' data-i18n='magic'></option>
+                                    <option value='reaction' data-i18n='reaction'></option>
+                                    <option value='strength' data-i18n='strength'></option>
+                                    <option value='willpower' data-i18n='willpower'></option>
+                                    <option value='logic' data-i18n='logic'></option>
+                                    <option value='intuition' data-i18n='intuition'></option>
+                                    <option value='charisma' data-i18n='charisma'></option>
+                                    <option value='edge' data-i18n='edge'></option>
+                                    <option value='movement' data-i18n='movement'></option>
+                                    <option value='unarmed' data-i18n='unarmed'></option>
+							</select>+                            
+							<select name='attr_tat2sel'>
+							        <option value='body' data-i18n='body' selected></option>
+                                    <option value='essence' data-i18n='essence'></option>
+                                    <option value='agility' data-i18n='agility'></option>
+                                    <option value='magic' data-i18n='magic'></option>
+                                    <option value='reaction' data-i18n='reaction'></option>
+                                    <option value='initiative' data-i18n='initiative'></option>
+                                    <option value='strength' data-i18n='strength'></option>
+                                    <option value='willpower' data-i18n='willpower'></option>
+                                    <option value='logic' data-i18n='logic'></option>
+                                    <option value='intuition' data-i18n='intuition'></option>
+                                    <option value='charisma' data-i18n='charisma'></option>
+                                    <option value='memory' data-i18n='memory'></option>
+                                    <option value='edge' data-i18n='edge'></option>
+                                    <option value='movement' data-i18n='movement'></option>
+                                    <option value='unarmed' data-i18n='unarmed'></option>
+							</select>                            							
                         </td>
                     </tr>
                 </table>
@@ -3420,6 +3491,61 @@ on("clicked:matreset", function(eventInfo) {
 	getAttrs(["matactionmajor_max","matactionminor_max"], function(values) {
 		console.log(values);
 		setAttrs({"matactionmajor":values.matactionmajor_max,"matactionminor":values.matactionminor_max});
+	});
+});
+
+on("change:strength change:reaction", function(eventInfo) {
+    getAttrs(["strength","reaction"], function (values) {
+	  setAttrs({"attackratingac":parseInt(values.strength)+parseInt(values.reaction)});
+	});
+});
+
+on("change:tat1sel change:tat2sel",function(eventInfo) {    
+    let names = {
+        "body":"Body",
+		"essence":"Essence",
+		"agility":"Agility",
+		"magic":"Magic",
+		"reaction":"Reaction",
+		"initiative":"Initiative",
+		"strength":"Strength",
+		"matrix-initiative":"Matrix Initiative",
+		"willpower":"Willpower",
+		"astral-initiative":"Astral Initiative",
+		"logic":"Logic",
+		"composure":"Composure",
+		"intuition":"Intuition",
+		"judge-intentions":"Judge Intentions",
+		"charisma":"Charisma",
+		"memory":"Memory",
+		"edge":"Edge",
+		"lift-carry":"Lift/Carry",
+		"movement":"Movement",
+		"unarmed":"Unarmed",
+		"defenserating":"Defense Rating",
+		"devicerating":"Device Rating"
+	}	
+	getAttrs(["tat1sel","tat2sel","body","essence","agility","magic","reaction","initiative","strength","matrix-initiative","willpower","astral-initiative","logic","composure","intuition","judge-intentions","charisma","memory","edge","lift-carry","movement","unarmed","defenserating","devicerating"],function(values) {
+		let out = {}
+		out["tat1name"] = names[values.tat1sel];
+		out["tat2name"] = names[values.tat2sel];		
+		out["tat1value"] = values[values.tat1sel];
+		out["tat2value"] = values[values.tat2sel];		
+		console.log(out);
+		setAttrs(out);
+	});
+});
+
+on("change:body change:essence change:agility change:magic change:reaction change:initiative change:strength change:matrix-initiative change:willpower change:astral-initiative change:logic change:composure change:intuition change:judge-intentions change:charisma change:memory change:edge change:lift-carry change:movement change:unarmed change:defenserating change:devicerating",function(eventInfo) {
+	getAttrs(["astralattr","athleticsattr","biotechattr","closecombatattr","conattr","conjuringattr","crackingattr","electronicsattr","enchantingattr","engineeringattr","exoticweaponsattr","firearmsattr","influenceattr","outdoorsattr","perceptionattr","pilotingattr","sorceryattr","stealthattr","taskingattr"], function(values) {
+		let out = {}
+		for(let propname in values) {
+			console.log("Check "+propname+" ("+values[propname]+") vs "+eventInfo.sourceAttribute);
+			if(values[propname] == eventInfo.sourceAttribute) {
+				out[propname+"value"] = eventInfo.newValue;
+			}
+		}
+		setAttrs(out,{"silent":true});
 	});
 });
 </script>

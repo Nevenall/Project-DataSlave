@@ -122,5 +122,8 @@
 "sprites":"Sprites",
 "program":"Program Name",
 "reslink":"Resonance Link Target",
-"actiontracker":"Action Tracker"
+"actiontracker":"Action Tracker",
+"attackrating":"Attack Rating",
+"tatlabel":"Two-Attribute Test",
+"defensetest":"Defense Test"
 }
