@@ -51,3 +51,5 @@ on("chat:message", function(msg) {
 		sendChat(options[5],output);
 	}
 });
+
+log("Shadowrun 6e Dice Tester v1.1 Loaded");
