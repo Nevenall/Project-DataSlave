@@ -1,5 +1,5 @@
 <!--- Project Dataslave --->
-<!--- Version 1.1 --->
+<!--- Version 1.2 --->
 <!--- By EtoileLion --->
 <div class='sheet-bg'>
 <input type='hidden' name='attr_sheetpage' class='sheet-sheetpage' value='1'>
@@ -3202,7 +3202,7 @@
 	</div>	  
 	  </div>
 	  <div class='sheet-col'>
-	  			<div class='sheet-section'>
+	  		<div class='sheet-section'>
                 <div class='sheet-headertext'>
                     <p data-i18n='matrixconfig'>Matrix Config</p>
                 </div>
@@ -3210,8 +3210,14 @@
 				<label class='sheet-flex' for='attr_istechnomancer'>This character is a Technomancer</label><input type='checkbox' name='attr_istechnomancer'>
 				</div>
             </div>
+			<div class='sheet-section'>
+				<div class='sheet-headertext'>
+					<p>Sheet VVC</p>
+				</div>	
+				<button type='action' name='act_vvc'>Update VVC</button><span class='sheet-vvc'></span><span name='attr_vvc'></span><span name='attr_innervvc'></span><span data-i18n="VVCVersion"></span>
+			</div>
 	  </div>
-	</div>
+	</div>	
 	<div class='sheet-section'>
 		<div class='sheet-headertext'>
             <p>Old Skill Recovery Info</p>
@@ -3574,4 +3580,12 @@ on("sheet:opened", function(eventInfo) {
         });
     });
 });
+
+
+on("clicked:vvc", function(eventInfo) {
+	console.log("Updating VVC");
+	setAttrs({"innervvc":""});
+	setAttrs({"innervvc":"B"});
+});
+
 </script>

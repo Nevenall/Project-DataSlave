@@ -401,3 +401,6 @@ select,
 .sheet-echoes .sheet-flexcontainer {
 	margin-bottom: 3px;
 }
+.sheet-vvc:before {
+	content: "2"
+}
