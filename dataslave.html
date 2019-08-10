@@ -734,8 +734,8 @@
 				<input type='hidden' name='attr_astral' class='sheet-hideskillrank' value="0">				
 				<div class='sheet-flexcontainer'>
 					<label class='sheet-skillhead sheet-flex'>Astral</label><input type='number' name='attr_astral' value="0">
-					<input type='hidden' name='attr_astralattrvalue' value='0'>
-					<input type='hidden' name='attr_astralattrname' value="">
+					<input type='hidden' name='attr_astralattrvalue' value='2'>
+					<input type='hidden' name='attr_astralattrname' value="initiative">
 										<select name='attr_astralattr'  class='sheet-inlinelabel'>
                                     <option value='body' data-i18n='body'></option>
                                     <option value='essence' data-i18n='essence'></option>
@@ -798,8 +798,8 @@
 				<input type='hidden' name='attr_athletics' class='sheet-hideskillrank' value="0">				
 				<div class='sheet-flexcontainer sheet-untrainedskill'>
 					<label class='sheet-skillhead sheet-flex'>Athletics</label><input type='number' name='attr_athletics' value="0">
-					<input type='hidden' name='attr_athleticsattrvalue' value='0'>
-					<input type='hidden' name='attr_athleticsattrname' value="">
+					<input type='hidden' name='attr_athleticsattrvalue' value='1'>
+					<input type='hidden' name='attr_athleticsattrname' value="Agility">
 										<select name='attr_athleticsattr'  class='sheet-inlinelabel'>
                                     <option value='body' data-i18n='body'></option>
                                     <option value='essence' data-i18n='essence'></option>
@@ -863,8 +863,8 @@
 				<input type='hidden' name='attr_biotech' class='sheet-hideskillrank' value="0">				
 				<div class='sheet-flexcontainer'>
 					<label class='sheet-skillhead sheet-flex'>Biotech</label><input type='number' name='attr_biotech' value="0">
-					<input type='hidden' name='attr_biotechattrvalue' value='0'>
-					<input type='hidden' name='attr_biotechattrname' value="">
+					<input type='hidden' name='attr_biotechattrvalue' value='1'>
+					<input type='hidden' name='attr_biotechattrname' value="logic">
 										<select name='attr_biotechattr'  class='sheet-inlinelabel'>
                                     <option value='body' data-i18n='body'></option>
                                     <option value='essence' data-i18n='essence'></option>
@@ -3238,9 +3238,9 @@
 			</td>
 		</tr>
 		<tr>
-			<td><span class='sheet-rolltemplate-result-pass'>
+			<td>{{#total}}<span class='sheet-rolltemplate-result-pass'>
 				{{total}} hits
-			</span>
+			</span>{{/total}}
 			<span class='sheet-rolltemplate-result-fail'>			
 				No hits
 			</span>			
@@ -3547,5 +3547,31 @@ on("change:body change:essence change:agility change:magic change:reaction chang
 		}
 		setAttrs(out,{"silent":true});
 	});
+});
+
+//I Don't like having to do this.
+on("sheet:opened", function(eventInfo) {
+    getAttrs(["astralattr","athleticsattr","biotechattr","closecombatattr","conattr","conjuringattr","crackingattr","electronicsattr","enchantingattr","engineeringattr","exoticweaponsattr","firearmsattr","influenceattr","outdoorsattr","perceptionattr","pilotingattr","sorceryattr","stealthattr","taskingattr"], function(values) {
+        console.log(values);
+        let names = {"body":"Body","essence":"Essence","agility":"Agility","magic":"Magic","reaction":"Reaction","initiative":"Initiative","strength":"Strength","matrix-initiative":"Matrix Initiative","willpower":"Willpower","astral-initiative":"Astral Initiative","logic":"Logic","composure":"Composure","intuition":"Intuition","judge-intentions":"Judge Intentions","charisma":"Charisma","memory":"Memory","edge":"Edge","lift-carry":"Lift/Carry","movement":"Movement","unarmed":"Unarmed","defenserating":"Defense Rating","devicerating":"Device Rating"}	
+        let defaults = {"astralattr":"astral-initiative","athleticsattr":"agility","biotechattr":"logic","closecombatattr":"agility","conattr":"charisma","conjuringattr":"magic","crackingattr":"logic","electronicsattr":"logic","enchantingattr":"magic","engineeringattr":"logic","exoticweaponsattr":"agility","firearmsattr":"agility","influenceattr":"charisma","outdoorsattr":"intuition","perceptionattr":"intuition","pilotingattr":"reaction","sorceryattr":"magic","stealthattr":"charisma","taskingattr":"intuition"}
+        let out = {};
+        getAttrs(["body","essence","agility","magic","reaction","initiative","strength","matrix-initiative","willpower","astral-initiative","logic","composure","intuition","judge-intentions","charisma","memory","edge","lift-carry","movement","unarmed","defenserating","devicerating"],function(atval) {
+        ["astralattr","athleticsattr","biotechattr","closecombatattr","conattr","conjuringattr","crackingattr","electronicsattr","enchantingattr","engineeringattr","exoticweaponsattr","firearmsattr","influenceattr","outdoorsattr","perceptionattr","pilotingattr","sorceryattr","stealthattr","taskingattr"].forEach(function(x) {
+                let rootname = x.substr(0,x.length - 4);
+                if(!(x in values)) {
+                    out[x] = defaults[x];
+                    out[rootname+"attrname"] = names[defaults[x]];             
+                    out[rootname+"attrvalue"] = atval[defaults[x]];				
+                } else {
+                    out[x] = values[x];
+                    out[rootname+"attrname"] = names[values[x]];              
+                    out[rootname+"attrvalue"] = atval[values[x]];				
+                }
+            });
+            console.log(out);
+            setAttrs(out);
+        });
+    });
 });
 </script>
