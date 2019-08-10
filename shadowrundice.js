@@ -66,13 +66,13 @@ on("chat:message", function(msg) {
 });
 
 on("change:attribute", function(obj,old) {
-	if(obj.get("name") === "innervvc") {
+	if(obj.get("name") === "innervvc" && obj.get("current") !== "") {
 		log(obj.get("_characterid"));
         let attribcur = findObjs({"_type":"attribute","_characterid":obj.get("_characterid"),"name":"vvc"});
         if (attribcur.length === 1) {
            attribcur[0].remove();
 		}
-        createObj("attribute",{"name":"vvc","_characterid":name,"current":String.fromCharCode(65+((version-1) % 25))});
+        createObj("attribute",{"name":"vvc","_characterid":obj.get("_characterid"),"current":String.fromCharCode(65+((version-1) % 25))});
     }
 });
 
