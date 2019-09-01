@@ -35,10 +35,10 @@ shadowtest takes 6 (optionally 7) parameters, separated by pipe (|) characters.
 * Attribute Name: String
 * Skill Name: String
 * Character Name: String
-* Special (**optional**): Either the letter Y, the letter N, or a number (usually 2 or 3). 
-** Y means the roll is a skill roll that can be attempted without training. 
-** N means it is a skill roll that cannot be attempted without training (which will then abort the roll if Skill Dice Number is 0). 
-** 2 or 3 is how I handle the Specialisms and Expertises. This is tacked on to the Modifier Dice Number.
+* Special (**optional**): Either the letter Y, the letter N, or a number (usually 2 or 3). If not using, do not include the last pipe character.
+  * Y means the roll is a skill roll that can be attempted without training. 
+  * N means it is a skill roll that cannot be attempted without training (which will then abort the roll if Skill Dice Number is 0). 
+  * 2 or 3 is how I handle the Specialisms and Expertises. This is tacked on to the Modifier Dice Number.
 
 `!shadowgremlin *name*`
 
