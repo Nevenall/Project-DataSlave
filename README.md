@@ -25,7 +25,7 @@ This version of the sheet requires a Pro level account with Roll20, in order to 
 10. Click the Save Script button below the textbox.
 
 # API Script Specifications
-`!shadowtest *adn*|*sdn*|[[*mdn*]]|*aname*|*sname*|*cname*(|*special*)`
+`!shadowtest *adn*|*sdn*|[[*mdn*]]|*aname*|*sname*|*cname*|*special*`
 
 shadowtest takes 6 (optionally 7) parameters, separated by pipe (|) characters. 
 
@@ -35,7 +35,7 @@ shadowtest takes 6 (optionally 7) parameters, separated by pipe (|) characters.
 * Attribute Name: String
 * Skill Name: String
 * Character Name: String
-* Special: Either the letter Y, the letter N, or a number (usually 2 or 3). 
+* Special (**optional**): Either the letter Y, the letter N, or a number (usually 2 or 3). 
 ** Y means the roll is a skill roll that can be attempted without training. 
 ** N means it is a skill roll that cannot be attempted without training (which will then abort the roll if Skill Dice Number is 0). 
 ** 2 or 3 is how I handle the Specialisms and Expertises. This is tacked on to the Modifier Dice Number.
